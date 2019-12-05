@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="javacc-5.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/pmd/javacc-5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/pmd/pmd-core-5.3.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/pmd/pmd-java-5.3.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

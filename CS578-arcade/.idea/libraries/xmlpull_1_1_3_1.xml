@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="xmlpull-1.1.3.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/xstream/xmlpull-1.1.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/xstream/xpp3_min-1.1.4c.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
