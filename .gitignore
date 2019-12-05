@@ -1,5 +1,5 @@
 tomcat/
-CS578-arcade/output/*
+CS578-arcade/output/production/
 CS578-arcade/ext-tools/
 CS578-arcade/json-lib/
 CS578-arcade/lib/
