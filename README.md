@@ -39,6 +39,8 @@ This is a course project based on `ARCADE` and `Tomcat` in CS 578 Software Archi
     - [Dependencies on Class Packages](#dependencies-on-class-packages)
   - [Interesting Stuff](#interesting-stuff)
 
+**Note:** Search `Where We Modified` in this page to see the code we have modified.
+
 ## Project Description
 
 In our third homework, we applied two recovery techniques to Tomcat and recovered Tomcat's architectures in the form of clusters. However, these techniques are not very suitable to analyze the security of a system from an architecture perspective (e.g. some techniques cannot cluster components of an architectural decision together).
@@ -225,7 +227,7 @@ So we came up with some solutions that we thought might work. But before that we
 
 - **Solution #3:** We develop a tool that discovers the pattern (we may call it "instanceof" pattern), and find a way of adding new dependencies into the tree. _It works!_
 
-**Note:** Our modification in ACDC mainly lies in [AcdcWithSmellDetection.java](https://github.com/junhaowww/578-is-great/blob/master/CS578-arcade/src/edu/usc/softarch/arcade/AcdcWithSmellDetection.java) and [ACDC.java](https://github.com/junhaowww/578-is-great/blob/master/CS578-arcade/src/acdc/ACDC.java). Code are commented, so it should be readable. In addition, in folder [OurSolution](https://github.com/junhaowww/578-is-great/tree/master/CS578-arcade/src/OurSolution) we create our own classes.
+**Where We Modified:** Our modification in ACDC mainly lies in [AcdcWithSmellDetection.java](https://github.com/junhaowww/578-is-great/blob/master/CS578-arcade/src/edu/usc/softarch/arcade/AcdcWithSmellDetection.java) and [ACDC.java](https://github.com/junhaowww/578-is-great/blob/master/CS578-arcade/src/acdc/ACDC.java). Code are commented, so it should be readable. In addition, in folder [OurSolution](https://github.com/junhaowww/578-is-great/tree/master/CS578-arcade/src/OurSolution) we create our own classes.
 
 Basically, we have a singleton class `Tomdog` ([Tomdog.java](https://github.com/junhaowww/578-is-great/blob/master/CS578-arcade/src/OurSolution/Tomdog.java)) that discovers the "instanceof" pattern. It is designed as a singleton because it then can be reused readily.
 
@@ -403,6 +405,8 @@ Last but not least, our way of adding the new dependencies to the tree should be
 
 
 ## Security Decision #2
+
+**Name:** XXX
 
 **Vulnerability ID:** [???](???)
 
