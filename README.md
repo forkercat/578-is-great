@@ -78,7 +78,7 @@ public String getProperty(String key) {
 }
 ```
 
-![Code](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/sv36i.png)
+![Code](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/sv36i.png "Code")
 
 
 #### Vulnerability Description
