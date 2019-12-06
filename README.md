@@ -15,7 +15,7 @@ This is a course project based on `ARCADE` and `Tomcat` in CS 578 Software Archi
 
 In our third homework, we applied two recovery techniques to Tomcat and recovered Tomcat's architectures in the form of clusters. However, these techniques are not very suitable to analyze the security of a system from an architecture perspective (e.g. some techniques cannot cluster components of an architectural decision together).
 
-In this project, we modify the existing techniques in ARCADE and turn them into "security-aware" versions. Specifically, given a security-related architectural decision, our refined techniques can put all its components into a cluster.
+In this project, we modify the existing techniques in `ARCADE` and turn them into "security-aware" versions. Specifically, given a security-related architectural decision, our refined techniques can put all its components into a cluster.
 
 ## Summary of What We Did
 
