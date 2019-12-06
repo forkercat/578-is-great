@@ -18,7 +18,8 @@ public class GetJSON {
   public static void main(String[] args) throws IOException {
     depend();
     acdc();
-    arc();
+    // arc();
+    System.out.println("Output in output folder");
   }
 
 
@@ -67,7 +68,7 @@ public class GetJSON {
 
 
   private static void acdc() throws IOException {
-    String file = "/Users/chuck/Desktop/578-is-great/tomcat/output/" + "ACDC/" + "8.5.47_acdc_clustered.rsf";
+    String file = "../tomcat/output/" + "ACDC/" + "8.5.47_acdc_clustered.rsf";
 
     FileReader fr = new FileReader(file);
 
@@ -78,6 +79,7 @@ public class GetJSON {
     Map<String, List<String>> map = new HashMap<>(); // <cluster name, list>
 
     while ((line = br.readLine()) != null) {
+      if (line.length() == 0) continue;
       arr = line.split("\\s+");
       String name = arr[1];
       String comp = arr[2];
@@ -112,7 +114,7 @@ public class GetJSON {
 
   private static void arc() throws IOException {
 
-    String file = "/Users/chuck/Desktop/578-is-great/tomcat/output/" + "ARC/" + "8.5.47_504_topics_485_arc_clusters.rsf";
+    String file = "../tomcat/output/" + "ARC/" + "8.5.47_504_topics_485_arc_clusters.rsf";
 
     FileReader fr = new FileReader(file);
 
@@ -123,6 +125,7 @@ public class GetJSON {
     Map<String, List<String>> map = new HashMap<>(); // <cluster name, list>
 
     while ((line = br.readLine()) != null) {
+      if (line.length() == 0) continue;
       arr = line.split("\\s+");
       String num = arr[1]; // it is a number
       String comp = arr[2];

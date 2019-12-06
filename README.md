@@ -32,6 +32,8 @@ This is a course project based on `ARCADE` and `Tomcat` in CS 578 Software Archi
     - [Vulnerability Description](#vulnerability-description-1)
     - [How It Was Fixed](#how-it-was-fixed-1)
   - [Extra Work: Visualization](#extra-work-visualization)
+    - [Cluster Bubbles](#cluster-bubbles)
+    - [Dependencies on Class Packages](#dependencies-on-class-packages)
   - [Interesting Stuff](#interesting-stuff)
 
 ## Project Description
@@ -61,14 +63,15 @@ So if you want to run our code, you can follow these steps:
 
 - Clone our this repository to your local directory by `git clone git@github.com:junhaowww/578-is-great.git` .
 - Since the project is so large, we separate Tomcat and some library files from our repository.
-  - Download Tomcat [source files]() (it is compiled, no worry), unzip, and put the folder `src` in `578-is-great/tomcat`.
-  - Download [library files](), unzip, and put them in `578-is-great/CS578-arcade`.
+  - Download Tomcat source files [tomcat_src.zip](https://drive.google.com/open?id=1G8iim7zwuyFeVv-iV1O9XDVJ95lbTgUG) (it is compiled, no worry), unzip, and put the folder `src` in `578-is-great/tomcat`.
+  - Download library files [library.zip](https://drive.google.com/open?id=1gYTkVeeNyrBW4_h2lD78NXvPzTlwhacl), unzip, and put them in `578-is-great/CS578-arcade`.
 - Open `578-is-great/CS578-arcade` with IntelliJ IDEA (`.idea` exists, do not re-create).
 - Enjoy:)
 
 Other Tools We Used:
 
 - [draw.io](https://www.draw.io/)
+- [Observable](https://observablehq.com/)
 
 
 Link: [Tomcat 8.x Vulnerabilities](http://tomcat.apache.org/security-8.html)
@@ -80,6 +83,7 @@ Link: [Tomcat 8.x Vulnerabilities](http://tomcat.apache.org/security-8.html)
 ## Security Decision #1
 
 **Name:** System Property Disclosure
+
 **Vulnerability ID:** [CVE-2016-6794](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-6794)
 
 This was fixed in revision [1754726](https://svn.apache.org/viewvc?view=revision&revision=1754726) for 8.5.x. Open it to see which files are related.
@@ -234,6 +238,7 @@ So we came up with some solutions that we thought might work. But before that we
 ## Security Decision #2
 
 **Name:** 
+
 **Vulnerability ID:** 911
 
 ### Function Description
@@ -285,8 +290,40 @@ if (JrePlatform.IS_WINDOWS && isInvalidWindowsFilename(name)) {
 
 ## Extra Work: Visualization
 
+With the help of [D3.js](https://d3js.org/) and [Observable](https://observablehq.com/), we also built some useful illustrations.
+
+### Cluster Bubbles
+
+Link: [[CS578] Cluster Bubbles](https://observablehq.com/@junhaowww/cs578-cluster-bubbles)
+
+- It based on Word Count Bubble Chart & Generated Tags Cluster for NLP Projects of NASA.
+- It helps you pick up information of all clusters readily.
+- It is a fork of [Word Count Bubble Chart by wolfiex](https://observablehq.com/@wolfiex/word-count-bubble-chart) that adds mouseover behavior.
+
+Originally, we have to find clusters from an output file like this:
+
+![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/af28b.png)
+
+Visualization:
+
+![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/w8ce1.png)
 
 
+### Dependencies on Class Packages
+
+Link: [[CS578] Dependencies on Class Packages](https://observablehq.com/@junhaowww/cs578-dependencies-on-class-packages)
+
+- It is based on MouseOver Chord Diagram.
+- It helps you figure out dependencies between packages.
+- It is a fork of [chord diagram](/@mbostock/d3-chord-diagram) that adds mouseover behavior.
+
+Originally, we have to find dependencies from an output file like this:
+
+![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/mi5hp.png)
+
+Visualization:
+
+![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/wn9th.png)
 
 
 ## Interesting Stuff
