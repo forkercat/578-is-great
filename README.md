@@ -26,12 +26,12 @@ This is a course project based on `ARCADE` and `Tomcat` in CS 578 Software Archi
       - [Recognize A New Pattern](#recognize-a-new-pattern)
       - [Walkthrough in ACDC Code](#walkthrough-in-acdc-code)
       - [Solutions That We Tried](#solutions-that-we-tried)
-    - [What We Didn’t](#what-we-didnt)
+    - [What We Didn't](#what-we-didnt)
   - [Security Decision #2 (JREPlatform.java)](#security-decision-2-jreplatformjava)
     - [Function Description](#function-description-1)
     - [Vulnerability Description](#vulnerability-description-1)
     - [How It Was Fixed](#how-it-was-fixed-1)
-  - [Visualization](#visualization)
+  - [Extra Work: Visualization](#extra-work-visualization)
   - [Interesting Stuff](#interesting-stuff)
 
 ## Project Description
@@ -208,10 +208,18 @@ So we came up with some solutions that we thought might work. But before that we
 
 #### Solutions That We Tried
 
+- **Solution #1:** Add dependencies before running ACDC. For example, we add dependency `Digester -> WebappClassLoaderBase`. However, it won't work. ACDC still cannot find this pattern.
+
+- **Solution #2:** Modify existing patterns in ACDC. It turns out that these patterns are extremely difficult to be understood. Although we have tried, we still have no ideas how they work in essential.
+
+- **Solution #3:** We develop a tool that discovers the pattern (we may call it "instanceof" pattern), and find a way of adding new dependencies into the tree. _It works!_
+
+**Note:** Our modification in ACDC mainly lies in [AcdcWithSmellDetection.java](https://github.com/junhaowww/578-is-great/blob/master/CS578-arcade/src/edu/usc/softarch/arcade/AcdcWithSmellDetection.java) and [ACDC.java](https://github.com/junhaowww/578-is-great/blob/master/CS578-arcade/src/acdc/ACDC.java). Code are commented, so it should be readable. In addition, in folder [OurSolution](https://github.com/junhaowww/578-is-great/tree/master/CS578-arcade/src/OurSolution) we create our own classes.
 
 
 
-### What We Didn’t
+
+### What We Didn't
 
 
 
@@ -268,7 +276,7 @@ if (JrePlatform.IS_WINDOWS && isInvalidWindowsFilename(name)) {
 
 
 
-## Visualization
+## Extra Work: Visualization
 
 
 
