@@ -1,4 +1,7 @@
+.vscode
+
 tomcat/src
+tomcat/.vscode
 CS578-arcade/output/production/
 CS578-arcade/ext-tools/
 CS578-arcade/json-lib/

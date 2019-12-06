@@ -17,6 +17,8 @@ In our third homework, we applied two recovery techniques to Tomcat and recovere
 
 In this project, we modify the existing techniques in `ARCADE` and turn them into "security-aware" versions. Specifically, given a security-related architectural decision, our refined techniques can put all its components into a cluster.
 
+**Our Subject System:** Tomcat 8.5.47
+
 ## Summary of What We Did
 
 - Read source code of Tomcat, and understand how Tomcat works.
@@ -29,6 +31,19 @@ In this project, we modify the existing techniques in `ARCADE` and turn them int
 
 
 ## Before We Start
+
+Setting up [ARCADE](https://github.com/asejfia/CS578-arcade) in our working environment is extremely hard. Since we would re-compile source files for many times, we open the project files in IntelliJ IDEA. And yes... it took us few days to make it work.
+
+So if you want to run our code, you can follow these steps.
+
+- Clone our this repository to your local directory by `git clone git@github.com:junhaowww/578-is-great.git` .
+- Since the project is so large, we separate `Tomcat` and some library files from it.
+  - Download `Tomcat` [source files]() (it is compiled, no worry), unzip, and put the folder `src` in `578-is-great/tomcat`.
+  - Download [library files](), unzip, and put them in `578-is-great/CS578-arcade`.
+- Open `578-is-great/CS578-arcade` with IntelliJ IDEA.
+
+
+### 
 
 环境配置和安装
 用了什么工具
