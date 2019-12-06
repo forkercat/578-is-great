@@ -102,7 +102,7 @@ public class Tomdog { /* Singleton */
     }
 
     // find more dependencies
-    System.out.println("\nWe Found: " + getInterfaceSet().size() + " interface & " + getInstanceofMap().keySet().size() + " \"instanceofs\" relationship patterns");
+    System.out.println("\nWe Found: " + getInterfaceSet().size() + " interfaces & " + getInstanceofMap().keySet().size() + " \"instanceofs\" relationship patterns");
     System.out.println("\n--------- [end] Tomdog now starts sleeping :) ---------\n\n");
 
   }

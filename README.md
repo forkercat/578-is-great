@@ -330,7 +330,7 @@ Here is the output in console:
 
 wait...
 
-We Found: 181 interface & 68 "instanceofs" relationship patterns
+We Found: 181 interfaces & 68 "instanceofs" relationship patterns
 
 --------- [end] Tomdog now starts sleeping :) ---------
 
