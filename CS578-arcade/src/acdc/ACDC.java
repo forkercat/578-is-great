@@ -1,5 +1,7 @@
 package acdc;
 
+import OurSolution.InstanceofPattern;
+
 import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
 import java.util.Iterator;
@@ -227,7 +229,7 @@ public class ACDC {
     // Populate the tree from the input file
     input.readInput(inputName, root);
 
-//    Pattern b = new BodyHeader(root);
+//    Pattern h = new BodyHeader(root);
 //    Pattern s = new SubGraph(root, maxClusterSize);
 //    Pattern o = new OrphanAdoption(root);
 //    Pattern r = new ReverseOrphanAdoption(root);
@@ -235,24 +237,26 @@ public class ACDC {
     //add new pattern here
 
 
-    selectedPatterns = "so";
+    selectedPatterns = "so"; // "h" is deleted because it is useless for Java
+    /** Our Solution */
+    selectedPatterns += "b";  // our pattern is "b" so the string is "sob" :)
+
     Vector vpatterns = new Vector(); //will contain the ordered patterns to be executed
 
     for (int j = 0; j < selectedPatterns.length(); j++) {
       switch (selectedPatterns.charAt(j)) {
-        case 'b':
+        case 'h':
           vpatterns.add(new BodyHeader(root));
-          //vpatterns.add(b);
           break;
         case 's':
           vpatterns.add(new SubGraph(root, maxClusterSize));
-          //vpatterns.add(s);
           break;
         case 'o':
           vpatterns.add(new OrphanAdoption(root));
-          //vpatterns.add(o);
           break;
-        // Add new pattern here
+        case 'b': // our pattern
+          vpatterns.add(new InstanceofPattern(root));
+          break;
 
         default:
           IO.put("Serious error.", 0);
@@ -271,7 +275,7 @@ public class ACDC {
     Iterator iv = vpatterns.iterator();
     while (iv.hasNext()) {
       Pattern p = (Pattern) iv.next();
-      IO.put("\n\n\nExecuting " + p.getName() + " pattern...", 0);
+      IO.put("\n\nExecuting " + p.getName() + " pattern...", 0);
       p.execute();
     }
 

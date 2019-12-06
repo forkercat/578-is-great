@@ -23,7 +23,7 @@ public class GetJSON {
 
 
   private static void depend() throws IOException {
-    String file = "/Users/chuck/Desktop/578-is-great/tomcat/output/" + "ACDC/" + "8.5.47_deps.rsf";
+    String file = "../tomcat/output/" + "ACDC/" + "8.5.47_deps.rsf";
 
     FileReader fr = new FileReader(file);
 

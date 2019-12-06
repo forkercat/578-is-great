@@ -1,5 +1,6 @@
 package edu.usc.softarch.arcade;
 
+import OurSolution.Tomdog;
 import acdc.ACDC;
 import com.google.common.base.Joiner;
 import edu.usc.softarch.arcade.antipattern.detection.ArchSmellDetector;
@@ -87,9 +88,15 @@ public class AcdcWithSmellDetection {
 
     /** Build Dependencies */
     if (true) {
-      builder.build(builderArgs); /** this line builds the dependency */
+      // Initialize Tomdog
+      String path = "../tomcat/src/8.5.47/"; // project path (subject to change)
+      Tomdog.setProjectPath(path);
+      Tomdog.getInstanceDog(); // singleton (calling this method initializes the Tomdog object)
 
-      System.out.println("Finish building dependencies... :)");
+      // Inside this method, we add our solution that helps find more dependencies.
+      builder.build(builderArgs); /** this line builds the dependency in .rsf file */
+
+      System.out.println("\nFinish building dependencies... :)");
 
       // if (true) return; // for debugging building dependencies
 
@@ -97,8 +104,6 @@ public class AcdcWithSmellDetection {
         return;
       }
     }
-
-
 
     /** ACDC */
     System.out.println("\nStarting ACDC...");

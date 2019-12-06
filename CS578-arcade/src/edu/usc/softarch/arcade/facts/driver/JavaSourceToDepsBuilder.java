@@ -116,15 +116,11 @@ public class JavaSourceToDepsBuilder implements SourceToDepsBuilder {
    * find more dependencies because of <instanceof>
    */
   private void runOurSolution() throws IOException {
-    String projectPath = "../tomcat/src/8.5.47/"; // subject to change
-    Tomdog dog = new Tomdog(projectPath); // our core processor
+    System.out.println("\n\n--------- [start] Our Solution (add more dependencies) ---------");
 
-    // find more dependencies
-    System.out.println("\n--------- Our Solution Starts ---------");
-    System.out.println("\nWe Found: " + dog.getInterfaceSet().size() + " interfaces & " + dog.getInstanceofMap().keySet().size() + " instanceofs");
-    System.out.println("\nTrying to find more dependencies in them...");
+    Tomdog dog = Tomdog.getInstanceDog();
+
     List<List<String>> moreDependencies = dog.findMoreDependencies();
-    System.out.println("\nWe Found: " + moreDependencies.size() + " new dependencies because of <instanceof>!");
 
     // add them to edges
     for (List<String> depend : moreDependencies) {
@@ -132,7 +128,9 @@ public class JavaSourceToDepsBuilder implements SourceToDepsBuilder {
       edges.add(edge);
     }
 
-    System.out.println("\n--------- End of Our Solution ---------\n");
+    System.out.println("\nWe Found: " + moreDependencies.size() + " new dependencies because of <instanceof>!");
+
+    System.out.println("\n--------- [end] Our Solution ---------\n");
 
   }
 

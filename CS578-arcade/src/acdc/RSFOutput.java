@@ -15,6 +15,7 @@ import java.util.Enumeration;
  * contain parent_node node
  */
 public class RSFOutput implements OutputHandler {
+
   public void writeOutput(String outputName, DefaultMutableTreeNode root) {
     PrintWriter out = null;
     try {

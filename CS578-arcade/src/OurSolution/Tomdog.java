@@ -13,8 +13,15 @@ import java.util.regex.Pattern;
  * @date 12/04/2019
  */
 
-public class Tomdog {
 
+/**
+ * Tomdog is a singleton class that finds "interface, implements, instanceof" patterns in .java source code,
+ * and it also finds more dependencies of "instanceof" by method findMoreDependencies.
+ * Also, with the help of generated maps and sets, we can achieve more with them.
+ */
+public class Tomdog { /* Singleton */
+
+  // testing
   public static void main(String[] args) throws IOException {
     // String projectPath = "/Users/chuck/Desktop/Code/w1/src/files/";
     String projectPath = "/Users/chuck/Desktop/578-is-great/tomcat/src/8.5.47/";
@@ -31,6 +38,11 @@ public class Tomdog {
     System.out.println("\nWe found in .java source files: " + dog.getImplMapping().keySet().size() + " implements | " + dog.getInterfaceSet().size() + " interfaces | " + dog.getInstanceofMap().keySet().size() + " instanceofs");
   }
 
+  private static Tomdog theDog = null;
+
+  private static String projectPath = "../tomcat/src/8.5.47/"; // default
+
+
   // <classFullName, map<usedClassName, usedClassFullName>>
   private Map<String, Map<String, String>> classNameMap = new HashMap<>();
   // <interface, [implementing classes]>
@@ -40,8 +52,32 @@ public class Tomdog {
   // <current class, [interface]>
   private Map<String, Set<String>> instanceofMap = new HashMap<>();
 
+  private List<List<String>> newDependencies = null;
 
-  public Tomdog(String path) throws IOException {
+  /** Set the project path */
+  public static void setProjectPath(String path) {
+    projectPath = path;
+  }
+
+  /** Get instance */
+  public static Tomdog getInstanceDog() throws IOException {
+    if (theDog == null) {
+      synchronized (Tomdog.class) {
+        if (theDog == null) {
+          theDog = new Tomdog(projectPath);
+        }
+      }
+    }
+    return theDog;
+  }
+
+  /** Constructor */ // (set constructor as private)
+  private Tomdog(String path) throws IOException {
+    // Hello
+    System.out.println("\n--------- [start] Tomdog is barking!!! ---------");
+
+    System.out.println("\nwait...\n");
+
     // get all files
     List<File> fileList = new ArrayList<>();
     getAllJavaFiles(path, fileList);
@@ -65,10 +101,20 @@ public class Tomdog {
       String codeStr = readFileToString(file.toString());
       processWithInstanceof(codeStr, className);
     }
+
+    // find more dependencies
+    System.out.println("\nWe Found: " + getInterfaceSet().size() + " interface & " + getInstanceofMap().keySet().size() + " \"instanceofs\" relationship patterns");
+    System.out.println("\n--------- [end] Tomdog now starts sleeping :) ---------\n\n");
+
   }
 
+  /** Returns a list that contains [A, B], [C, D], ... where A depends on B, C depends on D. */
   public List<List<String>> findMoreDependencies() {
-    List<List<String>> result = new ArrayList<>();
+    if (newDependencies != null) {
+      return newDependencies;
+    }
+
+    newDependencies = new ArrayList<>();
 
     // for each instanceof
     for (String classHasInstanceof : instanceofMap.keySet()) {
@@ -80,15 +126,15 @@ public class Tomdog {
           Set<String> classThatImplInterface = implementMap.get(inf);
           for (String cls : classThatImplInterface) {
             // classHasInstanceof depends on cls
-            result.add(Arrays.asList(classHasInstanceof, cls));
+            newDependencies.add(Arrays.asList(classHasInstanceof, cls));
           }
         }
       }
     }
-    return result;
+    return newDependencies;
   }
 
-
+  /** Generate the class map that helps find the full name of a class. */
   private void generateClassNameUsage(String codeStr, String className) {
     // package name
     String packageName = getPackageName(codeStr);
@@ -107,7 +153,7 @@ public class Tomdog {
     classNameMap.put(fullClassName, map);
   }
 
-
+  /** "Interface & Implements" pattern */
   private void processWithInterface(String codeStr, String className) {
     // package name
     String packageName = getPackageName(codeStr);
@@ -140,7 +186,7 @@ public class Tomdog {
     }
   }
 
-
+  /** "Instanceof" pattern */
   private void processWithInstanceof(String codeStr, String className) {
     // package name
     String packageName = getPackageName(codeStr);
@@ -163,6 +209,10 @@ public class Tomdog {
     }
   }
 
+
+  /**
+   * Helper Functions are as follows.
+   */
   private List<File> getAllJavaFiles(String fileDir, List<File> fileList) {
     File file = new File(fileDir);
     File[] files = file.listFiles();
