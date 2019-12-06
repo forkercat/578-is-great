@@ -83,7 +83,7 @@ public abstract class Pattern {
 	
 	public static void induceEdges(Vector v, DefaultMutableTreeNode root) 
 	{
-		IO.put("\n\n --> The following " + v.size() + " nodes were selected for edge induction: (set IO output level as 2 for information)\n\n", 0);
+		IO.put("\n --> The following " + v.size() + " nodes were selected for edge induction: \n   (set IO output level as 2 for information)\n", 0);
 		for (int m = 0; m < v.size(); m++)
 		{
 			Node ncurr = (Node) v.elementAt(m);

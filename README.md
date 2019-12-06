@@ -4,7 +4,7 @@ This is a course project based on `ARCADE` and `Tomcat` in CS 578.
 
 **Instructor & TA:** [Nenad Medvidovic](mailto:neno@usc.edu), [Adriana Sejfia](mailto:sejfia@usc.edu)
 
-**Authors:** Junhao Wang, Han Hu, Haobang Wu (names not listed in order)
+**Authors:** Junhao Wang, Han Hu, Hopong Ng (names not listed in order)
 
 **Contact Us:** [junhaowanggg@gmail.com](mailto:junhaowanggg@gmail.com)
 

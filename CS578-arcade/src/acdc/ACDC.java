@@ -264,38 +264,42 @@ public class ACDC {
       }
     }
 
-    System.out.println("\nInclude all edges...\n\n");
+    System.out.println("\nInclude all edges...");
     // Induce all edges
     Vector allNodes = Pattern.allNodes(root);
     Pattern.induceEdges(allNodes, root);
 
-    System.out.println("\nExecute the patterns...\n\n");
+    System.out.println("\n--------- [start] Using Patterns ---------\n");
 
     // Execute the patterns
+    int count = 1;
     Iterator iv = vpatterns.iterator();
     while (iv.hasNext()) {
       Pattern p = (Pattern) iv.next();
-      IO.put("\n\nExecuting " + p.getName() + " pattern...", 0);
+      IO.put("\n[" + count + "] Executing:  [" + p.getName() + "] pattern...", 0);
       p.execute();
+      ++count;
     }
 
+    System.out.println("\n--------- [end] Using Patterns ---------\n");
+
     // Take care of any objects that were not clustered
-    IO.put("\nProcessing objects that were not clustered: ...\n", 0);
+    IO.put("\n[Also] Processing objects that were not clustered: ...\n", 0);
     Pattern c = new ClusterLast(root);
     c.execute();
 
     // Create output file
     IO.put("\n> Done...", 0);
-    IO.put("\n> Creating output...\n", 0);
+    IO.put("\n> Creating output from the tree [root] by the inducer object...", 0);
     inducer.execute(); // it is a DownInducer
     output.writeOutput(outputName, root);
+
+    System.out.println("\n> Clusters have been generated :)");
 
     // Create GUI 
     if (gui) {
       displayTree(root);
     }
-
-    System.out.println("ACDC.java [Finished]\n");
   }
 
   private static void displayTree(DefaultMutableTreeNode root) {

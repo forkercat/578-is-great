@@ -4,6 +4,7 @@
  */
 package OurSolution;
 
+import acdc.IO;
 import acdc.Node;
 import acdc.Pattern;
 
@@ -28,7 +29,7 @@ public class InstanceofPattern extends Pattern {
     // 1. Read through all dependencies in 'dep.rsf' file
     //    and find dependencies that satisfy this pattern
     // 2. Since Tomdog has already analyzed this, we can
-    //    get all the new dependencies from it.
+    //    get all the new dependencies from it. (x)  <-- we choose this one
 
     Tomdog dog = null;
     try {
@@ -48,62 +49,46 @@ public class InstanceofPattern extends Pattern {
       dependMap.put(dep.get(0), set);
     }
 
-
-    // mapping class name to node
-    Map<String, Node> nodeMap = new HashMap<>();
-    Vector allNodes = Pattern.allNodes(root);
-    for (int i = 0; i < allNodes.size(); ++i) {
-      Node n = (Node) allNodes.get(i);
-      if (n.isCluster() == false) continue;
-      nodeMap.put(n.getName(), n);
-    }
+    IO.put("\n --> There are " + newDependencies.size() + " new dependencies to be added.\n   (set IO output level as 2 for information)\n", 0);
 
 
-    // tree
+    // go through the tree and
+    // if there is a dependency A -> B
+    //    && parent P has a child A,
+    // then we add B to P.children list
     Vector rootChildren = nodeChildren(root);
 
     for (int i = 0; i < rootChildren.size(); ++i) {
       Node nparent = (Node) rootChildren.elementAt(i);
       DefaultMutableTreeNode parent = (DefaultMutableTreeNode) nparent.getTreeNode();
 
-      if (nparent.isCluster() == false) continue;
+      if (nparent.isCluster() == false) continue; // not a cluster
 
       Vector subChildren = nodeChildren(parent);
 
       Set<String> toBeAdded = new HashSet<>();
 
-      System.out.println("parent: " + nparent.getName());
-
       for (int j = 0; j < subChildren.size(); ++j) {
         Node ncurr = (Node) subChildren.elementAt(j);
         DefaultMutableTreeNode curr = (DefaultMutableTreeNode) ncurr.getTreeNode();
 
-        // System.out.println("--------> " + ncurr.getName());
         if (dependMap.containsKey(ncurr.getName())) {
           toBeAdded.addAll(dependMap.get(ncurr.getName()));
         }
       }
 
-      // System.out.println(">>>> " + toBeAdded);
-
       // add to it
-      System.out.println("hi");
       for (String clsName : toBeAdded) {
-        // Node node = new Node(clsName, "Unknown");
-        Node node = nodeMap.get(clsName);
+        Node node = new Node(clsName, "Unknown");
         DefaultMutableTreeNode treeNode = new DefaultMutableTreeNode(node);
+        treeNode.setAllowsChildren(false);
+        node.setTreeNode(treeNode);
+        parent.add(treeNode);
         treeNode.setParent(parent);
-        treeNode.setAllowsChildren(true);
-
-        // parent.add(treeNode);
       }
     }
 
-
-
-
-    System.out.println("><>>><<><><<<<<<<<<<<<<<<<<<<<");
-
+    System.out.println("(This is our solution!)");
   }
 
 

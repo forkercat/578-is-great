@@ -113,7 +113,7 @@ public class AcdcWithSmellDetection {
 
 	  System.out.println("ardcArgs: " + Arrays.toString(acdcArgs));
 
-    System.out.println("Running acdc for revision    please wait T_T " + revisionNumber);
+    System.out.println("\nRunning ACDC for revision " + revisionNumber + "(please wait T_T )");
     ACDC.main(acdcArgs);
 
     // the last element of the smellArgs array is the location of the file containing the detected smells (one is created per subdirectory of dir)
@@ -121,10 +121,10 @@ public class AcdcWithSmellDetection {
     logger.debug("Running smell detecion for revision " + revisionNumber);
 
     /** Smell Detector */
-    System.out.println("\nDetecting Smells...\n");
+    System.out.println("\n[Other Stuff] Detecting Smells...\n");
     ArchSmellDetector.setupAndRunStructuralDetectionAlgs(smellArgs);
 
-    System.out.println("\nFinish ACDC... :)\n");
+    System.out.println("\nFinished running ACDC... :)\n\n");
 
   }
 }
