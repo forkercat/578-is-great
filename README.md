@@ -11,7 +11,7 @@ This is a course project based on `ARCADE` and `Tomcat` in CS 578 Software Archi
 
 **Reference:** listed in each section if needed.
 
-
+**Table of Contents:**
 
 - [578-is-great](#578-is-great)
   - [Project Description](#project-description)
@@ -24,6 +24,9 @@ This is a course project based on `ARCADE` and `Tomcat` in CS 578 Software Archi
       - [How It Was Fixed](#how-it-was-fixed)
       - [Failure in Recovery Techniques](#failure-in-recovery-techniques)
       - [What We Did](#what-we-did)
+        - [Recognize A New Pattern](#recognize-a-new-pattern)
+        - [Walkthrough in ACDC Code](#walkthrough-in-acdc-code)
+        - [Solutions That We Tried](#solutions-that-we-tried)
       - [What We Didn’t](#what-we-didnt)
     - [Security Decision #2 (JREPlatform.java)](#security-decision-2-jreplatformjava)
       - [Function Description](#function-description-1)
@@ -31,6 +34,7 @@ This is a course project based on `ARCADE` and `Tomcat` in CS 578 Software Archi
       - [How It Was Fixed](#how-it-was-fixed-1)
   - [Extra Work](#extra-work)
     - [Visualization](#visualization)
+  - [Interesting Stuff](#interesting-stuff)
 
 ## Project Description
 
@@ -153,6 +157,8 @@ Therefore, our goal is to put these three components together in a cluster.
 
 #### What We Did
 
+##### Recognize A New Pattern
+
 It took us a long period of time to think about why this technique failed. We discovered a pattern that the technique could not recognize.
 
 Code:
@@ -184,6 +190,28 @@ This pattern occurs when the following constraints are satisfied:
 - `A` has some code like `? instanceof X` and `X` is the interface `C`
 
 So we came up with some solutions that we thought might work. But before that we wanted to go over the code in `ACDC`.
+
+##### Walkthrough in ACDC Code
+
+- **AcdcWithSmellDetection.java**
+  - `main()`
+    - Read files
+    - `single()`
+      - `builder.build(builderArgs)`
+        - Build dependencies by a third-party library `Classycle`
+        - Store dependencies in an output file `[version]_deps.rsf`
+      - Run ACDC by `ACDC.main(acdcArgs)`
+- **ACDC.java**
+  - `main()`
+    - Set up parameters
+    - Pick patterns we want to use (`BodyHeader`, `SubGraph`, `OrphanAdoption`)
+    - Iterate all selected patterns and build a tree
+    - Generate clusters from the tree starting from `root`
+    - Output into files
+    - Smell Detection
+
+##### Solutions That We Tried
+
 
 
 
@@ -247,3 +275,10 @@ if (JrePlatform.IS_WINDOWS && isInvalidWindowsFilename(name)) {
 ## Extra Work
 
 ### Visualization
+
+
+
+## Interesting Stuff
+
+![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/gye11.png)
+
