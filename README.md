@@ -36,12 +36,12 @@ Setting up [ARCADE](https://github.com/asejfia/CS578-arcade) in our working envi
 
 So if you want to run our code, you can follow these steps:
 
-1. Clone our this repository to your local directory by `git clone git@github.com:junhaowww/578-is-great.git` .
-2. Since the project is so large, we separate Tomcat and some library files from our repository.
+- Clone our this repository to your local directory by `git clone git@github.com:junhaowww/578-is-great.git` .
+- Since the project is so large, we separate Tomcat and some library files from our repository.
   - Download Tomcat [source files]() (it is compiled, no worry), unzip, and put the folder `src` in `578-is-great/tomcat`.
   - Download [library files](), unzip, and put them in `578-is-great/CS578-arcade`.
-3. Open `578-is-great/CS578-arcade` with IntelliJ IDEA (`.idea` exists, do not re-create).
-4. Enjoy:)
+- Open `578-is-great/CS578-arcade` with IntelliJ IDEA (`.idea` exists, do not re-create).
+- Enjoy:)
 
 Other Tools We Used:
 
@@ -51,7 +51,7 @@ Other Tools We Used:
 
 ## Major Task
 
-Tomcat 8.x Vulnerabilities Website: [link](http://tomcat.apache.org/security-8.html)
+Link: [Tomcat 8.x Vulnerabilities](http://tomcat.apache.org/security-8.html)
 
 ### Security Decision #1 (System Property Disclosure)
 
@@ -64,7 +64,7 @@ This was fixed in revision [1754726](https://svn.apache.org/viewvc?view=revision
 <!-- 设计到哪些类和大概的功能 -->
 This security decision is related to several classes including `WebappClassLoaderBase`, `PermissionCheck`, `Digester`.
 
-`WebappClassLoader` is a shared class loader. When Tomcat loads an app, `WebappClassLoaderBase` will create `Digester` to parse XML files and use `Digester` to create other components like Server, Connector, Container, etc.
+`WebappClassLoader` is a shared class loader. When Tomcat loads an app, `WebappClassLoaderBase` will create `Digester` to parse XML files and use `Digester` to create and set up other components like Server, Connector, Container, etc.
 
 `PermissionCheck` is an interface implemented by `WebappClassLoaderBase`. It will be used for permission check when a `Digester` object calls the method `getProperty()`.
 
@@ -78,7 +78,7 @@ public String getProperty(String key) {
 }
 ```
 
-![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/sv36i.png)
+![Code](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/sv36i.png)
 
 
 #### Vulnerability Description
