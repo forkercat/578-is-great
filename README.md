@@ -17,7 +17,7 @@ This is a course project based on `ARCADE` and `Tomcat` in CS 578 Software Archi
   - [Project Description](#project-description)
   - [Summary of What We Did](#summary-of-what-we-did)
   - [Before We Start](#before-we-start)
-  - [Security Decision #1 (System Property Disclosure)](#security-decision-1-system-property-disclosure)
+  - [Security Decision #1](#security-decision-1)
     - [Function Description](#function-description)
     - [Vulnerability Description](#vulnerability-description)
     - [How It Was Fixed](#how-it-was-fixed)
@@ -27,7 +27,7 @@ This is a course project based on `ARCADE` and `Tomcat` in CS 578 Software Archi
       - [Walkthrough in ACDC Code](#walkthrough-in-acdc-code)
       - [Solutions That We Tried](#solutions-that-we-tried)
     - [What We Didn't](#what-we-didnt)
-  - [Security Decision #2 (JREPlatform.java)](#security-decision-2-jreplatformjava)
+  - [Security Decision #2](#security-decision-2)
     - [Function Description](#function-description-1)
     - [Vulnerability Description](#vulnerability-description-1)
     - [How It Was Fixed](#how-it-was-fixed-1)
@@ -71,12 +71,16 @@ Other Tools We Used:
 - [draw.io](https://www.draw.io/)
 
 
-
 Link: [Tomcat 8.x Vulnerabilities](http://tomcat.apache.org/security-8.html)
 
-## Security Decision #1 (System Property Disclosure)
 
-Vulnerability ID: [CVE-2016-6794](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-6794)
+
+
+
+## Security Decision #1
+
+**Name:** System Property Disclosure
+**Vulnerability ID:** [CVE-2016-6794](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-6794)
 
 This was fixed in revision [1754726](https://svn.apache.org/viewvc?view=revision&revision=1754726) for 8.5.x. Open it to see which files are related.
 
@@ -227,7 +231,10 @@ So we came up with some solutions that we thought might work. But before that we
 
 
 
-## Security Decision #2 (JREPlatform.java)
+## Security Decision #2
+
+**Name:** 
+**Vulnerability ID:** 911
 
 ### Function Description
 
