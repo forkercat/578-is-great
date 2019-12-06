@@ -75,6 +75,7 @@ Other Tools We Used:
 
 - [draw.io](https://www.draw.io/)
 - [Observable](https://observablehq.com/)
+- [XML Viewer](https://codebeautify.org/xmlviewer)
 
 
 Link: [Tomcat 8.x Vulnerabilities](http://tomcat.apache.org/security-8.html)
@@ -212,10 +213,12 @@ So we came up with some solutions that we thought might work. But before that we
   - `main()`
     - Set up parameters
     - Pick patterns we want to use (`BodyHeader`, `SubGraph`, `OrphanAdoption`)
+      - `BodyHeader` is useless since it is based on `.h` and `.c` files.
     - Iterate all selected patterns and build a tree
     - Generate clusters from the tree starting from `root`
     - Output into files
     - Smell Detection
+
 
 #### Solutions That We Tried
 
@@ -229,7 +232,7 @@ So we came up with some solutions that we thought might work. But before that we
 
 Basically, we have a singleton class `Tomdog` ([Tomdog.java](https://github.com/junhaowww/578-is-great/blob/master/CS578-arcade/src/OurSolution/Tomdog.java)) that discovers the "instanceof" pattern. It is designed as a singleton because it then can be reused readily.
 
-To find this pattern, `Tomdog` analyzes `.java` source files and uses regular expression to collect all interfaces and find patterns like `implements` and `instanceof`. All this information is stored in several hash maps and hash sets for future usage.
+To find this pattern, `Tomdog` analyzes `.java` source files and uses regular expression to collect all interfaces and find patterns like `A implements B, C, D` and `A instanceof B`. All this information is stored in several hash maps and hash sets for future usage.
 
 ```java
 // Example code snippet for finding "instanceof" in source code
@@ -281,16 +284,61 @@ for (int j = 0; j < selectedPatterns.length(); j++) {
 
 You may notice that we have a new pattern called `InstanceofPattern` ([InstanceofPattern.java](https://github.com/junhaowww/578-is-great/blob/master/CS578-arcade/src/OurSolution/InstanceofPattern.java))
 
+`InstanceofPattern` is a class that extends an abstract class `Pattern`. It should implements a method called `execute()`.
 
+```java
+public class InstanceofPattern extends Pattern {
+  public void execute() { // ... }
+}
+```
+
+Its task is to add the dependency to the tree, but it is quite challenging. In addition, at this time `Tomdog` awakes and we use `findMoreDependencies()` to fetch the new dependencies we found before.
+
+```java
+// Example code snippet for finding new dependencies
+// Returns a list that contains [A, B], [C, D], ...
+//         where A depends on B, C depends on D
+public List<List<String>> findMoreDependencies() {
+  if (newDependencies != null) {
+    return newDependencies;
+  }
+  newDependencies = new ArrayList<>();
+  // for each instanceof
+  for (String classHasInstanceof : instanceofMap.keySet()) {
+    Set<String> interfaces = instanceofMap.get(classHasInstanceof);
+    // for each interface
+    for (String inf : interfaces) {
+      if (implementMap.containsKey(inf)) {
+        // if yes, there is a bunch of classes implementing this interface
+        Set<String> classThatImplInterface = implementMap.get(inf);
+        for (String cls : classThatImplInterface) {
+          // classHasInstanceof depends on cls
+          newDependencies.add(Arrays.asList(classHasInstanceof, cls));
+        }
+      }
+    }
+  }
+  return newDependencies;
+}
+```
+
+**Finally,** we re-ran ARCADE and had the result we expected as follows.
+
+![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/uxriq.png)
 
 
 
 ### What We Didn't
 
+We think this new pattern we found is great. However, our technique should be improved. Consider the following case:
 
+![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/9sdxe.png)
 
+If there exists other classes `D` and `E` that implement `C` and `B`, `D`, `E` are very different. It is obvious that `A` does not depend on `D` and `E`, but in our current method these meaningless dependencies are created as well.
 
+To improve, we can add a constraint to check `X`'s type in the pattern `X instanceof Y`; however, figuring out the type of `X` just by searching is not easy.
 
+Last but not least, our way of adding the new dependencies to the tree should be improved either. The current approach is quite tricky and counter-intuitive. Maybe we can directly modify the exiting patterns like `SubGraph`.
 
 
 ## Security Decision #2
