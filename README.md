@@ -78,43 +78,45 @@ public String getProperty(String key) {
 }
 ```
 
-![Code](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/sv36i.png "Code")
+Class Diagram:
+
+![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/sv36i.png)
 
 
 #### Vulnerability Description
 
 <!-- 安全缺陷的描述（要自己写, 加引用） -->
-There is a method `getProperty()` in `Digester` class. In old versions, this method will simply call System.`getProperty()` and return the result.
+There is a method `getProperty()` in `Digester` class. In old versions, this method will simply call `System.getProperty()` and return the result.
 
-It is possible that a malicious app could get a `Digester` object. Then this app could call the `getProperty()` through the newly created digester object and get system properties that should be invisible to him.
+It is possible that a malicious application could get a `Digester` object and call `getProperty()` through the newly created `Digester` object. Then it gets system properties that should be invisible.
 
 #### How It Was Fixed
 
 <!-- PermissionCheck的原理 -->
-Tomcat added an interface named `PermissionCheck` and the `WebappClassLoaderBase` implemented the `check()` method stated in `PermissionCheck` interface.
-
-Then tomcat modified the `getProperty()` method in `Digester` class. 
-
-When this method is called, it will firstly find the class loader of this app through `Thread.currentThread().getContextClassLoader()`. 
-
-Then it'll check if this class loader is a `WebAppClassLoaderBase`. If so, the digester will call the `check()` method implemented by the classloader to check if he is granted to visite system properties. If the digester cannot pass the permission check, this method will simply return null. If the digester passes the permission check, this method will call `System.getProperty()` and return the its result.
+Tomcat added an interface `PermissionCheck`, and `WebappClassLoaderBase` implements this interface and overwrites `check()` method stated in the interface. Also, Tomcat modifies the method `getProperty()` in `Digester` class. The code is as follows:
 
 ```java
 @Override
 public String getProperty( String key ) {
-    ClassLoader cl = Thread.currentThread().getContextClassLoader();
-    if (cl instanceof PermissionCheck) {
-        Permission p = new PropertyPermission(key, "read");
-        if (!((PermissionCheck) cl).check(p)) {
-            return null;
-        }
+  ClassLoader cl = Thread.currentThread().getContextClassLoader();
+  if (cl instanceof PermissionCheck) {
+    Permission p = new PropertyPermission(key, "read");
+    if (!((PermissionCheck) cl).check(p)) {
+      return null;
     }
-    return System.getProperty(key);
+  }
+  return System.getProperty(key);
 }
 ```
 
+When this method is called, it will firstly find the class loader through `Thread.currentThread().getContextClassLoader()`. Then it will check if this class loader object implements `PermissionCheck`. If so, this loader is actually a `WebappClassLoaderBase` object and `Digester` will call `check()` to see if the application is granted permission to access system properties.
+
+Class Diagram:
+
 ![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/it0or.png)
-**Note:** Webapp
+
+**Note:** `WebappClassLoaderBase`
+
 
 #### Failure of Recovery
 
