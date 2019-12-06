@@ -279,9 +279,7 @@ for (int j = 0; j < selectedPatterns.length(); j++) {
 }
 ```
 
-You may notice that we have a new pattern called `InstanceofPattern` ([InstanceofPattern.java](https://github.com/junhaowww/578-is-great/blob/master/CS578-arcade/src/OurSolution/InstanceofPattern.java))
-
-`InstanceofPattern` is a class that extends an abstract class `Pattern`. It should implements a method called `execute()`.
+You may notice that we have a new pattern called `InstanceofPattern` ([InstanceofPattern.java](https://github.com/junhaowww/578-is-great/blob/master/CS578-arcade/src/OurSolution/InstanceofPattern.java)). `InstanceofPattern` is a class that extends an abstract class `Pattern`. It should implement a method called `execute()`.
 
 ```java
 public class InstanceofPattern extends Pattern {
