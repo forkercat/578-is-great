@@ -4,9 +4,13 @@ This is a course project based on `ARCADE` and `Tomcat` in CS 578.
 
 **Instructor & TA:** [Nenad Medvidovic](mailto:neno@usc.edu), [Adriana Sejfia](mailto:sejfia@usc.edu)
 
-**Author:** Junhao Wang, Han Hu, Haobang Wu (name not listed in order)
+**Authors:** Junhao Wang, Han Hu, Haobang Wu (names not listed in order)
 
 **Contact Us:** [junhaowanggg@gmail.com](mailto:junhaowanggg@gmail.com)
+
+**Reference:** listed in each section.
+
+
 
 
 ## Summary
@@ -14,21 +18,30 @@ This is a course project based on `ARCADE` and `Tomcat` in CS 578.
 
 
 
-## Before Starting
-
+## Before We Start
 
 
 
 
 ## Major Task
 
-### Security #1
+### Security Decision #1 (PermissionCheck.java)
 
-#### Description
+#### Function Description
+
+设计到哪些类和大概的功能
+
+#### Vulnerability Description
+
+安全缺陷的描述（要自己写, 加引用）
+
+#### How It Was Fixed
+
+PermissionCheck的原理
 
 
+#### Failure of Recovery
 
-#### Recovery Technique Problem
 
 
 #### What We Did
@@ -37,9 +50,18 @@ This is a course project based on `ARCADE` and `Tomcat` in CS 578.
 
 #### What We Didn’t
 
-### Security #2
 
 
-## Extra Job
+
+
+
+
+### Security Decision #2 (JREPlatform)
+
+
+
+
+
+## Extra Work
 
 ### Visualization
