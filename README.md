@@ -290,15 +290,14 @@ if (JrePlatform.IS_WINDOWS && isInvalidWindowsFilename(name)) {
 
 ## Extra Work: Visualization
 
-With the help of [D3.js](https://d3js.org/) and [Observable](https://observablehq.com/), we also built some useful illustrations.
+With the help of [D3.js](https://d3js.org/) and [Observable](https://observablehq.com/), we built some useful illustrations.
 
 ### Cluster Bubbles
 
-Link: [[CS578] Cluster Bubbles](https://observablehq.com/@junhaowww/cs578-cluster-bubbles)
+Play With It: [[CS578] Cluster Bubbles](https://observablehq.com/@junhaowww/cs578-cluster-bubbles)
 
-- It based on Word Count Bubble Chart & Generated Tags Cluster for NLP Projects of NASA.
 - It helps you pick up information of all clusters readily.
-- It is a fork of [Word Count Bubble Chart by wolfiex](https://observablehq.com/@wolfiex/word-count-bubble-chart) that adds mouseover behavior.
+- It is based on Word Count Bubble Chart & Generated Tags Cluster for NLP Projects of NASA. It is a fork of [Word Count Bubble Chart by wolfiex](https://observablehq.com/@wolfiex/word-count-bubble-chart) that adds mouseover behavior.
 
 Originally, we have to find clusters from an output file like this:
 
@@ -311,11 +310,10 @@ Visualization:
 
 ### Dependencies on Class Packages
 
-Link: [[CS578] Dependencies on Class Packages](https://observablehq.com/@junhaowww/cs578-dependencies-on-class-packages)
+Play With It: [[CS578] Dependencies on Class Packages](https://observablehq.com/@junhaowww/cs578-dependencies-on-class-packages)
 
-- It is based on MouseOver Chord Diagram.
 - It helps you figure out dependencies between packages.
-- It is a fork of [chord diagram](/@mbostock/d3-chord-diagram) that adds mouseover behavior.
+- It is based on MouseOver Chord Diagram. It is a fork of [chord diagram](/@mbostock/d3-chord-diagram) that adds mouseover behavior.
 
 Originally, we have to find dependencies from an output file like this:
 
