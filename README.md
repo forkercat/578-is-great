@@ -1,5 +1,6 @@
 # 578-is-great
 
+
 This is a course project based on `ARCADE` and `Tomcat` in CS 578 Software Architecture.
 
 **Instructor & TA:** [Nenad Medvidovic](mailto:neno@usc.edu), [Adriana Sejfia](mailto:sejfia@usc.edu)
@@ -8,8 +9,28 @@ This is a course project based on `ARCADE` and `Tomcat` in CS 578 Software Archi
 
 **Contact Us:** [junhaowanggg@gmail.com](mailto:junhaowanggg@gmail.com)
 
-**Reference:** listed in each section.
+**Reference:** listed in each section if needed.
 
+
+
+- [578-is-great](#578-is-great)
+  - [Project Description](#project-description)
+  - [Summary of What We Did](#summary-of-what-we-did)
+  - [Before We Start](#before-we-start)
+  - [Major Task](#major-task)
+    - [Security Decision #1 (System Property Disclosure)](#security-decision-1-system-property-disclosure)
+      - [Function Description](#function-description)
+      - [Vulnerability Description](#vulnerability-description)
+      - [How It Was Fixed](#how-it-was-fixed)
+      - [Failure in Recovery Techniques](#failure-in-recovery-techniques)
+      - [What We Did](#what-we-did)
+      - [What We Didn’t](#what-we-didnt)
+    - [Security Decision #2 (JREPlatform.java)](#security-decision-2-jreplatformjava)
+      - [Function Description](#function-description-1)
+      - [Vulnerability Description](#vulnerability-description-1)
+      - [How It Was Fixed](#how-it-was-fixed-1)
+  - [Extra Work](#extra-work)
+    - [Visualization](#visualization)
 
 ## Project Description
 
@@ -45,7 +66,7 @@ So if you want to run our code, you can follow these steps:
 
 Other Tools We Used:
 
-- Shit
+- [draw.io](https://www.draw.io/)
 
 
 
@@ -115,14 +136,54 @@ Class Diagram:
 
 ![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/it0or.png)
 
-**Note:** `WebappClassLoaderBase`
+**Note:** `WebAppClassLoaderBase` should be `WebappClassLoaderBase`.
 
 
-#### Failure of Recovery
+#### Failure in Recovery Techniques
+
+In the original ACDC technique, it successfully clusters `Digester` and `PermissionCheck`, but it fails in putting `WebappClassLoaderBase` into that cluster.
+
+![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/vd1ru.png)
+
+**Note:** Visualization is in `Extra Work` section.
+
+Therefore, our goal is to put these three components together in a cluster.
 
 
 
 #### What We Did
+
+It took us a long period of time to think about why this technique failed. We discovered a pattern that the technique could not recognize.
+
+Code:
+
+```java
+@Override
+public String getProperty( String key ) {
+  ClassLoader cl = Thread.currentThread().getContextClassLoader();
+  if (cl instanceof PermissionCheck) {
+    Permission p = new PropertyPermission(key, "read");
+    if (!((PermissionCheck) cl).check(p)) {
+      return null;
+    }
+  }
+  return System.getProperty(key);
+}
+```
+
+The interesting thing is that by static analysis we cannot know that `Digester` actually has some connection with `WebappClassLoaderBase`. It turns out that the object `cl` is an object that implements the interface `PermissionCheck`, so we would say `Digester` implicitly "works with" `WebappClassLoaderBase` and should depend on it.
+
+Diagram:
+
+![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/jt3sh.png)
+
+This pattern occurs when the following constraints are satisfied:
+
+- `A` depends on an interface `C` (maybe by `import` or something else)
+- `B` implements the interface `C` ("implements" is also a kind of dependency)
+- `A` has some code like `? instanceof X` and `X` is the interface `C`
+
+So we came up with some solutions that we thought might work. But before that we wanted to go over the code in `ACDC`.
 
 
 
@@ -171,6 +232,17 @@ if (JrePlatform.IS_WINDOWS && isInvalidWindowsFilename(name)) {
 ```
 
 ![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/cgf50.png)
+
+
+
+
+
+
+
+
+
+
+
 
 ## Extra Work
 
