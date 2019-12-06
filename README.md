@@ -17,7 +17,7 @@ In our third homework, we applied two recovery techniques to Tomcat and recovere
 
 In this project, we modify the existing techniques in `ARCADE` and turn them into "security-aware" versions. Specifically, given a security-related architectural decision, our refined techniques can put all its components into a cluster.
 
-**Our Subject System:** Tomcat 8.5.47
+**Our Subject System:** Apache Tomcat 8.5.47
 
 ## Summary of What We Did
 
@@ -26,47 +26,55 @@ In this project, we modify the existing techniques in `ARCADE` and turn them int
 - Know how relevant components work and why the vulnerabilities occur and how they affect the system.
 - Show that original techniques fail in discovering the vulnerabilities.
 - Analyze source code in `ARCADE` and understand how `ACDC` and `ARC` work.
-- Develop solutions that improve the techniques.
-- Use [D3.js](https://d3js.org/) to create cool things of visualization.
+- Develop solutions that improve the techniques, write many comments, and make output more readable.🙄
+- Use [D3.js](https://d3js.org/) to create visualizations (super cool).
 
 
 ## Before We Start
 
 Setting up [ARCADE](https://github.com/asejfia/CS578-arcade) in our working environment is extremely hard. Since we would re-compile source files for many times, we open the project files in IntelliJ IDEA. And yes... it took us few days to make it work.
 
-So if you want to run our code, you can follow these steps.
+So if you want to run our code, you can follow these steps:
 
-- Clone our this repository to your local directory by `git clone git@github.com:junhaowww/578-is-great.git` .
-- Since the project is so large, we separate `Tomcat` and some library files from it.
-  - Download `Tomcat` [source files]() (it is compiled, no worry), unzip, and put the folder `src` in `578-is-great/tomcat`.
+1. Clone our this repository to your local directory by `git clone git@github.com:junhaowww/578-is-great.git` .
+2. Since the project is so large, we separate Tomcat and some library files from our repository.
+  - Download Tomcat [source files]() (it is compiled, no worry), unzip, and put the folder `src` in `578-is-great/tomcat`.
   - Download [library files](), unzip, and put them in `578-is-great/CS578-arcade`.
-- Open `578-is-great/CS578-arcade` with IntelliJ IDEA.
+3. Open `578-is-great/CS578-arcade` with IntelliJ IDEA (`.idea` exists, do not re-create).
+4. Enjoy:)
 
+Other Tools We Used:
 
-### 
+- Shit
 
-环境配置和安装
-用了什么工具
 
 
 ## Major Task
 
-### Security Decision #1 (PermissionCheck.java)
+Tomcat 8.x Vulnerabilities Website: [link](http://tomcat.apache.org/security-8.html)
 
+### Security Decision #1 (System Property Disclosure)
+
+Vulnerability ID: [CVE-2016-6794](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-6794)
+
+This was fixed in revision [1754726](https://svn.apache.org/viewvc?view=revision&revision=1754726) for 8.5.x. Open it to see which files are related.
 
 #### Function Description
 
 <!-- 设计到哪些类和大概的功能 -->
-This security decision is related to serveral classes including `WebAppClassLoaderBase`, `PermissionCheck`, `Digester`.
+This security decision is related to several classes including `WebappClassLoaderBase`, `PermissionCheck`, `Digester`.
 
-The `WebAppClassLoader` is a shared classloader. When tomcat wants to load an app, the `WebAppClassLoader` will create a `Digester` for xml parsing and use the `Digester` to create other components like Server, Connector, Container, etc.
+`WebappClassLoader` is a shared class loader. When Tomcat loads an app, `WebappClassLoaderBase` will create `Digester` to parse XML files and use `Digester` to create other components like Server, Connector, Container, etc.
 
-`PermissionCheck` is an interface implemented by `WebClassLoaderBase`. It will be used for permission check when a digester calls its `getProperty()` method.
+`PermissionCheck` is an interface implemented by `WebappClassLoaderBase`. It will be used for permission check when a `Digester` object calls the method `getProperty()`.
+
+In previous versions, there is no `PermissionCheck`, so the code is as follows:
 
 ```java
+// Digester.java
 @Override
-public String getProperty( String key ) {
-    return System.getProperty(key);
+public String getProperty(String key) {
+  return System.getProperty(key);
 }
 ```
 
@@ -83,7 +91,7 @@ It is possible that a malicious app could get a `Digester` object. Then this app
 #### How It Was Fixed
 
 <!-- PermissionCheck的原理 -->
-Tomcat added an interface named `PermissionCheck` and the `WebAppClassLoaderBase` implemented the `check()` method stated in `PermissionCheck` interface.
+Tomcat added an interface named `PermissionCheck` and the `WebappClassLoaderBase` implemented the `check()` method stated in `PermissionCheck` interface.
 
 Then tomcat modified the `getProperty()` method in `Digester` class. 
 
@@ -106,7 +114,7 @@ public String getProperty( String key ) {
 ```
 
 ![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/it0or.png)
-
+**Note:** Webapp
 
 #### Failure of Recovery
 
