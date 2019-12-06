@@ -143,7 +143,7 @@ Class Diagram:
 
 In the original ACDC technique, it successfully clusters `Digester` and `PermissionCheck`, but it fails in putting `WebappClassLoaderBase` into that cluster.
 
-![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/vd1ru.png)
+![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/or8s5.png)
 
 **Note:** Visualization is in `Extra Work` section.
 
