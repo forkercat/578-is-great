@@ -1,22 +1,32 @@
 # 578-is-great
 
-This is a course project based on `ARCADE` and `Tomcat` in CS 578.
+This is a course project based on `ARCADE` and `Tomcat` in CS 578 Software Architecture.
 
 **Instructor & TA:** [Nenad Medvidovic](mailto:neno@usc.edu), [Adriana Sejfia](mailto:sejfia@usc.edu)
 
-**Authors:** Junhao Wang, Han Hu, Hopong Ng (names not listed in order)
+**Authors:** `Junhao Wang`, `Han Hu`, `Hopong Ng` (names not listed in order)
 
 **Contact Us:** [junhaowanggg@gmail.com](mailto:junhaowanggg@gmail.com)
 
 **Reference:** listed in each section.
 
 
+## Project Description
 
+In our third homework, we applied two recovery techniques to Tomcat and recovered Tomcat's architectures in the form of clusters. However, these techniques are not very suitable to analyze the security of a system from an architecture perspective (e.g. some techniques cannot cluster components of an architectural decision together).
 
-## Summary
+In this project, we modify the existing techniques in ARCADE and turn them into "security-aware" versions. Specifically, given a security-related architectural decision, our refined techniques can put all its components into a cluster.
 
-项目介绍
-大概我们做了什么
+## Summary of What We Did
+
+- Read source code of Tomcat, and understand how Tomcat works.
+- Pick security-related vulnerabilities, analyze if they are suitable for this project.
+- Know how relevant components work and why the vulnerabilities occur and how they affect the system.
+- Show that original techniques fail in discovering the vulnerabilities.
+- Analyze source code in `ARCADE` and understand how `ACDC` and `ARC` work.
+- Develop solutions that improve the techniques.
+- Use [D3.js](https://d3js.org/) to create cool things of visualization.
+
 
 ## Before We Start
 
@@ -99,7 +109,7 @@ public String getProperty( String key ) {
 
 
 
-### Security Decision #2 (JREPlatform)
+### Security Decision #2 (JREPlatform.java)
 
 #### Function Description
 
