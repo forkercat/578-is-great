@@ -17,23 +17,21 @@ This is a course project based on `ARCADE` and `Tomcat` in CS 578 Software Archi
   - [Project Description](#project-description)
   - [Summary of What We Did](#summary-of-what-we-did)
   - [Before We Start](#before-we-start)
-  - [Major Task](#major-task)
-    - [Security Decision #1 (System Property Disclosure)](#security-decision-1-system-property-disclosure)
-      - [Function Description](#function-description)
-      - [Vulnerability Description](#vulnerability-description)
-      - [How It Was Fixed](#how-it-was-fixed)
-      - [Failure in Recovery Techniques](#failure-in-recovery-techniques)
-      - [What We Did](#what-we-did)
-        - [Recognize A New Pattern](#recognize-a-new-pattern)
-        - [Walkthrough in ACDC Code](#walkthrough-in-acdc-code)
-        - [Solutions That We Tried](#solutions-that-we-tried)
-      - [What We Didn’t](#what-we-didnt)
-    - [Security Decision #2 (JREPlatform.java)](#security-decision-2-jreplatformjava)
-      - [Function Description](#function-description-1)
-      - [Vulnerability Description](#vulnerability-description-1)
-      - [How It Was Fixed](#how-it-was-fixed-1)
-  - [Extra Work](#extra-work)
-    - [Visualization](#visualization)
+  - [Security Decision #1 (System Property Disclosure)](#security-decision-1-system-property-disclosure)
+    - [Function Description](#function-description)
+    - [Vulnerability Description](#vulnerability-description)
+    - [How It Was Fixed](#how-it-was-fixed)
+    - [Failure in Recovery Techniques](#failure-in-recovery-techniques)
+    - [What We Did](#what-we-did)
+      - [Recognize A New Pattern](#recognize-a-new-pattern)
+      - [Walkthrough in ACDC Code](#walkthrough-in-acdc-code)
+      - [Solutions That We Tried](#solutions-that-we-tried)
+    - [What We Didn’t](#what-we-didnt)
+  - [Security Decision #2 (JREPlatform.java)](#security-decision-2-jreplatformjava)
+    - [Function Description](#function-description-1)
+    - [Vulnerability Description](#vulnerability-description-1)
+    - [How It Was Fixed](#how-it-was-fixed-1)
+  - [Visualization](#visualization)
   - [Interesting Stuff](#interesting-stuff)
 
 ## Project Description
@@ -74,17 +72,15 @@ Other Tools We Used:
 
 
 
-## Major Task
-
 Link: [Tomcat 8.x Vulnerabilities](http://tomcat.apache.org/security-8.html)
 
-### Security Decision #1 (System Property Disclosure)
+## Security Decision #1 (System Property Disclosure)
 
 Vulnerability ID: [CVE-2016-6794](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-6794)
 
 This was fixed in revision [1754726](https://svn.apache.org/viewvc?view=revision&revision=1754726) for 8.5.x. Open it to see which files are related.
 
-#### Function Description
+### Function Description
 
 <!-- 设计到哪些类和大概的功能 -->
 This security decision is related to several classes including `WebappClassLoaderBase`, `PermissionCheck`, `Digester`.
@@ -108,14 +104,14 @@ Class Diagram:
 ![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/sv36i.png)
 
 
-#### Vulnerability Description
+### Vulnerability Description
 
 <!-- 安全缺陷的描述（要自己写, 加引用） -->
 There is a method `getProperty()` in `Digester` class. In old versions, this method will simply call `System.getProperty()` and return the result.
 
 It is possible that a malicious application could get a `Digester` object and call `getProperty()` through the newly created `Digester` object. Then it gets system properties that should be invisible.
 
-#### How It Was Fixed
+### How It Was Fixed
 
 <!-- PermissionCheck的原理 -->
 Tomcat added an interface `PermissionCheck`, and `WebappClassLoaderBase` implements this interface and overwrites `check()` method stated in the interface. Also, Tomcat modifies the method `getProperty()` in `Digester` class. The code is as follows:
@@ -143,7 +139,7 @@ Class Diagram:
 **Note:** `WebAppClassLoaderBase` should be `WebappClassLoaderBase`.
 
 
-#### Failure in Recovery Techniques
+### Failure in Recovery Techniques
 
 In the original ACDC technique, it successfully clusters `Digester` and `PermissionCheck`, but it fails in putting `WebappClassLoaderBase` into that cluster.
 
@@ -155,9 +151,9 @@ Therefore, our goal is to put these three components together in a cluster.
 
 
 
-#### What We Did
+### What We Did
 
-##### Recognize A New Pattern
+#### Recognize A New Pattern
 
 It took us a long period of time to think about why this technique failed. We discovered a pattern that the technique could not recognize.
 
@@ -191,7 +187,7 @@ This pattern occurs when the following constraints are satisfied:
 
 So we came up with some solutions that we thought might work. But before that we wanted to go over the code in `ACDC`.
 
-##### Walkthrough in ACDC Code
+#### Walkthrough in ACDC Code
 
 - **AcdcWithSmellDetection.java**
   - `main()`
@@ -210,12 +206,12 @@ So we came up with some solutions that we thought might work. But before that we
     - Output into files
     - Smell Detection
 
-##### Solutions That We Tried
+#### Solutions That We Tried
 
 
 
 
-#### What We Didn’t
+### What We Didn’t
 
 
 
@@ -223,9 +219,9 @@ So we came up with some solutions that we thought might work. But before that we
 
 
 
-### Security Decision #2 (JREPlatform.java)
+## Security Decision #2 (JREPlatform.java)
 
-#### Function Description
+### Function Description
 
 <!-- 设计到哪些类和大概的功能 -->
 This security decision is related to classes including `AbstractFileResourceSet` and `JrePlatform`.
@@ -236,7 +232,7 @@ The `JrePlatform` is used to check whether the tomcat is running on windows.
 
 ![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/xj9uh.png)
 
-#### Vulnerability Description
+### Vulnerability Description
 
 <!-- 安全缺陷的描述（要自己写, 加引用） -->
 It's possible that a user upload a JSP file through HTTP PUT and that JSP file could be executed later.
@@ -244,7 +240,7 @@ It's possible that a user upload a JSP file through HTTP PUT and that JSP file c
 In this case, if the URL of that JSP file does not meet the requirement of the server's platform environment, like windows, an error could rise and the tomcat might crash.
 
 
-#### How It Was Fixed
+### How It Was Fixed
 
 <!-- JrePlatform的原理 -->
 Tomcat added another class named `JrePlatform` to solve this problem.
@@ -272,13 +268,17 @@ if (JrePlatform.IS_WINDOWS && isInvalidWindowsFilename(name)) {
 
 
 
-## Extra Work
+## Visualization
 
-### Visualization
+
 
 
 
 ## Interesting Stuff
+
+Each of us worked on each part and then we taught others what we learned.
+
+Very struggling...
 
 ![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/gye11.png)
 
