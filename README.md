@@ -131,8 +131,8 @@ Then the `AbstractFileResourceSet` will check if the current platform is windows
 
 ```java
 if (JrePlatform.IS_WINDOWS && isInvalidWindowsFilename(name)) {
-	            return null;
-	        }
+	return null;
+}
 ```
 
 ![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/asiu7.png)
