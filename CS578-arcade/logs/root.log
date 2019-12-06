@@ -37615,7 +37615,7 @@ DEBUG - org.apache.naming.factory.ResourceLinkFactory javax.naming.spi.ObjectFac
 DEBUG - org.apache.naming.factory.ResourceLinkFactory org.apache.naming.ResourceLinkRef
 DEBUG - org.apache.naming.factory.ResourceLinkFactory org.apache.naming.StringManager
 DEBUG - Running smell detecion for revision 8.5.47
-DEBUG - Elapsed time in milliseconds: 155
+DEBUG - Elapsed time in milliseconds: 240
 DEBUG - Found and built clusters:
 DEBUG - org.apache.catalina.ha.authenticator.ss
 DEBUG - org.apache.el.parser.ss
@@ -37741,7 +37741,7 @@ DEBUG - cal.ss
 DEBUG - javax.persistence.ss
 DEBUG - org.apache.tomcat.websocket.pojo.ss
 DEBUG - org.apache.tomcat.util.codec.ss
-DEBUG - Elapsed time in milliseconds: 469
+DEBUG - Elapsed time in milliseconds: 706
 DEBUG - No. of vertices: 124
 DEBUG - No. of edges: 3726
 DEBUG - Counting this strongly connected component set as relevant

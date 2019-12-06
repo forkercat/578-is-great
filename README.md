@@ -26,14 +26,14 @@ This is a course project based on `ARCADE` and `Tomcat` in CS 578 Software Archi
       - [Recognize A New Pattern](#recognize-a-new-pattern)
       - [Walkthrough in ACDC Code](#walkthrough-in-acdc-code)
       - [Solutions That We Tried](#solutions-that-we-tried)
-    - [What We Didn't](#what-we-didnt)
+    - [Potential Improvement](#potential-improvement)
   - [Security Decision #2](#security-decision-2)
     - [Function Description](#function-description-1)
     - [Vulnerability Description](#vulnerability-description-1)
     - [How It Was Fixed](#how-it-was-fixed-1)
     - [Failure in Recovery Techniques](#failure-in-recovery-techniques-1)
     - [What We Did](#what-we-did-1)
-    - [What We Didn't](#what-we-didnt-1)
+    - [Potential Improvement](#potential-improvement-1)
   - [Extra Work: Visualization](#extra-work-visualization)
     - [Cluster Bubbles](#cluster-bubbles)
     - [Dependencies on Class Packages](#dependencies-on-class-packages)
@@ -94,7 +94,6 @@ This was fixed in revision [1754726](https://svn.apache.org/viewvc?view=revision
 
 ### Function Description
 
-<!-- 设计到哪些类和大概的功能 -->
 This security decision is related to several classes including `WebappClassLoaderBase`, `PermissionCheck`, `Digester`.
 
 `WebappClassLoader` is a shared class loader. When Tomcat loads an app, `WebappClassLoaderBase` will create `Digester` to parse XML files and use `Digester` to create and set up other components like Server, Connector, Container, etc.
@@ -118,14 +117,12 @@ Class Diagram:
 
 ### Vulnerability Description
 
-<!-- 安全缺陷的描述（要自己写, 加引用） -->
 There is a method `getProperty()` in `Digester` class. In old versions, this method will simply call `System.getProperty()` and return the result.
 
 It is possible that a malicious application could get a `Digester` object and call `getProperty()` through the newly created `Digester` object. Then it gets system properties that should be invisible.
 
 ### How It Was Fixed
 
-<!-- PermissionCheck的原理 -->
 Tomcat added an interface `PermissionCheck`, and `WebappClassLoaderBase` implements this interface and overwrites `check()` method stated in the interface. Also, Tomcat modifies the method `getProperty()` in `Digester` class. The code is as follows:
 
 ```java
@@ -258,7 +255,7 @@ private void processWithInstanceof(String codeStr, String className) {
 }
 ```
 
-Also, `Tomdog` find new dependencies based on the pattern we discussed above. For example, it adds a dependency `Digester -> WebappClassLoaderBase`.
+Also, `Tomdog` finds new dependencies based on the pattern we discussed above. For example, it adds a dependency `Digester -> WebappClassLoaderBase`.
 
 Then `Tomdog` is sad because we will put it aside for a while. In `ACDC.java`, we need to put the new dependencies into the tree.
 
@@ -322,13 +319,70 @@ public List<List<String>> findMoreDependencies() {
 }
 ```
 
-**Finally,** we re-ran ARCADE and had the result we expected as follows.
+**Finally,** we re-run ARCADE and have the result we would expect as follows.
 
 ![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/uxriq.png)
 
+Here is the output in console:
+
+```shell
+--------- [start] Tomdog is barking!!! ---------
+
+wait...
+
+We Found: 181 interface & 68 "instanceofs" relationship patterns
+
+--------- [end] Tomdog now starts sleeping :) ---------
+
+// ...
+
+--------- [start] Our Solution (add more dependencies) ---------
+
+We Found: 353 new dependencies because of <instanceof>!
+
+--------- [end] Our Solution ---------
+
+Finish building dependencies... :)
+
+Starting ACDC...
+ardcArgs: [/Users/chuck/Desktop/578-is-great/tomcat/output/ACDC/8.5.47_deps.rsf, /Users/chuck/Desktop/578-is-great/tomcat/output/ACDC/8.5.47_acdc_clustered.rsf]
+
+Running ACDC for revision 8.5.47(please wait T_T )
+
+Include all edges...
+
+ --> The following 3571 nodes were selected for edge induction: 
+   (set IO output level as 2 for information)
 
 
-### What We Didn't
+--------- [start] Using Patterns ---------
+
+
+[1] Executing:  [Subgraph Dominator] pattern...
+
+ --> The following 2050 nodes were selected for edge induction: 
+   (set IO output level as 2 for information)
+
+
+[2] Executing:  [Orphan Adoption] pattern...
+
+ --> The following 243 nodes were selected for edge induction: 
+   (set IO output level as 2 for information)
+
+
+[3] Executing:  [Instanceof Pattern] pattern...
+
+ --> There are 353 new dependencies to be added.
+   (set IO output level as 2 for information)
+
+(This is our solution!)
+
+--------- [end] Using Patterns ---------
+
+// ...
+```
+
+### Potential Improvement
 
 We think this new pattern we found is great. However, our technique should be improved. Consider the following case:
 
@@ -341,15 +395,22 @@ To improve, we can add a constraint to check `X`'s type in the pattern `X instan
 Last but not least, our way of adding the new dependencies to the tree should be improved either. The current approach is quite tricky and counter-intuitive. Maybe we can directly modify the exiting patterns like `SubGraph`.
 
 
+
+
+
+
+
+
+
 ## Security Decision #2
 
-**Name:** 
+**Vulnerability ID:** [???](???)
 
-**Vulnerability ID:** 911
+This was fixed in revision [???](???) for 8.5.x. Open it to see which files are related.
+
 
 ### Function Description
 
-<!-- 设计到哪些类和大概的功能 -->
 This security decision is related to classes including `AbstractFileResourceSet` and `JrePlatform`.
 
 The `AbstractFileResourceSet` is used to get the file identified by a URL.
@@ -360,7 +421,6 @@ The `JrePlatform` is used to check whether the tomcat is running on windows.
 
 ### Vulnerability Description
 
-<!-- 安全缺陷的描述（要自己写, 加引用） -->
 It's possible that a user upload a JSP file through HTTP PUT and that JSP file could be executed later.
 
 In this case, if the URL of that JSP file does not meet the requirement of the server's platform environment, like windows, an error could rise and the tomcat might crash.
@@ -368,7 +428,6 @@ In this case, if the URL of that JSP file does not meet the requirement of the s
 
 ### How It Was Fixed
 
-<!-- JrePlatform的原理 -->
 Tomcat added another class named `JrePlatform` to solve this problem.
 
 Another component is introduced when fetching a file through URL. The `AbstractFileResourceSet` will fetch the IS_WINDOWS variable, which would be initialized through the static method in `JrePlatform` when this class is being loaded.
@@ -396,7 +455,8 @@ if (JrePlatform.IS_WINDOWS && isInvalidWindowsFilename(name)) {
 
 
 
-### What We Didn't
+### Potential Improvement
+
 
 
 
