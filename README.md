@@ -31,6 +31,9 @@ This is a course project based on `ARCADE` and `Tomcat` in CS 578 Software Archi
     - [Function Description](#function-description-1)
     - [Vulnerability Description](#vulnerability-description-1)
     - [How It Was Fixed](#how-it-was-fixed-1)
+    - [Failure in Recovery Techniques](#failure-in-recovery-techniques-1)
+    - [What We Did](#what-we-did-1)
+    - [What We Didn't](#what-we-didnt-1)
   - [Extra Work: Visualization](#extra-work-visualization)
     - [Cluster Bubbles](#cluster-bubbles)
     - [Dependencies on Class Packages](#dependencies-on-class-packages)
@@ -224,6 +227,61 @@ So we came up with some solutions that we thought might work. But before that we
 
 **Note:** Our modification in ACDC mainly lies in [AcdcWithSmellDetection.java](https://github.com/junhaowww/578-is-great/blob/master/CS578-arcade/src/edu/usc/softarch/arcade/AcdcWithSmellDetection.java) and [ACDC.java](https://github.com/junhaowww/578-is-great/blob/master/CS578-arcade/src/acdc/ACDC.java). Code are commented, so it should be readable. In addition, in folder [OurSolution](https://github.com/junhaowww/578-is-great/tree/master/CS578-arcade/src/OurSolution) we create our own classes.
 
+Basically, we have a singleton class `Tomdog` ([Tomdog.java](https://github.com/junhaowww/578-is-great/blob/master/CS578-arcade/src/OurSolution/Tomdog.java)) that discovers the "instanceof" pattern. It is designed as a singleton because it then can be reused readily.
+
+To find this pattern, `Tomdog` analyzes `.java` source files and uses regular expression to collect all interfaces and find patterns like `implements` and `instanceof`. All this information is stored in several hash maps and hash sets for future usage.
+
+```java
+// Example code snippet for finding "instanceof" in source code
+private void processWithInstanceof(String codeStr, String className) {
+  // package name
+  String packageName = getPackageName(codeStr);
+  String fullClassName = packageName + "." + className;
+  Map<String, String> nameMap = classNameMap.get(fullClassName);
+
+  // instanceof
+  Pattern instanceofPattern = Pattern.compile("[.\\s]* (\\((.*)\\s+instanceof\\s+(.*)\\)) [.\\s]*");
+  Matcher m2 = instanceofPattern.matcher(codeStr);
+
+  while (m2.find()) {
+    String interfaceName = nameMap.get(m2.group(3).split("<")[0]);
+    // check if it is an interface
+    if (interfaceName != null && interfaceSet.contains(interfaceName)) {
+      Set<String> set = instanceofMap.getOrDefault(fullClassName, new HashSet<>());
+      set.add(interfaceName);
+      instanceofMap.put(fullClassName, set);
+    }
+  }
+}
+```
+
+Also, `Tomdog` find new dependencies based on the pattern we discussed above. For example, it adds a dependency `Digester -> WebappClassLoaderBase`.
+
+Then `Tomdog` is sad because we will put it aside for a while. In `ACDC.java`, we need to put the new dependencies into the tree.
+
+```java
+// Example code snippet for adding patterns
+Vector vpatterns = new Vector();
+for (int j = 0; j < selectedPatterns.length(); j++) {
+  switch (selectedPatterns.charAt(j)) {
+    case 'h':
+      vpatterns.add(new BodyHeader(root)); break;
+    case 's':
+      vpatterns.add(new SubGraph(root, maxClusterSize)); break;
+    case 'o':
+      vpatterns.add(new OrphanAdoption(root)); break;
+    case 'b': // our pattern
+      vpatterns.add(new InstanceofPattern(root)); break;
+    default:
+      IO.put("Serious error.", 0);
+      System.exit(0);
+  }
+}
+```
+
+You may notice that we have a new pattern called `InstanceofPattern` ([InstanceofPattern.java](https://github.com/junhaowww/578-is-great/blob/master/CS578-arcade/src/OurSolution/InstanceofPattern.java))
+
+
 
 
 
@@ -280,7 +338,17 @@ if (JrePlatform.IS_WINDOWS && isInvalidWindowsFilename(name)) {
 
 
 
+### Failure in Recovery Techniques
 
+
+
+
+### What We Did
+
+
+
+
+### What We Didn't
 
 
 
@@ -291,6 +359,8 @@ if (JrePlatform.IS_WINDOWS && isInvalidWindowsFilename(name)) {
 ## Extra Work: Visualization
 
 With the help of [D3.js](https://d3js.org/) and [Observable](https://observablehq.com/), we built some useful illustrations.
+
+To generate data for visualization, we create a `GetJSON` ([GetJSON.java](https://github.com/junhaowww/578-is-great/blob/master/CS578-arcade/src/OurSolution/GetJSON.java)) class that converts our output information to JSON.
 
 ### Cluster Bubbles
 

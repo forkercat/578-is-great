@@ -23,8 +23,7 @@ public class Tomdog { /* Singleton */
 
   // testing
   public static void main(String[] args) throws IOException {
-    // String projectPath = "/Users/chuck/Desktop/Code/w1/src/files/";
-    String projectPath = "/Users/chuck/Desktop/578-is-great/tomcat/src/8.5.47/";
+    String projectPath = "../tomcat/src/8.5.47/";
     Tomdog dog = new Tomdog(projectPath);
 
     // System.out.println("\nInterfaces:");
