@@ -421,7 +421,6 @@ This security decision is related to two classes `AbstractFileResourceSet` and `
 ![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/xj9uh.png)
 
 
-
 ### Vulnerability Description
 
 It is possible that a user upload a JSP file through an HTTP PUT request and that the JSP file could be executed in the system later.
@@ -449,6 +448,7 @@ Class Diagram:
 
 
 ### Failure in Recovery Techniques
+In the original ACDC technique, ACDC fails in clustering `AbstractFileResourceSet` and `JrePlatform`.
 
 Originally, `org.apache.catalina.webresources.ss` only contains `AbstractFileResourceSet` but does not have `JrePlatform`.
 
@@ -456,12 +456,12 @@ Originally, `org.apache.catalina.webresources.ss` only contains `AbstractFileRes
 
 Problem Analysis:
 
-The reason why `AbstractFileResourceSet` and `JrePlatform` are not clustered is that in SubGraph Pattern, every child of the root will find its coverSet. A coverSet is a HashSet containing a node called "dominator node" and the set of its dominated nodes, `N = n(i), i:1,2,...m`, which have the followling properties.
+The reason why `AbstractFileResourceSet` and `JrePlatform` are not clustered is that in SubGraph Pattern, every child of the root will find its coverSet. A coverSet is a HashSet containing a node called "dominator node" and the set of its dominated nodes, `N = n(i), i:1,2,...m`, which have the following properties.
 
-1. There exists a path from the doninator to every `n(i)`
+1. There exists a path from the dominator to every `n(i)`
 2. For any node `v` such that there exists a path from `v` to any `n(i)`, either dominator node is in that path or `v` is one of `n(i)`.
 
-In our testcase, the coverSet of `org.apache.tomcat.util.compat.JrePlatform` is 
+In our test case, the coverSet of `org.apache.tomcat.util.compat.JrePlatform` is 
 `(org.apache.tomcat.util.compat.JrePlatform, org.apache.tomcat.util.compat.JrePlatform$1)`. 
 After finding its coverSet, a cluster named `org.apache.tomcat.util.compat.ss` will be created which contains `org.apache.tomcat.util.compat.JrePlatform` and `org.apache.tomcat.util.compat.JrePlatform$1`.
 As a result, `org.apache.tomcat.util.compat.JrePlatform` will not appear in any other cluster. So `AbstractFileResourceSet` and `JrePlatform` are not in the same cluster in output.
