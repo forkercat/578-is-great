@@ -449,24 +449,9 @@ Class Diagram:
 
 
 ### Failure in Recovery Techniques
+In the original ACDC technique, ACDC fails in clustering `AbstractFileResourceSet` and `JrePlatform`.
 
 Originally, `org.apache.catalina.webresources.ss` only contains `AbstractFileResourceSet` but does not have `JrePlatform`.
-
-![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/4l34i.png)
-
-
-### What We Did
-
-
-![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/gjr3n.png)
-
-As you can see, they are clustered together now.
-
-![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/f6wgw.png)
-
-
-
-
 
 
 
