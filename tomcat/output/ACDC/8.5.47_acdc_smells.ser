@@ -72,12 +72,14 @@
           <string>javax.el.EvaluationListener</string>
           <string>org.apache.el.parser.AstNot</string>
           <string>org.apache.el.parser.AstMethodParameters</string>
-          <string>org.apache.el.parser.AstValue</string>
+          <string>java.lang.ClassCircularityError</string>
           <string>org.apache.el.parser.AstString</string>
+          <string>org.apache.el.parser.AstValue</string>
           <string>org.apache.el.parser.AstValue$Target</string>
           <string>org.apache.el.parser.AstMod</string>
           <string>org.apache.el.lang.EvaluationContext</string>
           <string>javax.el.ValueReference</string>
+          <string>websocket.snake.Direction</string>
           <string>org.apache.tomcat.jni.Thread</string>
           <string>javax.el.VariableMapper</string>
           <string>org.apache.jasper.el.ELContextWrapper</string>
@@ -93,6 +95,7 @@
           <string>org.apache.el.parser.AstDeferredExpression</string>
           <string>org.apache.el.parser.AstMapEntry</string>
           <string>org.apache.el.parser.AstEqual</string>
+          <string>javax.el.ImportHandler</string>
           <string>org.apache.el.parser.ArithmeticNode</string>
           <string>org.apache.el.parser.AstPlus</string>
           <string>org.apache.catalina.servlet4preview.package-info</string>
@@ -110,7 +113,8 @@
           <string>javax.el.ELManager</string>
           <string>org.apache.el.parser.SimpleCharStream</string>
           <string>org.apache.el.parser.ELParser$LookaheadSuccess</string>
-          <string>org.apache.catalina.util.NetMask</string>
+          <string>org.apache.el.util.Validation</string>
+          <string>websocket.snake.SnakeTimer$1</string>
           <string>org.apache.el.parser.TokenMgrError</string>
           <string>org.apache.tomcat.jni.Multicast</string>
           <string>org.apache.tomcat.jni.PoolCallback</string>
@@ -120,6 +124,7 @@
           <string>org.apache.tomcat.websocket.server.package-info</string>
           <string>websocket.ExamplesConfig</string>
           <string>org.apache.el.parser.AstDynamicExpression</string>
+          <string>org.apache.el.util.Validation$1</string>
           <string>org.apache.el.parser.AstLambdaExpression$1</string>
           <string>org.apache.el.parser.AstGreaterThan</string>
           <string>org.apache.el.parser.AstFunction</string>
@@ -128,6 +133,7 @@
           <string>org.apache.el.parser.AstChoice</string>
           <string>org.apache.el.parser.AstMinus</string>
           <string>org.apache.el.parser.AstNotEqual</string>
+          <string>javax.el.ImportHandler$NotFound</string>
           <string>org.apache.tomcat.util.http.fileupload.package-info</string>
           <string>org.apache.catalina.util.ParameterMap</string>
           <string>javax.el.Expression</string>
@@ -139,6 +145,8 @@
           <string>org.apache.tomcat.util.http.fileupload.util.package-info</string>
           <string>org.apache.el.parser.AstSemicolon</string>
           <string>org.apache.el.parser.ELParserConstants</string>
+          <string>websocket.snake.Location</string>
+          <string>websocket.snake.Location$1</string>
           <string>org.apache.catalina.tribes.tipis.AbstractReplicatedMap</string>
           <string>org.apache.el.parser.ParseException</string>
           <string>org.apache.tomcat.dbcp.dbcp2.cpdsadapter.package-info</string>
@@ -152,43 +160,31 @@
           <string>javax.el.BeanNameResolver</string>
           <string>javax.el.ValueExpression</string>
           <string>org.apache.tomcat.util.http.fileupload.util.mime.package-info</string>
+          <string>websocket.snake.SnakeTimer</string>
           <string>org.apache.el.parser.AstSetData</string>
           <string>java.lang.Object</string>
           <string>java.lang.Class</string>
           <string>org.apache.el.parser.AstMult</string>
           <string>javax.el.BeanNameELResolver</string>
+          <string>websocket.snake.Snake</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
         <name>org.apache.tomcat.util.buf.ss</name>
         <entities>
           <string>org.apache.tomcat.util.buf.CharChunk</string>
-          <string>org.apache.tomcat.util.buf.UDecoder$DecodeException</string>
-          <string>org.apache.tomcat.util.buf.MessageBytes$MessageBytesFactory</string>
-          <string>java.io.ObjectInputStream</string>
-          <string>java.lang.Iterable</string>
-          <string>org.apache.tomcat.util.buf.Ascii</string>
-          <string>org.apache.tomcat.util.buf.ByteChunk</string>
-          <string>org.apache.tomcat.util.buf.ByteChunk$ByteOutputChannel</string>
-          <string>org.apache.tomcat.util.buf.UDecoder</string>
-          <string>org.apache.tomcat.util.buf.CharsetCache$DummyCharset</string>
-          <string>java.io.ObjectOutputStream</string>
-          <string>org.apache.tomcat.util.buf.StringCache$1</string>
-          <string>org.apache.tomcat.util.buf.CharsetCache</string>
-          <string>org.apache.tomcat.util.buf.AbstractChunk</string>
-          <string>org.apache.tomcat.util.buf.StringCache$ByteEntry</string>
-          <string>org.apache.tomcat.util.buf.ByteChunk$ByteInputChannel</string>
           <string>java.lang.Cloneable</string>
           <string>org.apache.tomcat.util.buf.CharChunk$CharInputChannel</string>
           <string>org.apache.tomcat.util.buf.MessageBytes$1</string>
+          <string>org.apache.tomcat.util.buf.MessageBytes$MessageBytesFactory</string>
           <string>org.apache.tomcat.util.buf.StringCache</string>
           <string>org.apache.tomcat.util.buf.CharChunk$CharOutputChannel</string>
           <string>org.apache.tomcat.util.buf.StringCache$CharEntry</string>
           <string>java.util.TreeMap</string>
-          <string>java.io.CharConversionException</string>
-          <string>org.apache.tomcat.util.buf.StringUtils</string>
           <string>org.apache.tomcat.util.buf.MessageBytes</string>
-          <string>org.apache.tomcat.util.buf.StringUtils$1</string>
+          <string>org.apache.tomcat.util.buf.StringCache$1</string>
+          <string>org.apache.tomcat.util.buf.AbstractChunk</string>
+          <string>org.apache.tomcat.util.buf.StringCache$ByteEntry</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -204,29 +200,6 @@
           <string>javax.servlet.http.Cookie</string>
           <string>javax.servlet.http.CookieNameValidator</string>
           <string>java.text.MessageFormat</string>
-        </entities>
-      </edu.usc.softarch.arcade.facts.ConcernCluster>
-      <edu.usc.softarch.arcade.facts.ConcernCluster>
-        <name>org.apache.tomcat.util.ss</name>
-        <entities>
-          <string>java.lang.management.CompilationMXBean</string>
-          <string>java.lang.management.RuntimeMXBean</string>
-          <string>java.lang.Thread$State</string>
-          <string>java.lang.management.MonitorInfo</string>
-          <string>java.lang.management.PlatformLoggingMXBean</string>
-          <string>java.lang.management.MemoryType</string>
-          <string>java.lang.management.MemoryManagerMXBean</string>
-          <string>java.lang.management.ThreadMXBean</string>
-          <string>java.lang.management.MemoryMXBean</string>
-          <string>org.apache.tomcat.util.Diagnostics</string>
-          <string>java.lang.management.ThreadInfo</string>
-          <string>java.lang.management.GarbageCollectorMXBean</string>
-          <string>java.lang.management.MemoryPoolMXBean</string>
-          <string>java.lang.management.PlatformManagedObject</string>
-          <string>java.lang.management.OperatingSystemMXBean</string>
-          <string>java.lang.management.ClassLoadingMXBean</string>
-          <string>java.lang.management.LockInfo</string>
-          <string>java.lang.management.MemoryUsage</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -269,6 +242,29 @@
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
+        <name>org.apache.tomcat.util.ss</name>
+        <entities>
+          <string>java.lang.management.CompilationMXBean</string>
+          <string>java.lang.management.RuntimeMXBean</string>
+          <string>java.lang.Thread$State</string>
+          <string>java.lang.management.MonitorInfo</string>
+          <string>java.lang.management.PlatformLoggingMXBean</string>
+          <string>java.lang.management.MemoryType</string>
+          <string>java.lang.management.MemoryManagerMXBean</string>
+          <string>java.lang.management.ThreadMXBean</string>
+          <string>java.lang.management.MemoryMXBean</string>
+          <string>org.apache.tomcat.util.Diagnostics</string>
+          <string>java.lang.management.ThreadInfo</string>
+          <string>java.lang.management.GarbageCollectorMXBean</string>
+          <string>java.lang.management.MemoryPoolMXBean</string>
+          <string>java.lang.management.PlatformManagedObject</string>
+          <string>java.lang.management.OperatingSystemMXBean</string>
+          <string>java.lang.management.ClassLoadingMXBean</string>
+          <string>java.lang.management.LockInfo</string>
+          <string>java.lang.management.MemoryUsage</string>
+        </entities>
+      </edu.usc.softarch.arcade.facts.ConcernCluster>
+      <edu.usc.softarch.arcade.facts.ConcernCluster>
         <name>org.apache.jasper.xmlparser.ss</name>
         <entities>
           <string>org.apache.jasper.xmlparser.XMLChar</string>
@@ -277,7 +273,6 @@
           <string>org.apache.jasper.xmlparser.UCSReader</string>
           <string>java.lang.Deprecated</string>
           <string>org.apache.jasper.xmlparser.XMLEncodingDetector</string>
-          <string>org.apache.jasper.compiler.Localizer</string>
           <string>org.apache.jasper.xmlparser.XMLEncodingDetector$RewindableInputStream</string>
           <string>java.io.Reader</string>
           <string>org.apache.jasper.xmlparser.SymbolTable$Entry</string>
@@ -293,6 +288,7 @@
         <entities>
           <string>java.awt.Color</string>
           <string>websocket.drawboard.Client</string>
+          <string>javax.websocket.CloseReason$CloseCodes</string>
           <string>javax.websocket.CloseReason</string>
           <string>java.awt.geom.Rectangle2D</string>
           <string>java.awt.RenderingHints</string>
@@ -300,6 +296,7 @@
           <string>websocket.drawboard.DrawMessage$ParseException</string>
           <string>java.lang.AssertionError</string>
           <string>websocket.drawboard.DrawboardEndpoint</string>
+          <string>javax.websocket.CloseReason$CloseCode</string>
           <string>java.awt.Graphics2D</string>
           <string>java.awt.geom.Arc2D</string>
           <string>websocket.drawboard.Room</string>
@@ -330,8 +327,18 @@
           <string>websocket.drawboard.wsmessages.BinaryWebsocketMessage</string>
           <string>websocket.drawboard.Room$MessageType</string>
           <string>java.awt.BasicStroke</string>
-          <string>websocket.drawboard.DrawboardEndpoint$3$1</string>
+          <string>javax.websocket.CloseReason$CloseCodes$1</string>
           <string>websocket.drawboard.wsmessages.AbstractWebsocketMessage</string>
+          <string>websocket.drawboard.DrawboardEndpoint$3$1</string>
+        </entities>
+      </edu.usc.softarch.arcade.facts.ConcernCluster>
+      <edu.usc.softarch.arcade.facts.ConcernCluster>
+        <name>javax.servlet.jsp.ss</name>
+        <entities>
+          <string>javax.servlet.jsp.JspPage</string>
+          <string>javax.servlet.jsp.PageContext</string>
+          <string>javax.servlet.jsp.ErrorData</string>
+          <string>javax.servlet.jsp.HttpJspPage</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -386,7 +393,6 @@
           <string>java.nio.channels.Selector</string>
           <string>org.apache.tomcat.jni.Mmap</string>
           <string>org.apache.tomcat.util.net.TLSClientHelloExtractor$ExtractorResult</string>
-          <string>org.apache.tomcat.util.net.AbstractEndpoint$Handler</string>
           <string>org.apache.tomcat.util.net.NioEndpoint$1</string>
           <string>org.apache.tomcat.util.net.NioBlockingSelector</string>
           <string>org.apache.tomcat.util.net.SocketWrapperBase$CompletionCheck</string>
@@ -402,7 +408,6 @@
           <string>javax.net.ssl.SSLEngineResult$Status</string>
           <string>org.apache.tomcat.util.threads.TaskThreadFactory</string>
           <string>org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper</string>
-          <string>org.apache.tomcat.util.net.openssl.OpenSSLImplementation</string>
           <string>java.nio.channels.AsynchronousSocketChannel</string>
           <string>org.apache.tomcat.util.net.NioEndpoint$SocketProcessor</string>
           <string>org.apache.tomcat.util.net.AbstractEndpoint$Acceptor$AcceptorState</string>
@@ -417,14 +422,11 @@
           <string>org.apache.tomcat.util.net.openssl.ciphers.Authentication</string>
           <string>org.apache.tomcat.util.net.AprEndpoint$SocketList</string>
           <string>org.apache.tomcat.util.net.NioSelectorPool</string>
-          <string>org.apache.tomcat.util.net.SSLUtil</string>
           <string>java.util.concurrent.ExecutionException</string>
-          <string>org.apache.tomcat.util.net.SSLHostConfigCertificate$StoreType</string>
           <string>org.apache.tomcat.util.net.SecureNio2Channel$1</string>
           <string>org.apache.tomcat.util.net.SecureNio2Channel$2</string>
           <string>org.apache.tomcat.util.net.SecureNio2Channel$3</string>
           <string>org.apache.tomcat.util.net.SecureNio2Channel$4</string>
-          <string>org.apache.tomcat.util.net.AbstractEndpoint$Handler$SocketState</string>
           <string>org.apache.tomcat.util.net.AprEndpoint$1</string>
           <string>org.apache.tomcat.util.net.SecureNio2Channel$5</string>
           <string>java.util.concurrent.LinkedBlockingDeque</string>
@@ -454,14 +456,12 @@
           <string>org.apache.tomcat.util.net.AprEndpoint$AprSocketWrapper</string>
           <string>java.nio.channels.SocketChannel</string>
           <string>org.apache.tomcat.util.net.AprEndpoint$Poller</string>
-          <string>org.apache.tomcat.util.net.AbstractJsseEndpoint$1</string>
           <string>org.apache.tomcat.util.net.SocketProcessorBase</string>
           <string>org.apache.tomcat.util.net.NioBlockingSelector$BlockPoller$RunnableCancel</string>
           <string>java.security.cert.CRL</string>
           <string>org.apache.tomcat.util.net.AbstractEndpoint</string>
           <string>org.apache.tomcat.util.net.SocketWrapperBase$BlockingMode</string>
           <string>org.apache.tomcat.util.net.TLSClientHelloExtractor</string>
-          <string>org.apache.tomcat.util.net.SSLUtil$ProtocolInfo</string>
           <string>java.security.cert.X509CertSelector</string>
           <string>java.nio.file.StandardOpenOption</string>
           <string>org.apache.tomcat.util.net.SendfileKeepAliveState</string>
@@ -469,8 +469,8 @@
           <string>org.apache.tomcat.util.net.AbstractEndpoint$BindState</string>
           <string>java.io.EOFException</string>
           <string>org.apache.tomcat.jni.File</string>
-          <string>org.apache.tomcat.util.net.SecureNioChannel</string>
           <string>org.apache.tomcat.util.ExceptionUtils</string>
+          <string>org.apache.tomcat.util.net.SecureNioChannel</string>
           <string>java.nio.channels.NetworkChannel</string>
           <string>org.apache.tomcat.util.net.NioEndpoint$PollerEvent</string>
           <string>java.security.cert.CRLException</string>
@@ -491,7 +491,6 @@
           <string>org.apache.tomcat.jni.Address</string>
           <string>org.apache.tomcat.util.net.SSLImplementation</string>
           <string>org.apache.tomcat.util.net.NioBlockingSelector$KeyReference</string>
-          <string>org.apache.tomcat.util.net.AbstractJsseEndpoint</string>
           <string>java.io.OutputStreamWriter</string>
           <string>java.nio.channels.InterruptedByTimeoutException</string>
           <string>org.apache.tomcat.util.net.Nio2Endpoint$1</string>
@@ -519,7 +518,6 @@
           <string>java.nio.channels.SelectableChannel</string>
           <string>java.lang.InterruptedException</string>
           <string>java.security.cert.CertStore</string>
-          <string>org.apache.tomcat.util.net.SSLHostConfigCertificate</string>
           <string>org.apache.tomcat.util.buf.ByteBufferHolder</string>
           <string>org.apache.tomcat.util.net.AprSSLSupport</string>
           <string>javax.net.ssl.ManagerFactoryParameters</string>
@@ -529,24 +527,18 @@
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
-        <name>javax.servlet.jsp.ss</name>
-        <entities>
-          <string>javax.servlet.jsp.JspPage</string>
-          <string>javax.servlet.jsp.PageContext</string>
-          <string>javax.servlet.jsp.ErrorData</string>
-          <string>javax.servlet.jsp.HttpJspPage</string>
-        </entities>
-      </edu.usc.softarch.arcade.facts.ConcernCluster>
-      <edu.usc.softarch.arcade.facts.ConcernCluster>
         <name>examples.ss</name>
         <entities>
+          <string>javax.servlet.jsp.tagext.TagSupport</string>
           <string>javax.servlet.jsp.tagext.BodyContent</string>
           <string>examples.ExampleTagBase</string>
           <string>javax.servlet.jsp.tagext.BodyTag</string>
           <string>javax.servlet.jsp.tagext.BodyTagSupport</string>
           <string>examples.LogTag</string>
           <string>javax.servlet.jsp.JspWriter</string>
+          <string>javax.servlet.jsp.tagext.IterationTag</string>
           <string>examples.FooTag</string>
+          <string>examples.ValuesTag</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -563,7 +555,6 @@
           <string>javax.xml.parsers.SAXParser</string>
           <string>org.apache.catalina.startup.Catalina$CatalinaShutdownHook</string>
           <string>javax.persistence.PersistenceContexts</string>
-          <string>org.apache.tomcat.JarScannerCallback</string>
           <string>javax.annotation.Resource</string>
           <string>org.apache.catalina.startup.LifecycleListenerRule</string>
           <string>javax.servlet.annotation.WebListener</string>
@@ -725,7 +716,6 @@
       <edu.usc.softarch.arcade.facts.ConcernCluster>
         <name>javax.el.ss</name>
         <entities>
-          <string>javax.el.CompositeELResolver$FeatureIterator</string>
           <string>javax.el.JreCompat</string>
           <string>org.apache.naming.factory.BeanFactory</string>
           <string>javax.el.ExpressionFactory</string>
@@ -741,7 +731,6 @@
           <string>javax.el.BeanELResolver$1</string>
           <string>javax.el.ExpressionFactory$CacheValue</string>
           <string>java.lang.reflect.Constructor</string>
-          <string>javax.el.ImportHandler</string>
           <string>java.beans.Introspector</string>
           <string>javax.el.Util$Wrapper</string>
           <string>javax.el.BeanELResolver$BeanProperty</string>
@@ -750,11 +739,9 @@
           <string>javax.el.Util</string>
           <string>javax.el.Util$MatchResult</string>
           <string>javax.el.ExpressionFactory$2</string>
-          <string>javax.el.CompositeELResolver</string>
           <string>javax.el.ExpressionFactory$1</string>
           <string>javax.el.ExpressionFactory$3</string>
-          <string>java.lang.ClassCircularityError</string>
-          <string>javax.el.ImportHandler$NotFound</string>
+          <string>java.util.MissingResourceException</string>
           <string>javax.el.BeanELResolver$BeanProperties</string>
           <string>javax.el.Util$CacheValue</string>
           <string>javax.el.ELProcessor</string>
@@ -769,15 +756,6 @@
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
-        <name>org.apache.catalina.tribes.tipis.ss</name>
-        <entities>
-          <string>org.apache.catalina.tribes.tipis.AbstractReplicatedMap</string>
-          <string>org.apache.catalina.tribes.tipis.ReplicatedMapEntry</string>
-          <string>org.apache.catalina.tribes.tipis.AbstractReplicatedMap$MapEntry</string>
-          <string>org.apache.catalina.tribes.tipis.AbstractReplicatedMap$State</string>
-        </entities>
-      </edu.usc.softarch.arcade.facts.ConcernCluster>
-      <edu.usc.softarch.arcade.facts.ConcernCluster>
         <name>org.apache.tomcat.util.http.fileupload.servlet.ss</name>
         <entities>
           <string>org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload</string>
@@ -789,9 +767,6 @@
         <entities>
           <string>javax.websocket.server.ServerEndpointConfig$Builder</string>
           <string>javax.websocket.server.DefaultServerEndpointConfig</string>
-          <string>javax.websocket.server.ServerEndpointConfig$Configurator$PrivilegedLoadDefault</string>
-          <string>javax.websocket.server.ServerEndpointConfig$Configurator</string>
-          <string>javax.websocket.server.ServerEndpointConfig$1</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -808,27 +783,20 @@
         <name>org.apache.tomcat.util.scan.ss</name>
         <entities>
           <string>java.util.jar.Manifest</string>
-          <string>org.apache.catalina.storeconfig.JarScannerSF</string>
           <string>org.apache.catalina.ant.DeployTask</string>
           <string>org.apache.tomcat.util.scan.StandardJarScanFilter$1</string>
           <string>org.apache.tomcat.Jar</string>
           <string>org.apache.tomcat.util.scan.JarFileUrlNestedJar</string>
           <string>java.net.URL</string>
-          <string>org.apache.tomcat.util.scan.Constants</string>
           <string>org.apache.tomcat.util.scan.JarFactory</string>
-          <string>org.apache.tomcat.JarScanType</string>
           <string>java.util.jar.JarFile</string>
-          <string>java.util.jar.Attributes</string>
           <string>org.apache.tomcat.util.scan.UrlJar</string>
           <string>org.apache.tomcat.util.scan.JarFileUrlJar</string>
           <string>org.apache.tomcat.util.file.Matcher</string>
-          <string>org.apache.tomcat.JarScanFilter</string>
           <string>java.net.URLConnection</string>
-          <string>org.apache.tomcat.util.scan.StandardJarScanner$ClassPathEntry</string>
           <string>org.apache.tomcat.util.scan.StandardJarScanFilter</string>
           <string>org.apache.tomcat.util.scan.AbstractInputStreamJar</string>
           <string>java.net.JarURLConnection</string>
-          <string>org.apache.tomcat.util.scan.StandardJarScanner</string>
           <string>org.apache.tomcat.util.scan.NonClosingJarInputStream</string>
           <string>java.io.InputStream</string>
         </entities>
@@ -861,7 +829,6 @@
           <string>org.apache.catalina.ssi.ExpressionTokenizer</string>
           <string>org.apache.catalina.ssi.ExpressionParseTree$OppNode</string>
           <string>java.lang.System</string>
-          <string>org.apache.catalina.ssi.SSIFilter</string>
           <string>org.apache.catalina.ssi.SSIConditionalState</string>
           <string>org.apache.catalina.ssi.ExpressionParseTree$StringNode</string>
           <string>org.apache.catalina.ssi.SSIExec</string>
@@ -871,11 +838,9 @@
           <string>org.apache.catalina.ssi.SSIConditional</string>
           <string>org.apache.catalina.ssi.SSIMediator</string>
           <string>org.apache.catalina.util.IOTools</string>
-          <string>org.apache.catalina.ssi.SSIServletExternalResolver$ServletContextAndPath</string>
           <string>org.apache.catalina.ssi.ExpressionParseTree</string>
           <string>org.apache.catalina.ssi.ExpressionParseTree$EqualNode</string>
           <string>org.apache.catalina.ssi.SSIProcessor</string>
-          <string>org.apache.catalina.ssi.SSIServletExternalResolver</string>
           <string>org.apache.catalina.ssi.ExpressionParseTree$LessThanNode</string>
           <string>java.io.PrintWriter</string>
           <string>org.apache.catalina.ssi.SSIFsize</string>
@@ -884,18 +849,15 @@
           <string>java.util.regex.PatternSyntaxException</string>
           <string>java.lang.Process</string>
           <string>org.apache.catalina.ssi.ExpressionParseTree$CompareNode</string>
-          <string>org.apache.catalina.ssi.ResponseIncludeWrapper</string>
           <string>org.apache.catalina.ssi.SSIStopProcessingException</string>
           <string>org.apache.catalina.ssi.SSIInclude</string>
           <string>org.apache.catalina.ssi.SSICommand</string>
           <string>org.apache.catalina.ssi.ExpressionParseTree$AndNode</string>
           <string>org.apache.catalina.ssi.SSIPrintenv</string>
           <string>org.apache.catalina.ssi.ExpressionParseTree$OrNode</string>
-          <string>org.apache.catalina.ssi.SSIServletRequestUtil</string>
           <string>org.apache.catalina.ssi.SSISet</string>
           <string>org.apache.catalina.ssi.SSIServlet</string>
           <string>org.apache.catalina.ssi.SSIConfig</string>
-          <string>org.apache.catalina.ssi.ByteArrayServletOutputStream</string>
           <string>org.apache.catalina.ssi.ExpressionParseTree$1</string>
           <string>org.apache.catalina.ssi.SSIEcho</string>
           <string>org.apache.catalina.ssi.SSIExternalResolver</string>
@@ -909,10 +871,6 @@
           <string>org.apache.catalina.tribes.util.ExecutorFactory$TribesThreadPoolExecutor</string>
           <string>org.apache.catalina.tribes.util.ExecutorFactory$TaskQueue</string>
           <string>java.util.concurrent.ThreadPoolExecutor</string>
-          <string>org.apache.catalina.tribes.util.TcclThreadFactory$1</string>
-          <string>org.apache.catalina.tribes.util.TcclThreadFactory</string>
-          <string>org.apache.catalina.tribes.util.StringManager$1</string>
-          <string>org.apache.catalina.tribes.util.StringManager</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -921,6 +879,7 @@
           <string>org.apache.juli.ClassLoaderLogManager$LogNode</string>
           <string>org.apache.juli.ClassLoaderLogManager$4</string>
           <string>java.text.SimpleDateFormat</string>
+          <string>java.lang.ThreadGroup</string>
           <string>org.apache.juli.ClassLoaderLogManager$1</string>
           <string>org.apache.juli.FileHandler$1$2</string>
           <string>org.apache.juli.ClassLoaderLogManager$2</string>
@@ -963,40 +922,17 @@
       <edu.usc.softarch.arcade.facts.ConcernCluster>
         <name>org.apache.tomcat.util.http.fileupload.ss</name>
         <entities>
-          <string>org.apache.tomcat.util.http.fileupload.MultipartStream$IllegalBoundaryException</string>
-          <string>org.apache.tomcat.util.http.fileupload.MultipartStream$ItemInputStream</string>
-          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl$FileItemStreamImpl</string>
-          <string>org.apache.tomcat.util.http.fileupload.MultipartStream</string>
-          <string>org.apache.tomcat.util.http.fileupload.FileUploadException</string>
-          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl</string>
-          <string>org.apache.tomcat.util.http.fileupload.util.mime.ParseException</string>
-          <string>org.apache.tomcat.util.http.fileupload.FileItemStream</string>
-          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase$FileSizeLimitExceededException</string>
-          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase</string>
-          <string>org.apache.tomcat.util.http.fileupload.FileItemStream$ItemSkippedException</string>
-          <string>org.apache.tomcat.util.http.fileupload.util.FileItemHeadersImpl</string>
-          <string>org.apache.tomcat.util.http.fileupload.DeferredFileOutputStream</string>
-          <string>org.apache.tomcat.util.http.fileupload.ParameterParser</string>
-          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl$FileItemStreamImpl$1</string>
-          <string>org.apache.tomcat.util.http.fileupload.MultipartStream$MalformedStreamException</string>
-          <string>org.apache.tomcat.util.http.fileupload.RequestContext</string>
+          <string>org.apache.tomcat.util.http.fileupload.util.mime.QuotedPrintableDecoder</string>
           <string>java.io.OutputStream</string>
           <string>org.apache.tomcat.util.http.fileupload.util.mime.MimeUtility</string>
+          <string>java.lang.Character</string>
+          <string>org.apache.tomcat.util.http.fileupload.DeferredFileOutputStream</string>
+          <string>org.apache.tomcat.util.http.fileupload.ParameterParser</string>
           <string>org.apache.tomcat.util.http.fileupload.ByteArrayOutputStream</string>
           <string>org.apache.tomcat.util.http.fileupload.FileUtils</string>
-          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase$SizeLimitExceededException</string>
-          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase$FileUploadIOException</string>
           <string>org.apache.tomcat.util.http.fileupload.ThresholdingOutputStream</string>
-          <string>org.apache.tomcat.util.http.fileupload.UploadContext</string>
-          <string>org.apache.tomcat.util.http.fileupload.util.mime.QuotedPrintableDecoder</string>
-          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase$IOFileUploadException</string>
-          <string>org.apache.tomcat.util.http.fileupload.ProgressListener</string>
-          <string>org.apache.tomcat.util.http.fileupload.MultipartStream$ProgressNotifier</string>
-          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl$1</string>
-          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase$InvalidContentTypeException</string>
-          <string>org.apache.tomcat.util.http.fileupload.FileItemIterator</string>
-          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase$SizeException</string>
           <string>java.io.UnsupportedEncodingException</string>
+          <string>org.apache.tomcat.util.http.fileupload.util.mime.ParseException</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -1021,6 +957,39 @@
           <string>org.apache.naming.factory.SendMailFactory$1</string>
           <string>org.apache.naming.LookupRef</string>
           <string>javax.mail.Authenticator</string>
+        </entities>
+      </edu.usc.softarch.arcade.facts.ConcernCluster>
+      <edu.usc.softarch.arcade.facts.ConcernCluster>
+        <name>org.apache.catalina.users.ss</name>
+        <entities>
+          <string>org.apache.catalina.users.AbstractGroup</string>
+          <string>org.apache.catalina.mbeans.UserMBean</string>
+          <string>org.apache.catalina.users.MemoryRole</string>
+          <string>org.apache.tomcat.util.security.Escape</string>
+          <string>java.lang.Iterable</string>
+          <string>org.apache.catalina.Role</string>
+          <string>org.apache.catalina.UserDatabase</string>
+          <string>org.apache.catalina.users.MemoryUserCreationFactory</string>
+          <string>org.apache.catalina.Group</string>
+          <string>org.apache.catalina.users.MemoryUser$4</string>
+          <string>org.apache.catalina.users.MemoryUser$3</string>
+          <string>org.apache.catalina.users.MemoryRoleCreationFactory</string>
+          <string>org.apache.catalina.users.MemoryUser$2</string>
+          <string>org.apache.catalina.users.MemoryUser$1</string>
+          <string>org.apache.catalina.users.AbstractUser</string>
+          <string>org.apache.catalina.mbeans.GroupMBean</string>
+          <string>org.apache.catalina.users.MemoryUserDatabase</string>
+          <string>org.apache.catalina.users.MemoryGroupCreationFactory</string>
+          <string>org.apache.tomcat.util.digester.AbstractObjectCreationFactory</string>
+          <string>org.apache.catalina.users.MemoryGroup$1</string>
+          <string>org.apache.tomcat.util.buf.StringUtils$Function</string>
+          <string>org.apache.tomcat.util.buf.StringUtils</string>
+          <string>org.apache.catalina.User</string>
+          <string>org.apache.catalina.users.AbstractRole</string>
+          <string>org.apache.catalina.users.MemoryUser</string>
+          <string>org.apache.catalina.mbeans.MemoryUserDatabaseMBean</string>
+          <string>org.apache.catalina.users.MemoryGroup</string>
+          <string>org.apache.tomcat.util.buf.StringUtils$1</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -1050,44 +1019,14 @@
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
-        <name>org.apache.catalina.users.ss</name>
-        <entities>
-          <string>org.apache.catalina.users.AbstractGroup</string>
-          <string>org.apache.catalina.mbeans.UserMBean</string>
-          <string>org.apache.catalina.users.MemoryRole</string>
-          <string>org.apache.tomcat.util.security.Escape</string>
-          <string>org.apache.catalina.Role</string>
-          <string>org.apache.catalina.UserDatabase</string>
-          <string>org.apache.catalina.users.MemoryUserCreationFactory</string>
-          <string>org.apache.catalina.Group</string>
-          <string>org.apache.catalina.users.MemoryUser$4</string>
-          <string>org.apache.catalina.users.MemoryUser$3</string>
-          <string>org.apache.catalina.users.MemoryRoleCreationFactory</string>
-          <string>org.apache.catalina.users.MemoryUser$2</string>
-          <string>org.apache.catalina.users.MemoryUser$1</string>
-          <string>org.apache.catalina.users.AbstractUser</string>
-          <string>org.apache.catalina.mbeans.GroupMBean</string>
-          <string>org.apache.catalina.users.MemoryUserDatabase</string>
-          <string>org.apache.catalina.users.MemoryGroupCreationFactory</string>
-          <string>org.apache.tomcat.util.digester.AbstractObjectCreationFactory</string>
-          <string>org.apache.catalina.users.MemoryGroup$1</string>
-          <string>org.apache.tomcat.util.buf.StringUtils$Function</string>
-          <string>org.apache.catalina.User</string>
-          <string>org.apache.catalina.users.AbstractRole</string>
-          <string>org.apache.catalina.users.MemoryUser</string>
-          <string>org.apache.catalina.mbeans.MemoryUserDatabaseMBean</string>
-          <string>org.apache.catalina.users.MemoryGroup</string>
-        </entities>
-      </edu.usc.softarch.arcade.facts.ConcernCluster>
-      <edu.usc.softarch.arcade.facts.ConcernCluster>
         <name>org.apache.jasper.runtime.ss</name>
         <entities>
           <string>org.apache.jasper.runtime.JspFactoryImpl$PrivilegedGetPageContext</string>
           <string>org.apache.jasper.el.VariableResolverImpl</string>
           <string>java.io.CharArrayReader</string>
           <string>javax.el.StaticFieldELResolver</string>
-          <string>org.apache.jasper.runtime.JspWriterImpl</string>
           <string>javax.el.ELContextListener</string>
+          <string>org.apache.jasper.runtime.JspWriterImpl</string>
           <string>java.lang.NullPointerException</string>
           <string>org.apache.jasper.runtime.JspSourceImports</string>
           <string>javax.el.ELClass</string>
@@ -1095,6 +1034,7 @@
           <string>org.apache.jasper.runtime.JspContextWrapper$1</string>
           <string>javax.el.MapELResolver</string>
           <string>javax.el.ArrayELResolver</string>
+          <string>javax.el.CompositeELResolver</string>
           <string>javax.servlet.jsp.el.ScopedAttributeELResolver</string>
           <string>org.apache.jasper.runtime.ServletResponseWrapperInclude</string>
           <string>java.lang.Void</string>
@@ -1111,6 +1051,7 @@
           <string>java.beans.FeatureDescriptor</string>
           <string>org.apache.jasper.runtime.JspFactoryImpl$1</string>
           <string>org.apache.jasper.runtime.JspFactoryImpl$2</string>
+          <string>javax.el.CompositeELResolver$FeatureIterator</string>
           <string>org.apache.jasper.runtime.BodyContentImpl</string>
           <string>org.apache.jasper.runtime.BodyContentImpl$2</string>
           <string>org.apache.catalina.tribes.tipis.AbstractReplicatedMap</string>
@@ -1125,8 +1066,8 @@
           <string>org.apache.jasper.runtime.JspApplicationContextImpl</string>
           <string>javax.el.ListELResolver</string>
           <string>org.apache.jasper.runtime.ProtectedFunctionMapper</string>
-          <string>org.apache.jasper.runtime.JspWriterImpl$1</string>
           <string>org.apache.jasper.runtime.PageContextImpl$11</string>
+          <string>org.apache.jasper.runtime.JspWriterImpl$1</string>
           <string>org.apache.jasper.runtime.PageContextImpl$10</string>
           <string>org.apache.jasper.runtime.PageContextImpl$12</string>
           <string>javax.el.ELResolver</string>
@@ -1139,6 +1080,7 @@
           <string>org.apache.jasper.runtime.PageContextImpl$3</string>
           <string>org.apache.jasper.runtime.PageContextImpl$4</string>
           <string>org.apache.jasper.runtime.PageContextImpl$1</string>
+          <string>org.apache.jasper.security.SecurityUtil</string>
           <string>javax.el.ELContextEvent</string>
           <string>org.apache.jasper.runtime.PageContextImpl$2</string>
           <string>javax.el.PropertyNotFoundException</string>
@@ -1149,16 +1091,21 @@
         <name>org.apache.catalina.tribes.transport.bio.ss</name>
         <entities>
           <string>org.apache.catalina.tribes.transport.MultiPointSender</string>
+          <string>org.apache.catalina.tribes.transport.PooledSender$SenderQueue</string>
           <string>org.apache.catalina.tribes.transport.bio.BioSender</string>
           <string>org.apache.catalina.tribes.transport.bio.PooledMultiSender</string>
+          <string>org.apache.catalina.tribes.io.ListenCallback</string>
+          <string>org.apache.catalina.tribes.transport.Constants</string>
+          <string>org.apache.catalina.tribes.transport.RxTaskPool$TaskCreator</string>
+          <string>org.apache.catalina.tribes.transport.PooledSender</string>
+          <string>org.apache.catalina.tribes.transport.ReceiverBase</string>
           <string>org.apache.catalina.tribes.transport.bio.BioReplicationTask</string>
           <string>org.apache.catalina.tribes.transport.RxTaskPool</string>
           <string>org.apache.catalina.tribes.transport.DataSender</string>
-          <string>org.apache.catalina.tribes.io.ListenCallback</string>
-          <string>org.apache.catalina.tribes.transport.RxTaskPool$TaskCreator</string>
           <string>org.apache.catalina.tribes.transport.bio.MultipointBioSender</string>
           <string>org.apache.catalina.tribes.transport.bio.BioReceiver</string>
           <string>org.apache.catalina.tribes.transport.AbstractRxTask</string>
+          <string>org.apache.catalina.tribes.transport.ReceiverBase$TaskThreadFactory</string>
           <string>org.apache.catalina.tribes.transport.AbstractSender</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -1183,10 +1130,8 @@
           <string>org.apache.catalina.mbeans.RoleMBean</string>
           <string>org.apache.tomcat.util.modeler.OperationInfo</string>
           <string>javax.management.Attribute</string>
-          <string>org.apache.tomcat.util.modeler.modules.MbeansDescriptorsIntrospectionSource</string>
           <string>java.lang.management.ManagementFactory</string>
           <string>javax.management.AttributeChangeNotification</string>
-          <string>org.apache.tomcat.util.modeler.modules.MbeansDescriptorsDigesterSource</string>
           <string>javax.management.InstanceNotFoundException</string>
           <string>org.apache.tomcat.util.modeler.NotificationInfo</string>
           <string>java.util.concurrent.locks.ReadWriteLock</string>
@@ -1225,11 +1170,13 @@
           <string>org.apache.tomcat.jdbc.pool.PoolProperties</string>
           <string>org.apache.tomcat.jdbc.pool.JdbcInterceptor</string>
           <string>org.apache.tomcat.jdbc.pool.FairBlockingQueue$ExchangeCountDownLatch</string>
+          <string>org.apache.tomcat.jdbc.pool.interceptor.AbstractCreateStatementInterceptor</string>
           <string>org.apache.tomcat.jdbc.pool.FairBlockingQueue$ItemFuture</string>
           <string>org.apache.tomcat.jdbc.pool.DataSourceProxy</string>
           <string>org.apache.tomcat.jdbc.pool.ConnectionPool$PoolCleaner</string>
           <string>org.apache.tomcat.jdbc.pool.MultiLockFairBlockingQueue$ItemFuture</string>
           <string>org.apache.tomcat.jdbc.pool.FairBlockingQueue</string>
+          <string>org.apache.tomcat.jdbc.pool.interceptor.QueryTimeoutInterceptor</string>
           <string>org.apache.tomcat.jdbc.pool.PoolExhaustedException</string>
           <string>javax.naming.InitialContext</string>
           <string>org.apache.tomcat.jdbc.pool.Validator</string>
@@ -1238,11 +1185,12 @@
           <string>org.apache.tomcat.jdbc.pool.PooledConnectionMBean</string>
           <string>java.util.concurrent.LinkedBlockingQueue</string>
           <string>org.apache.tomcat.jdbc.pool.PoolProperties$InterceptorDefinition</string>
-          <string>org.apache.tomcat.jdbc.pool.StatementFacade$StatementProxy</string>
           <string>org.apache.tomcat.jdbc.pool.PoolUtilities</string>
+          <string>org.apache.tomcat.jdbc.pool.StatementFacade$StatementProxy</string>
           <string>org.apache.tomcat.jdbc.pool.jmx.ConnectionPoolMBean</string>
           <string>org.apache.tomcat.jdbc.pool.ConnectionPool$1</string>
           <string>org.apache.tomcat.jdbc.pool.ConnectionPool$PrivilegedNewTimer</string>
+          <string>java.security.AccessController</string>
           <string>java.util.ConcurrentModificationException</string>
           <string>org.apache.tomcat.jdbc.pool.XADataSource</string>
           <string>org.apache.tomcat.jdbc.pool.StatementFacade</string>
@@ -1358,24 +1306,11 @@
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
-        <name>org.apache.tomcat.util.res.ss</name>
-        <entities>
-          <string>org.apache.tomcat.util.res.StringManager$1</string>
-          <string>java.text.FieldPosition</string>
-          <string>java.util.MissingResourceException</string>
-          <string>org.apache.tomcat.util.res.StringManager</string>
-        </entities>
-      </edu.usc.softarch.arcade.facts.ConcernCluster>
-      <edu.usc.softarch.arcade.facts.ConcernCluster>
         <name>org.apache.catalina.tribes.transport.ss</name>
         <entities>
-          <string>org.apache.catalina.tribes.transport.PooledSender$SenderQueue</string>
-          <string>org.apache.catalina.tribes.transport.ReceiverBase</string>
           <string>org.apache.catalina.tribes.transport.nio.PooledParallelSenderMBean</string>
           <string>org.apache.catalina.tribes.transport.nio.PooledParallelSender</string>
           <string>org.apache.catalina.tribes.transport.ReplicationTransmitter</string>
-          <string>org.apache.catalina.tribes.transport.ReceiverBase$TaskThreadFactory</string>
-          <string>org.apache.catalina.tribes.transport.PooledSender</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -1389,7 +1324,6 @@
           <string>org.apache.catalina.tribes.transport.nio.ParallelNioSender$SendResult</string>
           <string>java.nio.channels.DatagramChannel</string>
           <string>org.apache.catalina.tribes.transport.nio.ParallelNioSender$1</string>
-          <string>org.apache.catalina.tribes.transport.Constants</string>
           <string>org.apache.catalina.tribes.util.ExceptionUtils</string>
           <string>org.apache.catalina.tribes.transport.SenderState</string>
           <string>java.net.UnknownHostException</string>
@@ -1408,25 +1342,10 @@
       <edu.usc.softarch.arcade.facts.ConcernCluster>
         <name>org.apache.coyote.ss</name>
         <entities>
-          <string>org.apache.coyote.AbstractProtocol$ConnectionHandler</string>
-          <string>org.apache.coyote.AbstractProcessor$1</string>
-          <string>org.apache.coyote.AbstractProcessor</string>
-          <string>org.apache.coyote.Adapter</string>
-          <string>org.apache.coyote.AsyncStateMachine$AsyncState</string>
-          <string>org.apache.coyote.AbstractProtocol$RecycledProcessors</string>
-          <string>org.apache.coyote.UpgradeProtocol</string>
-          <string>org.apache.tomcat.util.http.parser.AcceptEncoding</string>
-          <string>java.util.concurrent.CopyOnWriteArraySet</string>
-          <string>org.apache.coyote.AsyncContextCallback</string>
-          <string>org.apache.coyote.CompressionConfig</string>
           <string>org.apache.coyote.ContainerThreadMarker</string>
-          <string>org.apache.coyote.ProtocolHandler</string>
-          <string>org.apache.coyote.AbstractProtocol$AsyncTimeout</string>
-          <string>org.apache.coyote.AsyncStateMachine</string>
-          <string>org.apache.coyote.AbstractProtocol</string>
-          <string>org.apache.coyote.Processor</string>
-          <string>org.apache.coyote.AbstractProcessorLight</string>
+          <string>org.apache.tomcat.util.http.parser.AcceptEncoding</string>
           <string>org.apache.tomcat.util.net.ContainerThreadMarker</string>
+          <string>org.apache.coyote.CompressionConfig</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -1437,6 +1356,7 @@
           <string>org.apache.naming.factory.FactoryBase</string>
           <string>org.apache.catalina.Contained</string>
           <string>org.apache.catalina.core.ApplicationContext</string>
+          <string>org.apache.coyote.AsyncContextCallback</string>
           <string>org.apache.catalina.core.ApplicationDispatcher$PrivilegedForward</string>
           <string>javax.servlet.Registration$Dynamic</string>
           <string>org.apache.catalina.Host</string>
@@ -1480,12 +1400,14 @@
           <string>org.apache.catalina.core.StandardWrapperFacade</string>
           <string>org.apache.tomcat.unittest.TesterContext</string>
           <string>org.apache.catalina.connector.Response</string>
+          <string>org.apache.tomcat.util.http.CookieProcessorBase$1</string>
           <string>async.Stockticker$TickListener</string>
           <string>org.apache.catalina.core.ApplicationSessionCookieConfig</string>
           <string>org.apache.catalina.core.StandardHostValve</string>
           <string>javax.servlet.FilterRegistration$Dynamic</string>
           <string>javax.servlet.ServletRequestListener</string>
           <string>org.apache.catalina.realm.NullRealm</string>
+          <string>org.apache.tomcat.util.buf.UDecoder$DecodeException</string>
           <string>javax.servlet.ServletException</string>
           <string>org.apache.catalina.Lifecycle</string>
           <string>org.apache.catalina.servlet4preview.http.HttpFilter</string>
@@ -1494,6 +1416,7 @@
           <string>javax.servlet.AsyncEvent</string>
           <string>org.apache.catalina.servlet4preview.ServletContext</string>
           <string>java.util.EventObject</string>
+          <string>org.apache.tomcat.util.buf.UDecoder</string>
           <string>javax.servlet.AsyncListener</string>
           <string>org.apache.catalina.servlet4preview.AsyncContext</string>
           <string>org.apache.catalina.core.NamingContextListener</string>
@@ -1511,6 +1434,7 @@
           <string>javax.servlet.ServletRequestAttributeListener</string>
           <string>org.apache.catalina.core.StandardServer</string>
           <string>java.security.Provider</string>
+          <string>java.lang.ref.Reference</string>
           <string>org.apache.catalina.core.ApplicationHttpResponse</string>
           <string>javax.servlet.ServletResponseWrapper</string>
           <string>org.apache.catalina.Realm</string>
@@ -1532,6 +1456,7 @@
           <string>org.apache.catalina.core.AsyncContextImpl$AsyncRunnable</string>
           <string>org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor</string>
           <string>org.apache.catalina.valves.AbstractAccessLogValve</string>
+          <string>org.apache.tomcat.util.collections.ManagedConcurrentWeakHashMap$1$1$1</string>
           <string>javax.servlet.http.HttpSessionAttributeListener</string>
           <string>org.apache.catalina.core.StandardPipeline</string>
           <string>org.apache.tomcat.util.http.Rfc6265CookieProcessor</string>
@@ -1551,8 +1476,8 @@
           <string>java.beans.PropertyChangeListener</string>
           <string>org.apache.catalina.core.ApplicationMapping$MappingImpl</string>
           <string>org.apache.catalina.core.ApplicationHttpRequest</string>
-          <string>org.apache.catalina.filters.TesterHttpServletResponse</string>
           <string>org.apache.catalina.core.StandardHost$MemoryLeakTrackingListener</string>
+          <string>org.apache.catalina.filters.TesterHttpServletResponse</string>
           <string>org.apache.catalina.JmxEnabled</string>
           <string>org.apache.catalina.core.StandardEngine</string>
           <string>org.apache.catalina.core.ApplicationDispatcher</string>
@@ -1563,6 +1488,7 @@
           <string>javax.naming.RefAddr</string>
           <string>java.util.concurrent.Callable</string>
           <string>org.apache.catalina.core.ApplicationFilterChain$1</string>
+          <string>java.lang.ref.ReferenceQueue</string>
           <string>org.apache.catalina.core.ContainerBase$StartChild</string>
           <string>org.apache.catalina.core.ApplicationFilterChain</string>
           <string>org.apache.catalina.core.DefaultInstanceManager$1</string>
@@ -1570,6 +1496,7 @@
           <string>org.apache.catalina.core.StandardEngineValve</string>
           <string>javax.naming.StringRefAddr</string>
           <string>org.apache.catalina.util.LifecycleMBeanBase</string>
+          <string>org.apache.tomcat.util.collections.ManagedConcurrentWeakHashMap</string>
           <string>org.apache.catalina.manager.ManagerServlet</string>
           <string>org.apache.catalina.core.DefaultInstanceManager$3</string>
           <string>javax.persistence.PersistenceUnit</string>
@@ -1578,6 +1505,7 @@
           <string>async.Stockticker$Stock</string>
           <string>async.AsyncStockContextListener</string>
           <string>org.apache.catalina.authenticator.AuthenticatorBase</string>
+          <string>org.apache.tomcat.util.http.CookieProcessorBase</string>
           <string>org.apache.catalina.core.StandardEngine$NoopAccessLog</string>
           <string>javax.servlet.UnavailableException</string>
           <string>javax.xml.ws.WebServiceRef</string>
@@ -1600,6 +1528,7 @@
           <string>org.apache.catalina.core.AsyncContextImpl</string>
           <string>org.apache.catalina.ContainerListener</string>
           <string>org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntry</string>
+          <string>java.text.DateFormat</string>
           <string>javax.servlet.Registration</string>
           <string>org.apache.catalina.core.AsyncListenerWrapper</string>
           <string>org.apache.naming.ServiceRef</string>
@@ -1612,7 +1541,9 @@
           <string>org.apache.catalina.core.ApplicationDispatcher$PrivilegedInclude</string>
           <string>javax.servlet.ServletContextEvent</string>
           <string>javax.servlet.ServletResponse</string>
+          <string>org.apache.tomcat.util.collections.ManagedConcurrentWeakHashMap$1$1</string>
           <string>javax.annotation.PostConstruct</string>
+          <string>org.apache.tomcat.util.collections.ManagedConcurrentWeakHashMap$1</string>
           <string>org.apache.catalina.core.StandardContext</string>
           <string>org.apache.naming.factory.EjbFactory</string>
           <string>org.apache.tomcat.util.descriptor.web.ErrorPage</string>
@@ -1628,9 +1559,9 @@
           <string>org.apache.catalina.loader.WebappClassLoaderBase</string>
           <string>org.apache.catalina.connector.ResponseFacade</string>
           <string>org.apache.naming.factory.Constants</string>
+          <string>org.apache.tomcat.util.collections.ManagedConcurrentWeakHashMap$Key</string>
           <string>org.apache.catalina.Container</string>
           <string>org.apache.catalina.core.AsyncContextImpl$DebugException</string>
-          <string>javax.servlet.DispatcherType</string>
           <string>javax.servlet.ServletContextAttributeEvent</string>
           <string>org.apache.catalina.servlet4preview.http.HttpServletRequest</string>
           <string>javax.servlet.ServletRequestWrapper</string>
@@ -1708,7 +1639,6 @@
           <string>org.apache.catalina.storeconfig.StoreFileMover</string>
           <string>org.apache.catalina.storeconfig.StoreFactoryBase</string>
           <string>org.apache.catalina.core.StandardEngine</string>
-          <string>org.apache.catalina.session.PersistentManagerBase</string>
           <string>org.apache.catalina.core.ContainerBase</string>
           <string>org.apache.catalina.storeconfig.IStoreFactory</string>
           <string>org.apache.catalina.storeconfig.LoaderSF</string>
@@ -1726,7 +1656,6 @@
           <string>org.apache.catalina.Cluster</string>
           <string>org.apache.catalina.storeconfig.WebResourceRootSF</string>
           <string>org.apache.catalina.session.ManagerBase</string>
-          <string>org.apache.catalina.startup.EngineConfig</string>
           <string>java.beans.IndexedPropertyDescriptor</string>
           <string>org.apache.catalina.storeconfig.StoreFactoryRule</string>
           <string>org.apache.tomcat.unittest.TesterHost</string>
@@ -1739,7 +1668,6 @@
           <string>org.apache.catalina.storeconfig.Constants</string>
           <string>org.apache.tomcat.util.http.CookieProcessor</string>
           <string>org.apache.catalina.mbeans.MBeanUtils</string>
-          <string>org.apache.catalina.valves.PersistentValve</string>
           <string>org.apache.catalina.storeconfig.WrapperListenerSF</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -1751,27 +1679,30 @@
           <string>org.apache.tomcat.util.descriptor.web.ServletDef</string>
           <string>org.apache.tomcat.util.digester.SetNextRule</string>
           <string>org.apache.tomcat.util.descriptor.web.ServiceQnameRule</string>
+          <string>org.apache.tomcat.util.res.StringManager$1</string>
           <string>org.apache.tomcat.util.descriptor.web.ContextResource</string>
           <string>org.apache.catalina.core.JniLifecycleListener</string>
           <string>org.apache.tomcat.util.descriptor.web.JspConfigDescriptorImpl</string>
           <string>org.apache.tomcat.util.descriptor.web.SetDenyUncoveredHttpMethodsRule</string>
           <string>org.apache.tomcat.util.descriptor.web.ContextHandler</string>
           <string>org.apache.tomcat.util.descriptor.web.SecurityCollection</string>
-          <string>org.apache.coyote.http11.Http11Nio2Protocol</string>
           <string>org.apache.tomcat.util.descriptor.web.ContextService</string>
           <string>org.apache.catalina.valves.LoadBalancerDrainingValve</string>
           <string>org.apache.tomcat.util.descriptor.web.IgnoreAnnotationsRule</string>
           <string>org.apache.tomcat.util.digester.CallMethodRule</string>
           <string>org.apache.tomcat.util.descriptor.web.SetSessionConfig</string>
+          <string>java.text.FieldPosition</string>
           <string>org.apache.tomcat.util.descriptor.web.RelativeOrderingRule</string>
+          <string>org.apache.tomcat.util.modeler.modules.MbeansDescriptorsIntrospectionSource</string>
           <string>SessionExample</string>
           <string>javax.servlet.descriptor.TaglibDescriptor</string>
           <string>org.apache.tomcat.util.descriptor.web.ContextEnvironment</string>
           <string>org.apache.jasper.servlet.TldPreScanned</string>
-          <string>org.apache.tomcat.jdbc.pool.interceptor.QueryTimeoutInterceptor</string>
+          <string>org.apache.tomcat.util.modeler.modules.MbeansDescriptorsDigesterSource</string>
           <string>org.apache.tomcat.util.descriptor.web.NamingResources</string>
           <string>org.apache.tomcat.util.descriptor.web.SetOverrideRule</string>
           <string>org.apache.tomcat.util.descriptor.web.VersionRule</string>
+          <string>org.apache.catalina.session.JDBCStore</string>
           <string>org.apache.tomcat.util.descriptor.web.JspPropertyGroup</string>
           <string>org.apache.tomcat.jdbc.naming.GenericNamingResourcesFactory</string>
           <string>RequestInfoExample</string>
@@ -1780,6 +1711,7 @@
           <string>org.apache.tomcat.util.descriptor.web.SetPublicIdRule</string>
           <string>javax.servlet.HttpMethodConstraintElement</string>
           <string>java.lang.Exception</string>
+          <string>org.apache.catalina.authenticator.SSLAuthenticator</string>
           <string>javax.servlet.descriptor.JspPropertyGroupDescriptor</string>
           <string>org.apache.tomcat.util.descriptor.web.WebRuleSet</string>
           <string>java.lang.StringBuilder</string>
@@ -1792,12 +1724,14 @@
           <string>org.apache.tomcat.util.descriptor.web.LoginConfig</string>
           <string>org.apache.tomcat.util.digester.CallParamRule</string>
           <string>org.apache.tomcat.util.descriptor.web.ResourceBase</string>
+          <string>org.apache.catalina.session.PersistentManagerBase</string>
           <string>javax.servlet.descriptor.JspConfigDescriptor</string>
           <string>util.HTMLFilter</string>
           <string>javax.servlet.HttpConstraintElement</string>
           <string>org.apache.tomcat.util.descriptor.web.WebXml</string>
           <string>org.apache.tomcat.util.descriptor.web.MultipartDef</string>
           <string>org.apache.tomcat.util.descriptor.web.Injectable</string>
+          <string>org.apache.catalina.core.StandardHost</string>
           <string>org.apache.juli.logging.Log</string>
           <string>org.apache.tomcat.util.digester.Rule</string>
           <string>org.apache.tomcat.util.descriptor.web.ContextResourceEnvRef</string>
@@ -1808,7 +1742,9 @@
           <string>org.apache.catalina.valves.RemoteCIDRValve</string>
           <string>org.apache.tomcat.util.descriptor.web.SecurityConstraint</string>
           <string>org.xml.sax.Attributes</string>
+          <string>org.apache.catalina.startup.VersionLoggerListener</string>
           <string>org.apache.tomcat.util.descriptor.web.AbsoluteOrderingRule</string>
+          <string>org.apache.tomcat.util.res.StringManager</string>
           <string>org.apache.tomcat.util.descriptor.web.NameRule</string>
           <string>org.apache.catalina.valves.RemoteHostValve</string>
           <string>org.apache.tomcat.util.descriptor.web.TaglibLocationRule</string>
@@ -1816,17 +1752,22 @@
           <string>org.apache.tomcat.util.descriptor.web.TaglibDescriptorImpl</string>
           <string>org.apache.catalina.valves.RemoteIpValve</string>
           <string>org.apache.tomcat.util.descriptor.web.SecurityRoleRef</string>
+          <string>org.apache.catalina.session.FileStore</string>
+          <string>org.apache.catalina.startup.EngineConfig</string>
           <string>org.apache.tomcat.util.descriptor.web.MessageDestinationRef</string>
           <string>org.apache.catalina.startup.Tool</string>
+          <string>org.apache.tomcat.unittest.TesterHost</string>
           <string>org.apache.tomcat.util.descriptor.web.JspPropertyGroupDescriptorImpl</string>
           <string>java.lang.IllegalArgumentException</string>
           <string>org.apache.tomcat.util.descriptor.web.SetDistributableRule</string>
           <string>org.apache.tomcat.util.descriptor.web.ContextEjb</string>
           <string>java.net.URLEncoder</string>
+          <string>org.apache.catalina.util.NetMask</string>
           <string>org.apache.tomcat.util.descriptor.web.MappedNameRule</string>
           <string>org.apache.tomcat.util.descriptor.web.SetJspConfig</string>
           <string>org.apache.tomcat.util.descriptor.web.ContextLocalEjb</string>
           <string>org.apache.tomcat.util.descriptor.web.SoapHeaderRule</string>
+          <string>org.apache.catalina.valves.PersistentValve</string>
           <string>org.apache.tomcat.util.descriptor.web.LifecycleCallbackRule</string>
           <string>org.apache.catalina.valves.RemoteAddrValve</string>
         </entities>
@@ -1848,7 +1789,6 @@
           <string>org.apache.tomcat.dbcp.dbcp2.datasources.PerUserPoolDataSourceFactory</string>
           <string>org.apache.tomcat.dbcp.dbcp2.datasources.PerUserPoolDataSource</string>
           <string>org.apache.tomcat.dbcp.dbcp2.datasources.UserPassKey</string>
-          <string>org.apache.tomcat.dbcp.dbcp2.Utils</string>
           <string>org.apache.tomcat.dbcp.dbcp2.LifetimeExceededException</string>
           <string>javax.naming.Context</string>
           <string>org.apache.tomcat.dbcp.dbcp2.datasources.InstanceKeyDataSource</string>
@@ -1865,12 +1805,9 @@
         <entities>
           <string>javax.websocket.DefaultClientEndpointConfig</string>
           <string>javax.websocket.ClientEndpointConfig$Builder$1</string>
-          <string>javax.websocket.CloseReason$CloseCodes</string>
           <string>javax.websocket.ClientEndpointConfig</string>
           <string>javax.websocket.ClientEndpointConfig$Builder</string>
           <string>javax.websocket.Extension</string>
-          <string>javax.websocket.CloseReason$CloseCodes$1</string>
-          <string>javax.websocket.CloseReason$CloseCode</string>
           <string>javax.websocket.ClientEndpointConfig$Configurator</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -1881,20 +1818,20 @@
           <string>javax.servlet.FilterChain</string>
           <string>org.apache.tomcat.websocket.server.WsFrameServer</string>
           <string>org.apache.tomcat.websocket.server.WsSci</string>
-          <string>javax.servlet.http.WebConnection</string>
           <string>org.apache.tomcat.websocket.server.UriTemplate$Segment</string>
           <string>java.lang.InstantiationException</string>
           <string>javax.servlet.Filter</string>
+          <string>javax.websocket.server.ServerEndpointConfig$Configurator$PrivilegedLoadDefault</string>
           <string>org.apache.tomcat.websocket.server.WsRemoteEndpointImplServer$OnResultRunnable</string>
           <string>org.apache.tomcat.websocket.server.WsRemoteEndpointImplServer$1</string>
           <string>org.apache.tomcat.websocket.pojo.Constants</string>
           <string>javax.websocket.server.ServerEndpointConfig</string>
+          <string>javax.websocket.server.ServerEndpointConfig$1</string>
           <string>org.apache.tomcat.websocket.server.WsServerContainer$ExactPathMatch</string>
           <string>javax.websocket.ContainerProvider</string>
           <string>compressionFilters.CompressionFilter</string>
           <string>javax.websocket.server.ServerEndpoint</string>
           <string>org.apache.tomcat.websocket.server.WsFrameServer$1</string>
-          <string>org.apache.coyote.http11.upgrade.InternalHttpUpgradeHandler</string>
           <string>java.lang.reflect.Modifier</string>
           <string>javax.websocket.server.HandshakeRequest</string>
           <string>org.apache.tomcat.websocket.server.WsMappingResult</string>
@@ -1903,7 +1840,6 @@
           <string>javax.websocket.server.ServerApplicationConfig</string>
           <string>org.apache.catalina.filters.TesterHttpServletResponse</string>
           <string>org.apache.tomcat.websocket.server.WsPerSessionServerEndpointConfig</string>
-          <string>org.apache.tomcat.websocket.WsIOException</string>
           <string>org.apache.tomcat.websocket.server.WsHttpUpgradeHandler$1</string>
           <string>filters.ExampleFilter</string>
           <string>javax.servlet.annotation.HandlesTypes</string>
@@ -1916,13 +1852,15 @@
           <string>org.apache.tomcat.websocket.server.UpgradeUtil</string>
           <string>org.apache.catalina.filters.WebdavFixFilter</string>
           <string>org.apache.tomcat.websocket.server.WsWriteTimeout$1</string>
-          <string>org.apache.tomcat.websocket.server.WsHttpUpgradeHandler</string>
           <string>org.apache.tomcat.websocket.server.WsHandshakeRequest</string>
+          <string>org.apache.tomcat.websocket.server.WsHttpUpgradeHandler</string>
+          <string>org.apache.tomcat.websocket.BackgroundProcessManager$WsBackgroundThread</string>
           <string>org.apache.tomcat.websocket.server.WsFilter</string>
           <string>org.apache.tomcat.websocket.server.WsRemoteEndpointImplServer</string>
           <string>org.apache.catalina.filters.SessionInitializerFilter</string>
           <string>org.apache.tomcat.websocket.server.WsSessionListener</string>
           <string>org.apache.tomcat.websocket.server.WsServerContainer$TemplatePathMatch</string>
+          <string>javax.websocket.server.ServerEndpointConfig$Configurator</string>
           <string>org.apache.catalina.connector.ResponseFacade</string>
           <string>java.util.concurrent.ConcurrentSkipListMap</string>
           <string>org.apache.catalina.connector.Response</string>
@@ -1931,6 +1869,7 @@
           <string>org.apache.tomcat.websocket.server.WsServerContainer</string>
           <string>javax.servlet.FilterConfig</string>
           <string>org.apache.tomcat.websocket.pojo.PojoEndpointServer</string>
+          <string>org.apache.tomcat.websocket.BackgroundProcessManager</string>
           <string>org.apache.tomcat.websocket.server.UriTemplate</string>
           <string>org.apache.tomcat.websocket.server.Constants</string>
         </entities>
@@ -1938,14 +1877,16 @@
       <edu.usc.softarch.arcade.facts.ConcernCluster>
         <name>org.apache.el.stream.ss</name>
         <entities>
+          <string>org.apache.el.lang.ELSupport</string>
+          <string>java.beans.PropertyEditor</string>
           <string>java.util.Iterator</string>
-          <string>org.apache.el.stream.StreamELResolverImpl</string>
+          <string>org.apache.el.util.MessageFactory</string>
+          <string>java.beans.PropertyEditorManager</string>
           <string>org.apache.el.stream.Stream$7</string>
           <string>org.apache.el.stream.Stream$8</string>
           <string>org.apache.el.stream.Stream$LambdaExpressionComparator</string>
           <string>org.apache.el.stream.Stream</string>
           <string>org.apache.el.stream.Stream$3</string>
-          <string>org.apache.el.stream.StreamELResolverImpl$ArrayIterator</string>
           <string>org.apache.el.stream.Stream$4</string>
           <string>org.apache.el.stream.Stream$OpIterator</string>
           <string>org.apache.el.stream.Stream$5</string>
@@ -1953,6 +1894,7 @@
           <string>org.apache.el.stream.Stream$1</string>
           <string>org.apache.el.stream.Stream$2</string>
           <string>org.apache.el.stream.Optional</string>
+          <string>org.apache.el.lang.ELSupport$1</string>
           <string>javax.el.LambdaExpression</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -1962,19 +1904,6 @@
           <string>org.apache.tomcat.jni.BIOCallback</string>
           <string>org.apache.tomcat.jni.SSL</string>
           <string>org.apache.tomcat.jni.PasswordCallback</string>
-        </entities>
-      </edu.usc.softarch.arcade.facts.ConcernCluster>
-      <edu.usc.softarch.arcade.facts.ConcernCluster>
-        <name>org.apache.jasper.tagplugins.jstl.ss</name>
-        <entities>
-          <string>java.io.ByteArrayOutputStream</string>
-          <string>org.apache.jasper.tagplugins.jstl.Util</string>
-          <string>org.apache.jasper.tagplugins.jstl.Util$ImportResponseWrapper</string>
-          <string>javax.servlet.ServletOutputStream</string>
-          <string>javax.servlet.WriteListener</string>
-          <string>javax.servlet.http.HttpServletResponseWrapper</string>
-          <string>org.apache.jasper.tagplugins.jstl.Util$ImportResponseWrapper$1</string>
-          <string>javax.servlet.jsp.JspTagException</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -2001,36 +1930,6 @@
           <string>org.apache.catalina.tribes.io.XByteBuffer</string>
           <string>org.apache.catalina.tribes.io.DirectByteArrayOutputStream</string>
           <string>org.apache.catalina.tribes.io.ReplicationStream</string>
-        </entities>
-      </edu.usc.softarch.arcade.facts.ConcernCluster>
-      <edu.usc.softarch.arcade.facts.ConcernCluster>
-        <name>org.apache.catalina.tribes.membership.ss</name>
-        <entities>
-          <string>org.apache.catalina.tribes.membership.McastServiceImpl$RecoveryThread</string>
-          <string>org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread</string>
-          <string>org.apache.catalina.tribes.MembershipListener</string>
-          <string>org.apache.catalina.tribes.membership.MemberImpl</string>
-          <string>java.net.BindException</string>
-          <string>org.apache.catalina.tribes.Channel</string>
-          <string>org.apache.catalina.tribes.membership.Membership$MemberComparator</string>
-          <string>org.apache.catalina.tribes.membership.Membership</string>
-          <string>java.lang.Thread</string>
-          <string>org.apache.catalina.tribes.membership.Membership$1</string>
-          <string>org.apache.catalina.tribes.membership.McastServiceImpl$ReceiverThread</string>
-          <string>org.apache.catalina.tribes.membership.McastServiceImpl$4</string>
-          <string>org.apache.catalina.tribes.membership.McastServiceImpl$3</string>
-          <string>org.apache.catalina.tribes.membership.McastServiceImpl$2</string>
-          <string>org.apache.catalina.tribes.membership.McastServiceImpl$1</string>
-          <string>org.apache.catalina.tribes.MessageListener</string>
-          <string>org.apache.catalina.tribes.membership.McastServiceMBean</string>
-          <string>org.apache.catalina.tribes.io.ChannelData</string>
-          <string>java.net.MulticastSocket</string>
-          <string>org.apache.catalina.tribes.membership.McastService</string>
-          <string>org.apache.catalina.tribes.util.UUIDGenerator</string>
-          <string>org.apache.catalina.tribes.Member</string>
-          <string>java.net.DatagramPacket</string>
-          <string>org.apache.catalina.tribes.membership.McastServiceImpl</string>
-          <string>org.apache.catalina.tribes.membership.Constants</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -2068,6 +1967,7 @@
           <string>java.nio.file.CopyOption</string>
           <string>org.apache.catalina.webresources.VirtualResource</string>
           <string>org.apache.catalina.webresources.EmptyResourceSet</string>
+          <string>org.apache.tomcat.util.compat.JrePlatform</string>
           <string>org.apache.catalina.WebResourceSet</string>
           <string>org.apache.catalina.webresources.FileResourceSet</string>
           <string>java.nio.file.StandardCopyOption</string>
@@ -2075,6 +1975,7 @@
           <string>java.nio.file.LinkOption</string>
           <string>org.apache.tomcat.util.http.RequestUtil</string>
           <string>org.apache.catalina.webresources.Cache</string>
+          <string>org.apache.tomcat.util.compat.JrePlatform$1</string>
           <string>org.apache.catalina.webresources.TomcatURLStreamHandlerFactory</string>
           <string>java.util.jar.JarInputStream</string>
           <string>org.apache.catalina.webresources.JarResource</string>
@@ -2086,7 +1987,38 @@
           <string>org.apache.catalina.webresources.StandardRoot$1</string>
           <string>org.apache.catalina.webresources.AbstractFileResourceSet</string>
           <string>org.apache.catalina.webresources.AbstractResourceSet</string>
+          <string>org.apache.catalina.ssi.SSIServletRequestUtil</string>
           <string>org.apache.catalina.webresources.WarResourceSet</string>
+        </entities>
+      </edu.usc.softarch.arcade.facts.ConcernCluster>
+      <edu.usc.softarch.arcade.facts.ConcernCluster>
+        <name>org.apache.catalina.tribes.membership.ss</name>
+        <entities>
+          <string>org.apache.catalina.tribes.membership.McastServiceImpl$RecoveryThread</string>
+          <string>org.apache.catalina.tribes.membership.McastServiceImpl$SenderThread</string>
+          <string>org.apache.catalina.tribes.MembershipListener</string>
+          <string>org.apache.catalina.tribes.membership.MemberImpl</string>
+          <string>java.net.BindException</string>
+          <string>org.apache.catalina.tribes.Channel</string>
+          <string>org.apache.catalina.tribes.membership.Membership$MemberComparator</string>
+          <string>org.apache.catalina.tribes.membership.Membership</string>
+          <string>java.lang.Thread</string>
+          <string>org.apache.catalina.tribes.membership.Membership$1</string>
+          <string>org.apache.catalina.tribes.membership.McastServiceImpl$ReceiverThread</string>
+          <string>org.apache.catalina.tribes.membership.McastServiceImpl$4</string>
+          <string>org.apache.catalina.tribes.membership.McastServiceImpl$3</string>
+          <string>org.apache.catalina.tribes.membership.McastServiceImpl$2</string>
+          <string>org.apache.catalina.tribes.membership.McastServiceImpl$1</string>
+          <string>org.apache.catalina.tribes.MessageListener</string>
+          <string>org.apache.catalina.tribes.membership.McastServiceMBean</string>
+          <string>org.apache.catalina.tribes.io.ChannelData</string>
+          <string>java.net.MulticastSocket</string>
+          <string>org.apache.catalina.tribes.membership.McastService</string>
+          <string>org.apache.catalina.tribes.util.UUIDGenerator</string>
+          <string>org.apache.catalina.tribes.Member</string>
+          <string>java.net.DatagramPacket</string>
+          <string>org.apache.catalina.tribes.membership.McastServiceImpl</string>
+          <string>org.apache.catalina.tribes.membership.Constants</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -2094,9 +2026,6 @@
         <entities>
           <string>org.apache.coyote.http11.filters.BufferedInputFilter</string>
           <string>java.nio.BufferOverflowException</string>
-          <string>org.apache.coyote.http11.filters.GzipOutputFilter$FakeOutputStream</string>
-          <string>org.apache.coyote.http11.filters.GzipOutputFilter</string>
-          <string>java.util.zip.GZIPOutputStream</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -2113,8 +2042,6 @@
         <entities>
           <string>java.io.PrintStream</string>
           <string>org.apache.tomcat.util.log.CaptureLog</string>
-          <string>org.apache.tomcat.util.log.UserDataHelper$Config</string>
-          <string>org.apache.tomcat.util.log.UserDataHelper</string>
           <string>org.apache.tomcat.util.log.SystemLogHandler</string>
           <string>java.util.Stack</string>
         </entities>
@@ -2158,19 +2085,14 @@
           <string>java.util.Collection</string>
           <string>java.io.StringWriter</string>
           <string>org.apache.tomcat.util.http.LegacyCookieProcessor</string>
-          <string>org.apache.tomcat.util.http.CookieProcessorBase</string>
           <string>org.apache.tomcat.util.http.MimeHeaderField</string>
           <string>org.apache.tomcat.util.http.ResponseUtil$ResponseAdapter</string>
-          <string>org.apache.tomcat.util.http.CookieProcessorBase$1</string>
           <string>org.apache.tomcat.util.http.LegacyCookieProcessor$1</string>
           <string>org.apache.tomcat.util.http.ResponseUtil$Adapter</string>
-          <string>org.apache.tomcat.util.http.Parameters$1</string>
           <string>org.apache.tomcat.util.http.NamesEnumerator</string>
           <string>org.apache.tomcat.util.http.MimeHeaders</string>
           <string>org.apache.tomcat.util.http.parser.Vary</string>
-          <string>org.apache.tomcat.util.http.Parameters</string>
           <string>org.apache.tomcat.util.http.ResponseUtil</string>
-          <string>java.text.DateFormat</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -2192,6 +2114,7 @@
           <string>org.apache.catalina.valves.rewrite.Substitution$RewriteCondBackReferenceElement</string>
           <string>org.apache.catalina.valves.rewrite.Substitution</string>
           <string>org.apache.catalina.valves.rewrite.RewriteCond$PatternCondition</string>
+          <string>org.apache.coyote.Adapter</string>
           <string>org.apache.catalina.valves.rewrite.Substitution$ServerVariableElement</string>
           <string>org.apache.catalina.valves.rewrite.RewriteRule</string>
           <string>org.apache.catalina.valves.rewrite.RewriteValve</string>
@@ -2200,6 +2123,7 @@
           <string>org.apache.catalina.util.LifecycleBase</string>
           <string>org.apache.catalina.loader.WebappClassLoaderBase</string>
           <string>org.apache.tomcat.unittest.TesterContext</string>
+          <string>org.apache.coyote.ProtocolHandler</string>
           <string>org.apache.catalina.valves.rewrite.RewriteCond$LexicalCondition</string>
           <string>org.apache.catalina.valves.rewrite.Substitution$MapElement</string>
           <string>java.util.regex.Pattern</string>
@@ -2212,9 +2136,7 @@
         <entities>
           <string>org.apache.el.util.ReflectionUtil</string>
           <string>org.apache.el.util.Jre9Compat</string>
-          <string>org.apache.el.util.Validation</string>
           <string>org.apache.el.util.ReflectionUtil$MatchResult</string>
-          <string>org.apache.el.util.Validation$1</string>
           <string>org.apache.el.util.JreCompat</string>
           <string>org.apache.el.util.ReflectionUtil$1</string>
           <string>org.apache.el.util.ReflectionUtil$PrivilegedGetTccl</string>
@@ -2304,68 +2226,55 @@
       <edu.usc.softarch.arcade.facts.ConcernCluster>
         <name>org.apache.catalina.connector.ss</name>
         <entities>
-          <string>javax.servlet.http.HttpServletRequestWrapper</string>
           <string>org.apache.tomcat.util.buf.UEncoder</string>
           <string>org.apache.catalina.connector.Request$3</string>
           <string>org.apache.catalina.connector.Request$4</string>
           <string>org.apache.catalina.connector.Request$5</string>
           <string>org.apache.catalina.connector.Request$6</string>
-          <string>org.apache.tomcat.util.http.parser.AcceptLanguage</string>
           <string>org.apache.catalina.connector.Request$7</string>
+          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl</string>
           <string>java.lang.CloneNotSupportedException</string>
-          <string>org.apache.catalina.connector.ResponseFacade$1</string>
+          <string>org.apache.tomcat.util.http.fileupload.FileItemStream</string>
+          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase$FileSizeLimitExceededException</string>
           <string>org.apache.tomcat.util.http.fileupload.FileItemHeadersSupport</string>
           <string>org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction</string>
-          <string>org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction</string>
-          <string>java.util.Locale</string>
+          <string>org.apache.tomcat.util.http.fileupload.util.FileItemHeadersImpl</string>
           <string>org.apache.catalina.connector.Request$SpecialAttributeAdapter</string>
-          <string>org.apache.catalina.connector.RequestFacade$1</string>
           <string>org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction</string>
-          <string>org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction</string>
           <string>org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction</string>
-          <string>org.apache.catalina.core.AprLifecycleListener</string>
-          <string>org.apache.catalina.connector.RequestFacade</string>
           <string>org.ietf.jgss.GSSCredential</string>
           <string>org.apache.catalina.connector.Response$3</string>
           <string>org.apache.catalina.connector.Request</string>
           <string>org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction</string>
           <string>org.apache.catalina.connector.Response$2</string>
-          <string>org.apache.catalina.connector.CoyoteInputStream</string>
           <string>org.apache.catalina.connector.Response$1</string>
           <string>org.apache.catalina.connector.InputBuffer$1</string>
           <string>org.apache.tomcat.util.buf.C2BConverter</string>
           <string>javax.servlet.ServletRequestAttributeEvent</string>
           <string>org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction</string>
+          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase$FileUploadIOException</string>
           <string>java.security.PrivilegedExceptionAction</string>
-          <string>java.security.PrivilegedAction</string>
-          <string>org.apache.catalina.connector.CoyoteOutputStream</string>
-          <string>java.util.List</string>
-          <string>java.security.Principal</string>
-          <string>org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction</string>
-          <string>org.apache.catalina.authenticator.SSLAuthenticator</string>
+          <string>org.apache.tomcat.util.http.fileupload.UploadContext</string>
+          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase$IOFileUploadException</string>
           <string>org.apache.catalina.connector.CoyoteAdapter$RecycleRequiredException</string>
           <string>org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory</string>
           <string>org.apache.catalina.connector.CoyoteAdapter</string>
-          <string>org.apache.tomcat.jni.LibraryNotFoundError</string>
-          <string>org.apache.catalina.TomcatPrincipal</string>
-          <string>org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction</string>
+          <string>org.apache.tomcat.util.http.fileupload.FileItemIterator</string>
           <string>org.apache.catalina.connector.CoyoteReader</string>
+          <string>org.apache.tomcat.util.http.parser.HttpParser</string>
+          <string>org.apache.tomcat.util.http.fileupload.MultipartStream$IllegalBoundaryException</string>
           <string>org.apache.tomcat.util.http.fileupload.servlet.ServletRequestContext</string>
-          <string>javax.servlet.ServletInputStream</string>
           <string>org.apache.catalina.connector.Connector</string>
-          <string>org.apache.catalina.core.ApplicationPushBuilder</string>
-          <string>org.apache.tomcat.jni.Library</string>
+          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl$FileItemStreamImpl</string>
           <string>java.util.ArrayList</string>
           <string>org.apache.catalina.connector.OutputBuffer</string>
-          <string>org.apache.catalina.connector.InputBuffer</string>
-          <string>org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction</string>
-          <string>java.nio.charset.CodingErrorAction</string>
+          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase</string>
           <string>java.lang.StringBuffer</string>
-          <string>org.apache.catalina.util.URLEncoder</string>
           <string>org.apache.catalina.connector.ResponseFacade$DateHeaderPrivilegedAction</string>
           <string>org.apache.catalina.connector.CoyoteWriter</string>
-          <string>org.apache.tomcat.util.http.fileupload.FileItemFactory</string>
-          <string>org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction</string>
+          <string>org.apache.tomcat.util.buf.CharsetCache</string>
+          <string>org.apache.tomcat.util.http.Parameters$FailReason</string>
+          <string>org.apache.tomcat.util.http.parser.HttpParser$DomainParseState</string>
           <string>org.apache.tomcat.util.http.fileupload.FileItem</string>
           <string>org.apache.catalina.realm.GenericPrincipal</string>
           <string>org.apache.catalina.connector.CoyoteInputStream$4</string>
@@ -2376,25 +2285,69 @@
           <string>org.apache.catalina.connector.CoyoteInputStream$1</string>
           <string>org.apache.tomcat.util.buf.UEncoder$SafeCharsSet</string>
           <string>javax.servlet.SessionTrackingMode</string>
-          <string>org.apache.catalina.Authenticator</string>
-          <string>org.apache.catalina.connector.ResponseFacade</string>
-          <string>org.apache.catalina.connector.ResponseFacade$SetContentTypePrivilegedAction</string>
-          <string>jsp2.examples.el.Functions</string>
           <string>org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction</string>
           <string>org.apache.catalina.connector.Response</string>
-          <string>javax.servlet.http.Part</string>
-          <string>org.apache.catalina.loader.JdbcLeakPrevention</string>
+          <string>org.apache.tomcat.util.http.fileupload.ProgressListener</string>
           <string>org.apache.catalina.connector.CoyoteAdapter$1</string>
           <string>org.apache.catalina.connector.Request$1</string>
           <string>org.apache.catalina.connector.Request$2</string>
+          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl$1</string>
           <string>javax.servlet.http.HttpUtils</string>
-          <string>org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction</string>
-          <string>java.lang.UnsatisfiedLinkError</string>
-          <string>java.util.BitSet</string>
           <string>org.apache.catalina.connector.OutputBuffer$1</string>
           <string>org.apache.catalina.connector.OutputBuffer$2</string>
           <string>org.apache.catalina.core.ApplicationPart</string>
           <string>org.apache.tomcat.util.buf.B2CConverter</string>
+          <string>javax.servlet.http.HttpServletRequestWrapper</string>
+          <string>org.apache.tomcat.util.http.fileupload.FileUploadException</string>
+          <string>org.apache.tomcat.util.http.parser.AcceptLanguage</string>
+          <string>org.apache.catalina.connector.ResponseFacade$1</string>
+          <string>org.apache.tomcat.util.buf.CharsetCache$DummyCharset</string>
+          <string>org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction</string>
+          <string>java.util.Locale</string>
+          <string>org.apache.tomcat.util.http.Parameters</string>
+          <string>org.apache.catalina.connector.RequestFacade$1</string>
+          <string>org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction</string>
+          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl$FileItemStreamImpl$1</string>
+          <string>org.apache.tomcat.util.http.fileupload.MultipartStream$MalformedStreamException</string>
+          <string>org.apache.catalina.core.AprLifecycleListener</string>
+          <string>org.apache.catalina.connector.RequestFacade</string>
+          <string>org.apache.tomcat.util.http.fileupload.RequestContext</string>
+          <string>org.apache.catalina.connector.CoyoteInputStream</string>
+          <string>java.security.PrivilegedAction</string>
+          <string>org.apache.catalina.connector.CoyoteOutputStream</string>
+          <string>java.util.List</string>
+          <string>java.security.Principal</string>
+          <string>org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction</string>
+          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase$InvalidContentTypeException</string>
+          <string>org.apache.tomcat.jni.LibraryNotFoundError</string>
+          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase$SizeException</string>
+          <string>org.apache.catalina.TomcatPrincipal</string>
+          <string>org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction</string>
+          <string>javax.servlet.ServletInputStream</string>
+          <string>org.apache.tomcat.util.http.fileupload.MultipartStream$ItemInputStream</string>
+          <string>org.apache.tomcat.util.http.fileupload.MultipartStream</string>
+          <string>org.apache.catalina.core.ApplicationPushBuilder</string>
+          <string>org.apache.tomcat.jni.Library</string>
+          <string>org.apache.tomcat.util.http.fileupload.FileItemStream$ItemSkippedException</string>
+          <string>org.apache.catalina.connector.InputBuffer</string>
+          <string>org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction</string>
+          <string>org.apache.catalina.util.URLEncoder</string>
+          <string>org.apache.tomcat.util.http.fileupload.FileItemHeaders</string>
+          <string>org.apache.tomcat.util.http.fileupload.FileItemFactory</string>
+          <string>org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction</string>
+          <string>org.apache.tomcat.util.http.fileupload.FileUploadBase$SizeLimitExceededException</string>
+          <string>org.apache.catalina.Authenticator</string>
+          <string>org.apache.catalina.connector.ResponseFacade</string>
+          <string>org.apache.catalina.connector.ResponseFacade$SetContentTypePrivilegedAction</string>
+          <string>jsp2.examples.el.Functions</string>
+          <string>javax.servlet.http.Part</string>
+          <string>org.apache.tomcat.util.http.Parameters$1</string>
+          <string>org.apache.catalina.loader.JdbcLeakPrevention</string>
+          <string>org.apache.tomcat.util.http.fileupload.MultipartStream$ProgressNotifier</string>
+          <string>org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction</string>
+          <string>javax.servlet.DispatcherType</string>
+          <string>java.lang.UnsatisfiedLinkError</string>
+          <string>java.util.BitSet</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -2404,15 +2357,22 @@
           <string>javax.management.remote.rmi.RMIJRMPServerImpl</string>
           <string>javax.management.remote.rmi.RMIServerImpl</string>
           <string>org.apache.catalina.mbeans.BaseCatalinaMBean</string>
+          <string>org.apache.tomcat.util.descriptor.web.ContextTransaction</string>
           <string>javax.rmi.ssl.SslRMIServerSocketFactory</string>
           <string>java.rmi.registry.Registry</string>
+          <string>org.apache.catalina.realm.TestGenericPrincipal</string>
           <string>java.rmi.server.RMIServerSocketFactory</string>
           <string>javax.management.remote.JMXConnectorServer</string>
+          <string>num.NumberGuessBean</string>
+          <string>org.apache.catalina.servlet4preview.GenericFilter</string>
           <string>javax.management.JMRuntimeException</string>
           <string>java.rmi.Remote</string>
+          <string>org.apache.catalina.realm.GenericPrincipal</string>
           <string>javax.rmi.ssl.SslRMIClientSocketFactory</string>
           <string>org.apache.catalina.mbeans.ClassNameMBean</string>
           <string>org.apache.catalina.mbeans.JmxRemoteLifecycleListener$SslRmiServerBindSocketFactory</string>
+          <string>org.apache.catalina.realm.GenericPrincipal$SerializablePrincipal</string>
+          <string>org.apache.catalina.realm.TesterPrincipal</string>
           <string>javax.management.remote.JMXServiceURL</string>
           <string>org.apache.catalina.mbeans.MBeanDumper</string>
           <string>org.apache.catalina.realm.DataSourceRealm</string>
@@ -2422,79 +2382,43 @@
           <string>javax.management.remote.rmi.RMIConnectorServer</string>
           <string>java.rmi.registry.LocateRegistry</string>
           <string>javax.net.ssl.SSLServerSocket</string>
+          <string>org.apache.catalina.connector.CoyotePrincipal</string>
           <string>java.rmi.AlreadyBoundException</string>
           <string>org.apache.catalina.mbeans.JmxRemoteLifecycleListener$RmiClientLocalhostSocketFactory</string>
           <string>org.apache.catalina.mbeans.JmxRemoteLifecycleListener$RmiServerBindSocketFactory</string>
           <string>org.apache.catalina.mbeans.ConnectorMBean</string>
           <string>org.apache.catalina.realm.UserDatabaseRealm</string>
           <string>java.rmi.server.RMIClientSocketFactory</string>
+          <string>org.apache.catalina.realm.MemoryRealm</string>
           <string>javax.management.RuntimeOperationsException</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
         <name>org.apache.catalina.ha.session.ss</name>
         <entities>
-          <string>org.apache.tomcat.util.descriptor.web.ServletDef</string>
-          <string>java.io.ObjectOutput</string>
-          <string>org.apache.tomcat.util.descriptor.web.SecurityCollection</string>
-          <string>org.apache.tomcat.util.descriptor.web.ContextTransaction</string>
-          <string>org.apache.tomcat.util.descriptor.web.FilterMap</string>
-          <string>org.apache.catalina.core.ApplicationFilterConfig</string>
-          <string>org.apache.tomcat.jdbc.pool.PoolProperties</string>
-          <string>org.apache.tomcat.util.http.fileupload.util.FileItemHeadersImpl</string>
-          <string>org.apache.tomcat.util.net.openssl.OpenSSLConfCmd</string>
-          <string>org.apache.catalina.authenticator.SingleSignOnListener</string>
-          <string>org.apache.tomcat.util.buf.AbstractChunk</string>
-          <string>num.NumberGuessBean</string>
-          <string>org.apache.tomcat.util.http.ServerCookie</string>
-          <string>org.apache.catalina.servlet4preview.GenericFilter</string>
-          <string>org.apache.catalina.tribes.tipis.LazyReplicatedMap</string>
-          <string>java.io.Externalizable</string>
-          <string>org.apache.catalina.util.ParameterMap</string>
-          <string>javax.el.Expression</string>
-          <string>org.apache.catalina.realm.TesterPrincipal</string>
-          <string>javax.servlet.jsp.tagext.TagSupport</string>
-          <string>org.apache.catalina.authenticator.SingleSignOnSessionKey</string>
-          <string>org.apache.catalina.deploy.NamingResourcesImpl</string>
-          <string>javax.el.ValueReference</string>
-          <string>org.apache.tomcat.util.buf.MessageBytes</string>
-          <string>org.apache.catalina.connector.CoyotePrincipal</string>
-          <string>org.apache.tomcat.util.modeler.FeatureInfo</string>
-          <string>java.io.ObjectInput</string>
-          <string>org.apache.tomcat.util.descriptor.web.InjectionTarget</string>
-          <string>org.apache.tomcat.util.descriptor.web.LoginConfig</string>
-          <string>org.apache.tomcat.util.descriptor.web.ResourceBase</string>
           <string>org.apache.catalina.ha.session.BackupManager</string>
-          <string>org.apache.tomcat.util.descriptor.web.ErrorPage</string>
-          <string>org.apache.catalina.tribes.tipis.AbstractReplicatedMap</string>
-          <string>org.apache.tomcat.util.descriptor.web.MultipartDef</string>
-          <string>org.apache.tomcat.util.net.openssl.OpenSSLConf</string>
-          <string>org.apache.tomcat.util.descriptor.web.ApplicationParameter</string>
-          <string>org.apache.tomcat.util.descriptor.web.SecurityConstraint</string>
-          <string>org.apache.tomcat.util.net.SSLHostConfig</string>
-          <string>org.apache.tomcat.dbcp.dbcp2.datasources.InstanceKeyDataSource</string>
-          <string>javax.servlet.http.Cookie</string>
-          <string>org.apache.catalina.realm.GenericPrincipal</string>
-          <string>org.apache.tomcat.util.descriptor.web.SecurityRoleRef</string>
-          <string>org.apache.tomcat.util.descriptor.web.FilterDef</string>
-          <string>org.apache.catalina.ha.session.DeltaRequest$AttributeInfo</string>
-          <string>org.apache.catalina.authenticator.SingleSignOnEntry</string>
+          <string>java.io.Externalizable</string>
           <string>org.apache.catalina.ha.session.DeltaRequest</string>
-          <string>org.apache.tomcat.util.net.SSLHostConfigCertificate</string>
+          <string>org.apache.catalina.ha.session.ClusterManagerBase</string>
+          <string>java.io.ObjectOutput</string>
+          <string>org.apache.catalina.ha.session.DeltaRequest$AttributeInfo</string>
           <string>org.apache.catalina.ha.session.DeltaSession</string>
-          <string>org.apache.catalina.session.StandardSession</string>
-          <string>org.apache.tomcat.dbcp.dbcp2.cpdsadapter.DriverAdapterCPDS</string>
+          <string>org.apache.catalina.tribes.tipis.LazyReplicatedMap</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
         <name>org.apache.catalina.ha.context.ss</name>
         <entities>
           <string>org.apache.catalina.ha.context.ReplicatedContext$MultiEnumeration</string>
+          <string>org.apache.catalina.tribes.tipis.AbstractReplicatedMap</string>
+          <string>org.apache.catalina.tribes.tipis.ReplicatedMapEntry</string>
           <string>org.apache.catalina.tribes.tipis.AbstractReplicatedMap$MapMessage</string>
           <string>org.apache.catalina.tribes.tipis.ReplicatedMap</string>
           <string>org.apache.catalina.tribes.tipis.AbstractReplicatedMap$MapOwner</string>
+          <string>org.apache.catalina.tribes.tipis.AbstractReplicatedMap$MapEntry</string>
           <string>org.apache.catalina.ha.context.ReplicatedContext$ReplApplContext</string>
           <string>org.apache.catalina.ha.context.ReplicatedContext</string>
+          <string>org.apache.catalina.tribes.tipis.AbstractReplicatedMap$State</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -2520,9 +2444,10 @@
           <string>org.apache.tomcat.dbcp.dbcp2.BasicDataSource</string>
           <string>org.apache.tomcat.dbcp.dbcp2.DriverManagerConnectionFactory</string>
           <string>org.apache.tomcat.dbcp.dbcp2.PStmtKey$PreparedCallWithResultSetConcurrency</string>
-          <string>org.apache.tomcat.dbcp.dbcp2.PoolingDataSource$PoolGuardConnectionWrapper</string>
           <string>java.sql.Array</string>
+          <string>org.apache.tomcat.dbcp.dbcp2.PoolingDataSource$PoolGuardConnectionWrapper</string>
           <string>org.apache.tomcat.dbcp.dbcp2.PStmtKey</string>
+          <string>javax.management.InstanceAlreadyExistsException</string>
           <string>java.sql.ParameterMetaData</string>
           <string>org.apache.tomcat.dbcp.dbcp2.DelegatingConnection</string>
           <string>java.sql.RowIdLifetime</string>
@@ -2533,6 +2458,7 @@
           <string>org.apache.tomcat.dbcp.dbcp2.BasicDataSource$1</string>
           <string>org.apache.tomcat.dbcp.dbcp2.PStmtKey$PreparedCallSQL</string>
           <string>java.lang.LinkageError</string>
+          <string>javax.management.NotCompliantMBeanException</string>
           <string>org.apache.tomcat.dbcp.dbcp2.PStmtKey$PreparedStatementWithResultSetHoldability</string>
           <string>java.sql.PreparedStatement</string>
           <string>org.apache.tomcat.dbcp.dbcp2.ObjectNameWrapper</string>
@@ -2540,6 +2466,7 @@
           <string>org.apache.tomcat.dbcp.dbcp2.ConnectionFactory</string>
           <string>org.apache.tomcat.dbcp.dbcp2.DriverFactory</string>
           <string>org.apache.tomcat.dbcp.dbcp2.PStmtKey$PreparedStatementWithColumnNames</string>
+          <string>javax.management.JMException</string>
           <string>org.apache.tomcat.dbcp.dbcp2.Jdbc41Bridge</string>
           <string>org.apache.tomcat.dbcp.dbcp2.PStmtKey$PreparedStatementWithResultSetConcurrency</string>
           <string>javax.sql.CommonDataSource</string>
@@ -2553,21 +2480,26 @@
           <string>org.apache.tomcat.dbcp.dbcp2.BasicDataSourceMXBean</string>
           <string>java.sql.DatabaseMetaData</string>
           <string>org.apache.tomcat.dbcp.dbcp2.SQLExceptionList</string>
+          <string>org.apache.tomcat.dbcp.pool2.impl.GenericKeyedObjectPoolConfig</string>
           <string>org.apache.tomcat.dbcp.dbcp2.BasicDataSource$PaGetConnection</string>
           <string>java.sql.SQLException</string>
           <string>java.sql.SQLClientInfoException</string>
-          <string>org.apache.tomcat.dbcp.dbcp2.Constants</string>
           <string>org.apache.tomcat.dbcp.dbcp2.DelegatingStatement</string>
+          <string>org.apache.tomcat.dbcp.dbcp2.Constants</string>
+          <string>org.apache.tomcat.dbcp.dbcp2.Utils</string>
+          <string>javax.management.MBeanRegistrationException</string>
           <string>org.apache.tomcat.dbcp.dbcp2.PoolableConnectionMXBean</string>
           <string>org.apache.tomcat.dbcp.dbcp2.cpdsadapter.PStmtKeyCPDS</string>
           <string>java.lang.NoClassDefFoundError</string>
-          <string>org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory</string>
           <string>java.sql.Clob</string>
+          <string>org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory</string>
           <string>org.apache.tomcat.dbcp.dbcp2.PoolingDriver$PoolGuardConnectionWrapper</string>
           <string>org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement</string>
           <string>java.security.PrivilegedActionException</string>
+          <string>org.apache.tomcat.dbcp.pool2.PooledObjectFactory</string>
           <string>java.util.Properties</string>
           <string>org.apache.tomcat.dbcp.dbcp2.PoolingDataSource</string>
+          <string>org.apache.tomcat.dbcp.pool2.BasePooledObjectFactory</string>
           <string>org.apache.tomcat.dbcp.dbcp2.DataSourceConnectionFactory</string>
           <string>java.sql.DriverPropertyInfo</string>
           <string>org.apache.tomcat.dbcp.dbcp2.PStmtKey$PreparedCallWithResultSetHoldability</string>
@@ -2619,6 +2551,7 @@
           <string>org.apache.catalina.tribes.JmxChannel</string>
           <string>org.apache.catalina.tribes.group.ChannelInterceptorBase</string>
           <string>java.io.Serializable</string>
+          <string>org.apache.catalina.tribes.util.StringManager</string>
           <string>org.apache.catalina.tribes.group.GroupChannel</string>
           <string>org.apache.catalina.tribes.group.GroupChannel$HeartbeatThread</string>
           <string>org.apache.catalina.tribes.group.ExtendedRpcCallback</string>
@@ -2628,6 +2561,7 @@
           <string>org.apache.catalina.tribes.jmx.JmxRegistry</string>
           <string>org.apache.catalina.tribes.group.RpcCallback</string>
           <string>org.apache.catalina.tribes.ChannelException</string>
+          <string>org.apache.catalina.tribes.util.StringManager$1</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -2641,35 +2575,33 @@
       <edu.usc.softarch.arcade.facts.ConcernCluster>
         <name>org.apache.coyote.http11.upgrade.ss</name>
         <entities>
-          <string>org.apache.tomcat.ContextBind</string>
           <string>org.apache.coyote.UpgradeToken</string>
           <string>org.apache.coyote.http11.upgrade.UpgradeProcessorExternal</string>
           <string>org.apache.coyote.http11.upgrade.UpgradeServletInputStream</string>
           <string>org.apache.coyote.http11.upgrade.UpgradeServletOutputStream</string>
-          <string>javax.servlet.ReadListener</string>
           <string>org.apache.coyote.http11.upgrade.UpgradeProcessorBase</string>
           <string>org.apache.tomcat.util.net.DispatchType</string>
+          <string>org.apache.tomcat.ContextBind</string>
+          <string>java.io.CharConversionException</string>
+          <string>javax.servlet.ServletOutputStream</string>
+          <string>javax.servlet.WriteListener</string>
+          <string>javax.servlet.ReadListener</string>
+          <string>org.apache.catalina.ssi.ByteArrayServletOutputStream</string>
+          <string>org.apache.jasper.tagplugins.jstl.Util$ImportResponseWrapper$1</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
         <name>org.apache.tomcat.util.http.parser.ss</name>
         <entities>
-          <string>org.apache.tomcat.util.http.parser.HttpParser$DomainParseState</string>
-          <string>org.apache.tomcat.util.http.parser.HttpParser</string>
-          <string>org.apache.tomcat.util.http.parser.Cookie</string>
-          <string>org.apache.tomcat.util.collections.ConcurrentCache</string>
-          <string>java.lang.ArrayIndexOutOfBoundsException</string>
-          <string>org.apache.tomcat.util.http.parser.Host</string>
-          <string>org.apache.tomcat.util.http.parser.MediaType</string>
           <string>org.apache.tomcat.util.http.parser.Cookie$1</string>
-          <string>java.lang.Character</string>
-          <string>org.apache.tomcat.util.http.parser.Host$MessageBytesReader</string>
+          <string>org.apache.tomcat.util.http.parser.Cookie</string>
           <string>org.apache.tomcat.util.http.parser.MediaTypeCache</string>
+          <string>org.apache.tomcat.util.collections.ConcurrentCache</string>
           <string>org.apache.tomcat.util.http.parser.Cookie$ByteBuffer</string>
-          <string>org.apache.tomcat.util.log.UserDataHelper$Mode</string>
           <string>org.apache.tomcat.util.http.ServerCookie</string>
           <string>java.util.WeakHashMap</string>
           <string>org.apache.tomcat.util.http.ServerCookies</string>
+          <string>org.apache.tomcat.util.http.parser.MediaType</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -2706,13 +2638,14 @@
           <string>org.apache.coyote.http2.ByteUtil</string>
           <string>org.apache.coyote.http2.Http2OutputBuffer</string>
           <string>org.apache.coyote.http2.FrameType$IntPredicate</string>
-          <string>org.apache.coyote.http2.ConnectionSettingsBase$1</string>
           <string>org.apache.coyote.http2.Http2Parser</string>
           <string>org.apache.coyote.http2.StreamException</string>
+          <string>org.apache.coyote.http2.ConnectionSettingsBase$1</string>
           <string>org.apache.coyote.http2.Http2Protocol</string>
           <string>org.apache.coyote.http2.Http2Exception</string>
           <string>org.apache.coyote.http2.HpackException</string>
           <string>org.apache.coyote.http2.Stream$StreamOutputBuffer</string>
+          <string>javax.servlet.http.WebConnection</string>
           <string>org.apache.coyote.ProtocolException</string>
           <string>org.apache.coyote.http2.HpackEncoder$HpackHeaderFunction</string>
           <string>org.apache.coyote.http2.ConnectionException</string>
@@ -2734,16 +2667,18 @@
           <string>org.apache.coyote.http2.Http2Error</string>
           <string>org.apache.coyote.http2.StreamRunnable</string>
           <string>java.util.concurrent.ConcurrentLinkedQueue</string>
-          <string>org.apache.coyote.http2.ConnectionSettingsBase</string>
           <string>org.apache.coyote.http2.HpackEncoder$State</string>
+          <string>org.apache.coyote.http2.ConnectionSettingsBase</string>
           <string>org.apache.coyote.http2.Flags</string>
           <string>org.apache.coyote.http2.Http2UpgradeHandler$ConnectionState</string>
-          <string>org.apache.coyote.http2.StreamStateMachine$State</string>
+          <string>org.apache.tomcat.util.http.parser.Host</string>
           <string>org.apache.coyote.http2.AbstractStream</string>
+          <string>org.apache.coyote.http2.StreamStateMachine$State</string>
           <string>java.util.TreeSet</string>
           <string>org.apache.coyote.http2.FrameType$2</string>
           <string>org.apache.coyote.http2.FrameType$3</string>
           <string>org.apache.coyote.http2.Http2UpgradeHandler$PingManager</string>
+          <string>org.apache.tomcat.util.http.parser.Host$MessageBytesReader</string>
           <string>org.apache.coyote.http2.FrameType$1</string>
           <string>org.apache.coyote.http2.HpackDecoder</string>
           <string>org.apache.coyote.http2.HpackDecoder$HeaderEmitter</string>
@@ -2776,30 +2711,25 @@
           <string>jsp2.examples.simpletag.EchoAttributesTag</string>
           <string>jsp2.examples.simpletag.RepeatSimpleTag</string>
           <string>javax.servlet.jsp.tagext.JspFragment</string>
+          <string>org.apache.jasper.tagplugins.jstl.Util</string>
           <string>jsp2.examples.simpletag.TileSimpleTag</string>
           <string>javax.servlet.jsp.tagext.JspTag</string>
           <string>javax.servlet.jsp.tagext.Tag</string>
           <string>javax.servlet.jsp.SkipPageException</string>
           <string>javax.servlet.jsp.tagext.SimpleTag</string>
+          <string>javax.servlet.jsp.JspTagException</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
         <name>org.apache.tomcat.util.collections.ss</name>
         <entities>
           <string>org.apache.tomcat.util.collections.CaseInsensitiveKeyMap$Key</string>
-          <string>org.apache.tomcat.util.collections.CaseInsensitiveKeyMap$EntrySet</string>
-          <string>java.util.Map$Entry</string>
-          <string>org.apache.tomcat.util.collections.ManagedConcurrentWeakHashMap$1$1$1</string>
-          <string>java.util.AbstractSet</string>
-          <string>java.lang.ref.ReferenceQueue</string>
-          <string>java.lang.ref.Reference</string>
           <string>org.apache.tomcat.util.collections.CaseInsensitiveKeyMap</string>
           <string>org.apache.tomcat.util.collections.CaseInsensitiveKeyMap$EntryIterator</string>
+          <string>org.apache.tomcat.util.collections.CaseInsensitiveKeyMap$EntrySet</string>
+          <string>java.util.Map$Entry</string>
           <string>java.util.AbstractMap</string>
-          <string>org.apache.tomcat.util.collections.ManagedConcurrentWeakHashMap$Key</string>
-          <string>org.apache.tomcat.util.collections.ManagedConcurrentWeakHashMap$1$1</string>
-          <string>org.apache.tomcat.util.collections.ManagedConcurrentWeakHashMap$1</string>
-          <string>org.apache.tomcat.util.collections.ManagedConcurrentWeakHashMap</string>
+          <string>java.util.AbstractSet</string>
           <string>org.apache.tomcat.util.collections.CaseInsensitiveKeyMap$EntryImpl</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -2807,6 +2737,7 @@
         <name>org.apache.tomcat.util.net.jsse.ss</name>
         <entities>
           <string>org.apache.tomcat.util.buf.Asn1Parser</string>
+          <string>javax.net.ssl.X509KeyManager</string>
           <string>java.security.spec.InvalidKeySpecException</string>
           <string>javax.net.ssl.SSLParameters</string>
           <string>java.security.spec.RSAPrivateCrtKeySpec</string>
@@ -2818,6 +2749,7 @@
           <string>javax.crypto.EncryptedPrivateKeyInfo</string>
           <string>java.security.GeneralSecurityException</string>
           <string>org.apache.tomcat.util.net.jsse.JSSEImplementation</string>
+          <string>org.apache.tomcat.util.net.SSLHostConfigCertificate$Type</string>
           <string>org.apache.tomcat.util.compat.JreVendor</string>
           <string>javax.crypto.spec.PBEKeySpec</string>
           <string>org.apache.tomcat.util.net.jsse.JSSEKeyManager</string>
@@ -2837,7 +2769,10 @@
           <string>javax.net.ssl.KeyManager</string>
           <string>java.security.KeyFactory</string>
           <string>java.security.Key</string>
+          <string>org.apache.tomcat.util.net.SSLHostConfigCertificate$StoreType</string>
+          <string>org.apache.catalina.storeconfig.SSLHostConfigSF</string>
           <string>java.security.PrivateKey</string>
+          <string>org.apache.tomcat.util.net.SSLHostConfigCertificate</string>
           <string>java.security.NoSuchAlgorithmException</string>
           <string>org.apache.tomcat.util.net.SSLSessionManager</string>
           <string>org.apache.tomcat.util.net.jsse.PEMFile$Part</string>
@@ -2877,12 +2812,10 @@
           <string>org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreClear</string>
           <string>org.apache.catalina.Store</string>
           <string>javax.servlet.http.HttpSession</string>
-          <string>org.apache.catalina.session.JDBCStore</string>
           <string>org.apache.catalina.session.TooManyActiveSessionsException</string>
           <string>org.apache.catalina.realm.GenericPrincipal</string>
           <string>org.apache.catalina.session.StandardManager$PrivilegedDoUnload</string>
           <string>org.apache.catalina.session.ManagerBase</string>
-          <string>org.apache.catalina.session.FileStore</string>
           <string>javax.servlet.http.HttpSessionListener</string>
           <string>org.apache.catalina.SessionIdGenerator</string>
           <string>org.apache.catalina.util.StandardSessionIdGenerator</string>
@@ -2971,51 +2904,85 @@
       <edu.usc.softarch.arcade.facts.ConcernCluster>
         <name>org.apache.coyote.http11.ss</name>
         <entities>
-          <string>org.apache.coyote.http11.filters.ChunkedOutputFilter</string>
+          <string>org.apache.coyote.AbstractProcessor</string>
           <string>org.apache.coyote.http11.Http11InputBuffer$SocketInputBuffer</string>
-          <string>org.apache.coyote.http11.filters.IdentityOutputFilter</string>
-          <string>org.apache.coyote.http11.AbstractHttp11Protocol</string>
-          <string>java.io.InterruptedIOException</string>
-          <string>org.apache.coyote.http11.Http11InputBuffer$1</string>
+          <string>org.apache.coyote.http11.Http11Nio2Protocol</string>
+          <string>java.io.ObjectInputStream</string>
+          <string>org.apache.coyote.http11.filters.GzipOutputFilter$FakeOutputStream</string>
+          <string>org.apache.tomcat.util.buf.Ascii</string>
+          <string>org.apache.tomcat.util.buf.ByteChunk$ByteOutputChannel</string>
           <string>org.apache.tomcat.util.net.SendfileState</string>
-          <string>org.apache.tomcat.util.net.ApplicationBufferHandler</string>
-          <string>java.nio.charset.Charset</string>
           <string>org.apache.coyote.http11.InputFilter</string>
           <string>org.apache.coyote.http11.Http11InputBuffer$HeaderParseData</string>
-          <string>org.apache.coyote.InputBuffer</string>
-          <string>org.apache.coyote.OutputBuffer</string>
-          <string>org.apache.tomcat.util.http.HttpMessages</string>
-          <string>org.apache.coyote.http11.Http11InputBuffer</string>
           <string>org.apache.coyote.http11.Http11Processor</string>
-          <string>org.apache.coyote.http11.Http11Protocol</string>
-          <string>org.apache.coyote.Request</string>
-          <string>org.apache.coyote.http11.upgrade.UpgradeProcessorInternal</string>
-          <string>org.apache.coyote.http11.Http11Processor$1</string>
+          <string>org.apache.coyote.AsyncStateMachine</string>
+          <string>org.apache.tomcat.util.net.AbstractJsseEndpoint$1</string>
+          <string>org.apache.coyote.AbstractProtocol</string>
           <string>org.apache.coyote.http11.HttpOutputBuffer</string>
           <string>org.apache.tomcat.util.buf.Constants</string>
           <string>org.apache.coyote.http11.Http11InputBuffer$HeaderParsePosition</string>
-          <string>org.apache.coyote.http11.Constants</string>
           <string>org.apache.coyote.http11.HeadersTooLargeException</string>
           <string>org.apache.coyote.http11.Http11NioProtocol</string>
+          <string>org.apache.coyote.AbstractProtocol$ConnectionHandler</string>
           <string>org.apache.coyote.RequestGroupInfo</string>
-          <string>org.apache.tomcat.websocket.server.WsHttpUpgradeHandler</string>
           <string>org.apache.coyote.Response</string>
           <string>org.apache.coyote.Constants</string>
           <string>org.apache.coyote.http11.filters.VoidInputFilter</string>
+          <string>org.apache.tomcat.util.net.SSLUtil$ProtocolInfo</string>
           <string>org.apache.coyote.http11.OutputFilter</string>
-          <string>org.apache.coyote.RequestInfo</string>
-          <string>java.io.IOException</string>
+          <string>java.util.concurrent.CopyOnWriteArraySet</string>
           <string>java.nio.charset.StandardCharsets</string>
-          <string>org.apache.coyote.http11.Http11OutputBuffer</string>
+          <string>org.apache.coyote.http11.upgrade.InternalHttpUpgradeHandler</string>
           <string>org.apache.coyote.ActionHook</string>
           <string>org.apache.coyote.http11.AbstractHttp11JsseProtocol</string>
-          <string>org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer</string>
+          <string>org.apache.coyote.AbstractProtocol$AsyncTimeout</string>
           <string>org.apache.coyote.http11.filters.VoidOutputFilter</string>
           <string>org.apache.coyote.http11.filters.IdentityInputFilter</string>
-          <string>org.apache.coyote.http11.Http11InputBuffer$HeaderParseStatus</string>
+          <string>org.apache.tomcat.util.log.UserDataHelper$Mode</string>
           <string>org.apache.coyote.http11.filters.ChunkedInputFilter</string>
-          <string>org.apache.tomcat.util.buf.HexUtils</string>
+          <string>org.apache.coyote.ErrorState</string>
           <string>org.apache.coyote.http11.filters.SavedRequestInputFilter</string>
+          <string>org.apache.coyote.http11.filters.ChunkedOutputFilter</string>
+          <string>org.apache.coyote.AbstractProcessor$1</string>
+          <string>org.apache.coyote.AsyncStateMachine$AsyncState</string>
+          <string>org.apache.coyote.http11.filters.IdentityOutputFilter</string>
+          <string>org.apache.coyote.http11.AbstractHttp11Protocol</string>
+          <string>org.apache.coyote.UpgradeProtocol</string>
+          <string>org.apache.tomcat.util.net.AbstractEndpoint$Handler</string>
+          <string>java.io.InterruptedIOException</string>
+          <string>org.apache.coyote.http11.Http11InputBuffer$1</string>
+          <string>org.apache.tomcat.util.buf.ByteChunk</string>
+          <string>org.apache.tomcat.util.net.ApplicationBufferHandler</string>
+          <string>java.nio.charset.Charset</string>
+          <string>org.apache.catalina.ssi.SSIServletExternalResolver$ServletContextAndPath</string>
+          <string>org.apache.coyote.InputBuffer</string>
+          <string>org.apache.coyote.OutputBuffer</string>
+          <string>org.apache.coyote.http11.Http11InputBuffer</string>
+          <string>org.apache.tomcat.util.net.AbstractJsseEndpoint</string>
+          <string>org.apache.coyote.Processor</string>
+          <string>java.io.ObjectOutputStream</string>
+          <string>org.apache.coyote.http11.Http11Protocol</string>
+          <string>org.apache.coyote.Request</string>
+          <string>org.apache.coyote.AbstractProcessorLight</string>
+          <string>org.apache.coyote.http11.upgrade.UpgradeProcessorInternal</string>
+          <string>org.apache.coyote.http11.Http11Processor$1</string>
+          <string>org.apache.tomcat.util.buf.ByteChunk$ByteInputChannel</string>
+          <string>org.apache.tomcat.util.net.openssl.OpenSSLImplementation</string>
+          <string>org.apache.catalina.ssi.SSIServletExternalResolver</string>
+          <string>org.apache.coyote.http11.Constants</string>
+          <string>org.apache.tomcat.websocket.server.WsHttpUpgradeHandler</string>
+          <string>org.apache.coyote.AbstractProtocol$RecycledProcessors</string>
+          <string>org.apache.tomcat.util.log.UserDataHelper</string>
+          <string>org.apache.coyote.RequestInfo</string>
+          <string>java.io.IOException</string>
+          <string>org.apache.tomcat.util.net.SSLUtil</string>
+          <string>org.apache.coyote.http11.Http11OutputBuffer</string>
+          <string>org.apache.tomcat.util.net.AbstractEndpoint$Handler$SocketState</string>
+          <string>org.apache.tomcat.util.log.UserDataHelper$Config</string>
+          <string>org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer</string>
+          <string>org.apache.coyote.http11.filters.GzipOutputFilter</string>
+          <string>org.apache.coyote.http11.Http11InputBuffer$HeaderParseStatus</string>
+          <string>org.apache.tomcat.util.buf.HexUtils</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -3026,9 +2993,10 @@
           <string>org.apache.coyote.ajp.AjpProcessor$SocketInputBuffer</string>
           <string>org.apache.coyote.ajp.AjpProcessor$SocketOutputBuffer</string>
           <string>org.apache.coyote.ajp.AjpProcessor</string>
+          <string>org.apache.tomcat.util.http.HttpMessages</string>
+          <string>java.lang.ArrayIndexOutOfBoundsException</string>
           <string>org.apache.coyote.ajp.Constants</string>
           <string>org.apache.coyote.ajp.AjpMessage</string>
-          <string>org.apache.coyote.ErrorState</string>
           <string>org.apache.coyote.ajp.AjpProtocol</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -3056,7 +3024,6 @@
           <string>javax.el.FunctionMapper</string>
           <string>javax.xml.stream.XMLStreamException</string>
           <string>javax.servlet.jsp.tagext.PageData</string>
-          <string>javax.servlet.jsp.tagext.IterationTag</string>
           <string>java.security.Policy</string>
           <string>org.apache.jasper.compiler.Generator$TagHandlerInfo</string>
           <string>org.apache.jasper.compiler.JspRuntimeContext$1</string>
@@ -3074,11 +3041,10 @@
           <string>org.apache.jasper.compiler.ELParser$TextBuilder</string>
           <string>org.apache.jasper.compiler.tagplugin.TagPlugin</string>
           <string>org.apache.jasper.compiler.AttributeParser</string>
-          <string>org.apache.jasper.compiler.ELInterpreterFactory</string>
           <string>org.apache.jasper.compiler.Validator</string>
+          <string>org.apache.jasper.compiler.ELInterpreterFactory</string>
           <string>org.apache.jasper.compiler.JDTCompiler</string>
           <string>org.apache.jasper.compiler.Generator$GenBuffer</string>
-          <string>org.apache.jasper.compiler.JspConfig$JspProperty</string>
           <string>org.xml.sax.Locator</string>
           <string>org.apache.jasper.compiler.ELFunctionMapper</string>
           <string>org.apache.jasper.compiler.Node$SetProperty</string>
@@ -3108,8 +3074,8 @@
           <string>org.apache.jasper.compiler.Node$AttributeGenerator</string>
           <string>org.apache.jasper.compiler.DefaultErrorHandler</string>
           <string>org.apache.jasper.compiler.ImplicitTagLibraryInfo</string>
-          <string>org.apache.jasper.compiler.ELInterpreterFactory$DefaultELInterpreter</string>
           <string>org.apache.jasper.compiler.Node</string>
+          <string>org.apache.jasper.compiler.ELInterpreterFactory$DefaultELInterpreter</string>
           <string>org.apache.tools.ant.types.Path</string>
           <string>org.apache.jasper.compiler.PageDataImpl$FirstPassVisitor</string>
           <string>javax.xml.stream.XMLStreamReader</string>
@@ -3143,8 +3109,8 @@
           <string>org.apache.jasper.util.UniqueAttributesImpl</string>
           <string>org.apache.jasper.tagplugins.jstl.core.Otherwise</string>
           <string>org.apache.jasper.compiler.JspRuntimeContext$SecurityHolder</string>
-          <string>org.apache.jasper.tagplugins.jstl.core.Redirect</string>
           <string>org.apache.jasper.compiler.ELFunctionMapper$ELFunctionVisitor</string>
+          <string>org.apache.jasper.tagplugins.jstl.core.Redirect</string>
           <string>org.apache.jasper.compiler.Validator$ValidateVisitor$1ValidateFunctionMapper</string>
           <string>org.apache.jasper.compiler.SmapStratum$LineInfo</string>
           <string>org.apache.jasper.compiler.ErrorHandler</string>
@@ -3174,7 +3140,6 @@
           <string>org.apache.jasper.compiler.Collector$1</string>
           <string>javax.servlet.jsp.tagext.ValidationMessage</string>
           <string>javax.servlet.jsp.tagext.TagLibraryInfo</string>
-          <string>org.apache.jasper.compiler.TldCache$TaglibXmlCacheEntry</string>
           <string>org.apache.jasper.compiler.TagFileProcessor</string>
           <string>org.apache.jasper.compiler.tagplugin.TagPluginContext</string>
           <string>org.apache.jasper.compiler.Node$Nodes</string>
@@ -3191,7 +3156,6 @@
           <string>org.apache.jasper.compiler.TagPluginManager</string>
           <string>org.apache.jasper.compiler.JspUtil</string>
           <string>org.apache.jasper.compiler.ErrorDispatcher$ErrorVisitor</string>
-          <string>org.apache.jasper.compiler.JspConfig</string>
           <string>org.apache.jasper.compiler.SmapGenerator</string>
           <string>org.apache.jasper.tagplugins.jstl.core.Catch</string>
           <string>org.apache.jasper.compiler.ErrorDispatcher</string>
@@ -3252,7 +3216,6 @@
           <string>org.apache.jasper.compiler.ELNode$Text</string>
           <string>org.apache.jasper.compiler.Node$ELExpression</string>
           <string>java.util.HashMap</string>
-          <string>org.apache.jasper.compiler.JspConfig$JspPropertyGroup</string>
           <string>org.apache.jasper.compiler.JspReader</string>
           <string>org.apache.jasper.compiler.Node$Root</string>
           <string>org.apache.jasper.compiler.SmapUtil$SmapGenVisitor</string>
@@ -3261,12 +3224,11 @@
           <string>org.apache.tools.ant.BuildListener</string>
           <string>org.apache.jasper.compiler.Node$JspOutput</string>
           <string>org.eclipse.jdt.internal.compiler.env.IBinaryType</string>
-          <string>org.apache.jasper.compiler.Generator$GenBuffer$1</string>
           <string>org.apache.jasper.compiler.ELFunctionMapper$ELFunctionVisitor$1Fvisitor</string>
+          <string>org.apache.jasper.compiler.Generator$GenBuffer$1</string>
           <string>org.apache.jasper.compiler.Node$FallBackAction</string>
           <string>org.apache.jasper.compiler.ELNode$Nodes</string>
           <string>org.apache.jasper.compiler.ELParser</string>
-          <string>org.apache.jasper.compiler.TldCache</string>
           <string>org.xml.sax.SAXParseException</string>
           <string>org.apache.jasper.compiler.ELFunctionMapper$1</string>
           <string>org.apache.jasper.compiler.SmapUtil</string>
@@ -3276,113 +3238,67 @@
       <edu.usc.softarch.arcade.facts.ConcernCluster>
         <name>org.apache.catalina.realm.ss</name>
         <entities>
+          <string>javax.security.auth.login.LoginException</string>
+          <string>java.security.cert.X509Certificate</string>
+          <string>org.apache.catalina.startup.FailedContext</string>
+          <string>org.apache.catalina.realm.DigestCredentialHandlerBase</string>
+          <string>org.apache.catalina.realm.LockOutRealm</string>
           <string>javax.naming.ldap.InitialLdapContext</string>
           <string>javax.security.auth.callback.UnsupportedCallbackException</string>
-          <string>org.apache.tomcat.util.descriptor.web.SecurityCollection</string>
           <string>javax.naming.ldap.ExtendedRequest</string>
+          <string>org.apache.catalina.realm.JAASMemoryLoginModule</string>
           <string>org.apache.catalina.realm.MemoryRuleSet</string>
-          <string>org.apache.tomcat.util.http.fileupload.util.FileItemHeadersImpl</string>
-          <string>org.apache.tomcat.util.net.openssl.OpenSSLConfCmd</string>
-          <string>org.apache.catalina.authenticator.SingleSignOnListener</string>
+          <string>javax.naming.AuthenticationException</string>
+          <string>javax.naming.ldap.ExtendedResponse</string>
+          <string>javax.naming.directory.Attribute</string>
+          <string>org.apache.catalina.realm.X509UsernameRetriever</string>
+          <string>javax.security.auth.login.FailedLoginException</string>
+          <string>javax.net.ssl.HostnameVerifier</string>
+          <string>javax.security.auth.login.Configuration</string>
+          <string>org.apache.catalina.realm.JDBCRealm</string>
           <string>javax.security.auth.spi.LoginModule</string>
-          <string>org.apache.catalina.realm.GenericPrincipal$SerializablePrincipal</string>
+          <string>javax.security.auth.callback.PasswordCallback</string>
+          <string>org.apache.catalina.realm.MessageDigestCredentialHandler</string>
           <string>org.apache.catalina.util.LifecycleBase</string>
           <string>org.apache.catalina.realm.RealmBase$AllRolesMode</string>
           <string>javax.naming.ldap.StartTlsResponse</string>
           <string>javax.net.ssl.SSLSocketFactory</string>
-          <string>javax.servlet.jsp.tagext.TagSupport</string>
-          <string>org.apache.catalina.deploy.NamingResourcesImpl</string>
-          <string>javax.el.ValueReference</string>
           <string>javax.naming.ServiceUnavailableException</string>
-          <string>org.apache.catalina.connector.CoyotePrincipal</string>
           <string>javax.naming.directory.Attributes</string>
-          <string>org.apache.tomcat.util.modeler.FeatureInfo</string>
           <string>org.apache.catalina.realm.JNDIRealm$User</string>
+          <string>org.apache.catalina.core.StandardContext</string>
           <string>javax.naming.ldap.LdapContext</string>
           <string>javax.naming.directory.SearchResult</string>
+          <string>java.sql.Types</string>
           <string>javax.security.auth.callback.TextInputCallback</string>
           <string>org.apache.catalina.core.StandardEngine</string>
-          <string>org.apache.tomcat.util.descriptor.web.MultipartDef</string>
           <string>javax.naming.ldap.Control</string>
           <string>org.apache.catalina.core.StandardHost</string>
-          <string>org.apache.tomcat.util.net.openssl.OpenSSLConf</string>
           <string>org.apache.catalina.realm.MemoryUserRule</string>
-          <string>org.apache.tomcat.util.descriptor.web.ApplicationParameter</string>
-          <string>javax.naming.directory.InitialDirContext</string>
-          <string>javax.security.auth.login.CredentialExpiredException</string>
-          <string>org.apache.catalina.realm.TestGenericPrincipal</string>
-          <string>org.apache.catalina.realm.JNDIRealm</string>
-          <string>org.apache.catalina.realm.RealmBase</string>
-          <string>org.apache.tomcat.util.descriptor.web.SecurityConstraint</string>
-          <string>org.apache.tomcat.util.net.SSLHostConfig</string>
-          <string>javax.naming.ldap.StartTlsRequest</string>
-          <string>org.apache.catalina.realm.JAASRealm</string>
-          <string>org.apache.catalina.realm.GenericPrincipal</string>
-          <string>org.apache.tomcat.util.descriptor.web.SecurityRoleRef</string>
-          <string>org.apache.tomcat.util.descriptor.web.FilterDef</string>
-          <string>javax.naming.directory.DirContext</string>
-          <string>org.apache.catalina.authenticator.SingleSignOnEntry</string>
-          <string>org.apache.tomcat.unittest.TesterContext</string>
-          <string>javax.security.auth.callback.NameCallback</string>
-          <string>javax.naming.InvalidNameException</string>
-          <string>org.apache.catalina.realm.LockOutRealm$LockRecord</string>
-          <string>org.apache.catalina.session.StandardSession</string>
-          <string>org.apache.catalina.realm.JAASCallbackHandler</string>
-          <string>org.apache.tomcat.dbcp.dbcp2.cpdsadapter.DriverAdapterCPDS</string>
-          <string>javax.security.auth.login.LoginException</string>
-          <string>java.security.cert.X509Certificate</string>
-          <string>org.apache.catalina.startup.FailedContext</string>
-          <string>org.apache.tomcat.util.descriptor.web.ServletDef</string>
-          <string>org.apache.catalina.realm.DigestCredentialHandlerBase</string>
-          <string>org.apache.catalina.realm.LockOutRealm</string>
-          <string>org.apache.tomcat.util.descriptor.web.ContextTransaction</string>
-          <string>org.apache.tomcat.util.descriptor.web.FilterMap</string>
-          <string>org.apache.catalina.realm.JAASMemoryLoginModule</string>
-          <string>org.apache.catalina.core.ApplicationFilterConfig</string>
-          <string>javax.naming.AuthenticationException</string>
-          <string>javax.naming.ldap.ExtendedResponse</string>
-          <string>org.apache.tomcat.jdbc.pool.PoolProperties</string>
-          <string>javax.naming.directory.Attribute</string>
-          <string>org.apache.catalina.realm.X509UsernameRetriever</string>
-          <string>javax.security.auth.login.FailedLoginException</string>
-          <string>examples.ValuesTag</string>
-          <string>javax.net.ssl.HostnameVerifier</string>
-          <string>javax.security.auth.login.Configuration</string>
-          <string>org.apache.tomcat.util.buf.AbstractChunk</string>
-          <string>org.apache.catalina.realm.JDBCRealm</string>
-          <string>num.NumberGuessBean</string>
-          <string>org.apache.tomcat.util.http.ServerCookie</string>
-          <string>org.apache.catalina.servlet4preview.GenericFilter</string>
-          <string>javax.security.auth.callback.PasswordCallback</string>
-          <string>org.apache.catalina.util.ParameterMap</string>
-          <string>org.apache.catalina.realm.MessageDigestCredentialHandler</string>
-          <string>javax.el.Expression</string>
-          <string>org.apache.catalina.realm.TesterPrincipal</string>
-          <string>org.apache.catalina.authenticator.SingleSignOnSessionKey</string>
-          <string>org.apache.tomcat.util.buf.MessageBytes</string>
-          <string>org.apache.catalina.core.StandardContext</string>
-          <string>org.apache.tomcat.util.descriptor.web.InjectionTarget</string>
-          <string>java.sql.Types</string>
-          <string>org.apache.tomcat.util.descriptor.web.LoginConfig</string>
-          <string>org.apache.tomcat.util.descriptor.web.ResourceBase</string>
-          <string>org.apache.tomcat.util.descriptor.web.ErrorPage</string>
-          <string>org.apache.catalina.tribes.tipis.AbstractReplicatedMap</string>
           <string>javax.security.auth.login.AccountExpiredException</string>
           <string>javax.naming.directory.SearchControls</string>
           <string>javax.security.auth.login.LoginContext</string>
           <string>org.apache.catalina.realm.X509SubjectDnRetriever</string>
-          <string>org.apache.tomcat.dbcp.dbcp2.datasources.InstanceKeyDataSource</string>
-          <string>javax.servlet.http.Cookie</string>
+          <string>javax.naming.directory.InitialDirContext</string>
+          <string>javax.security.auth.login.CredentialExpiredException</string>
+          <string>org.apache.catalina.realm.JNDIRealm</string>
+          <string>org.apache.catalina.realm.RealmBase</string>
+          <string>javax.naming.ldap.StartTlsRequest</string>
           <string>org.apache.catalina.util.SessionConfig</string>
           <string>org.apache.catalina.realm.CombinedRealm</string>
+          <string>org.apache.catalina.realm.JAASRealm</string>
           <string>javax.naming.PartialResultException</string>
           <string>org.apache.catalina.realm.LockOutRealm$1</string>
+          <string>javax.naming.directory.DirContext</string>
           <string>org.apache.tomcat.unittest.TesterHost</string>
           <string>org.apache.catalina.loader.WebappClassLoaderBase</string>
-          <string>org.apache.tomcat.util.net.SSLHostConfigCertificate</string>
+          <string>org.apache.tomcat.unittest.TesterContext</string>
+          <string>javax.security.auth.callback.NameCallback</string>
+          <string>javax.naming.InvalidNameException</string>
           <string>javax.naming.CommunicationException</string>
           <string>org.ietf.jgss.GSSName</string>
-          <string>org.apache.catalina.realm.MemoryRealm</string>
+          <string>org.apache.catalina.realm.LockOutRealm$LockRecord</string>
+          <string>org.apache.catalina.realm.JAASCallbackHandler</string>
           <string>org.apache.catalina.realm.SecretKeyCredentialHandler</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -3393,20 +3309,13 @@
           <string>javax.websocket.MessageHandler</string>
           <string>javax.websocket.RemoteEndpoint$Basic</string>
           <string>websocket.echo.EchoAsyncAnnotation$1</string>
+          <string>java.io.ByteArrayOutputStream</string>
           <string>websocket.echo.EchoEndpoint$EchoMessageHandlerBinary</string>
           <string>websocket.echo.EchoEndpoint$1</string>
           <string>websocket.echo.EchoAsyncAnnotation</string>
           <string>websocket.echo.EchoEndpoint</string>
           <string>websocket.echo.EchoEndpoint$EchoMessageHandlerText</string>
           <string>javax.websocket.MessageHandler$Partial</string>
-        </entities>
-      </edu.usc.softarch.arcade.facts.ConcernCluster>
-      <edu.usc.softarch.arcade.facts.ConcernCluster>
-        <name>org.apache.el.ss</name>
-        <entities>
-          <string>org.apache.el.ExpressionFactoryImpl</string>
-          <string>org.apache.el.util.MessageFactory</string>
-          <string>org.apache.el.ValueExpressionLiteral</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -3526,6 +3435,7 @@
           <string>org.apache.catalina.filters.CsrfPreventionFilter$LruCache</string>
           <string>org.apache.catalina.filters.RestCsrfPreventionFilter$FetchRequest</string>
           <string>CookieExample</string>
+          <string>javax.servlet.http.HttpServletResponseWrapper</string>
           <string>org.apache.catalina.filters.RestCsrfPreventionFilter$StateChangingRequest</string>
           <string>org.apache.catalina.filters.TesterHttpServletResponse</string>
           <string>org.apache.catalina.filters.ExpiresFilter$StartingPoint</string>
@@ -3542,7 +3452,6 @@
           <string>org.apache.catalina.filters.CsrfPreventionFilterBase</string>
           <string>org.apache.catalina.filters.ExpiresFilter</string>
           <string>org.apache.catalina.filters.ExpiresFilter$XPrintWriter</string>
-          <string>org.apache.tomcat.util.http.Parameters$FailReason</string>
           <string>org.apache.catalina.filters.FailedRequestFilter</string>
           <string>org.apache.catalina.filters.CsrfPreventionFilter$CsrfResponseWrapper</string>
           <string>org.apache.catalina.filters.RestCsrfPreventionFilter$MethodType</string>
@@ -3567,55 +3476,15 @@
         <entities>
           <string>java.lang.IllegalAccessException</string>
           <string>java.lang.reflect.AccessibleObject</string>
-          <string>org.apache.tomcat.util.compat.JrePlatform</string>
-          <string>java.lang.Package</string>
-          <string>java.security.KeyStore</string>
-          <string>java.util.Deque</string>
-          <string>org.apache.tomcat.util.compat.JreCompat</string>
-          <string>java.lang.reflect.InvocationTargetException</string>
           <string>java.security.KeyStore$LoadStoreParameter</string>
-          <string>org.apache.tomcat.util.compat.JrePlatform$1</string>
+          <string>java.lang.Package</string>
           <string>org.apache.tomcat.util.compat.Jre8Compat</string>
           <string>java.util.zip.ZipFile</string>
+          <string>java.security.KeyStore</string>
+          <string>java.util.Deque</string>
           <string>org.apache.tomcat.util.compat.Jre9Compat</string>
-        </entities>
-      </edu.usc.softarch.arcade.facts.ConcernCluster>
-      <edu.usc.softarch.arcade.facts.ConcernCluster>
-        <name>org.apache.jasper.servlet.ss</name>
-        <entities>
-          <string>org.apache.jasper.servlet.TldScanner</string>
-          <string>org.apache.tomcat.PeriodicEventListener</string>
-          <string>org.apache.tomcat.JarScanner</string>
-          <string>org.apache.jasper.servlet.JasperInitializer</string>
-          <string>org.apache.jasper.EmbeddedServletOptions</string>
-          <string>org.apache.jasper.util.FastRemovalDequeue$1</string>
-          <string>org.apache.jasper.util.FastRemovalDequeue$Entry</string>
-          <string>org.apache.jasper.runtime.ExceptionUtils</string>
-          <string>org.apache.tomcat.SimpleInstanceManager</string>
-          <string>java.nio.file.SimpleFileVisitor</string>
-          <string>org.apache.jasper.servlet.JspServlet</string>
-          <string>javax.servlet.ServletConfig</string>
-          <string>java.nio.file.FileVisitor</string>
-          <string>org.apache.jasper.util.FastRemovalDequeue</string>
-          <string>org.apache.jasper.runtime.TagHandlerPool</string>
-          <string>org.apache.jasper.compiler.JarScannerFactory</string>
-          <string>org.apache.tomcat.InstanceManager</string>
-          <string>org.apache.tomcat.util.descriptor.tld.TldParser</string>
-          <string>java.nio.file.attribute.BasicFileAttributes</string>
-          <string>java.lang.SecurityManager</string>
-          <string>org.apache.jasper.Options</string>
-          <string>java.nio.file.FileVisitResult</string>
-          <string>org.apache.jasper.servlet.TldScanner$TldScannerCallback$1</string>
-          <string>org.apache.jasper.Constants</string>
-          <string>org.apache.jasper.servlet.JspServletWrapper</string>
-          <string>org.apache.jasper.servlet.JspServlet$1</string>
-          <string>org.apache.jasper.security.SecurityUtil</string>
-          <string>java.lang.ClassNotFoundException</string>
-          <string>javax.servlet.ServletContext</string>
-          <string>org.apache.jasper.runtime.JspSourceDependent</string>
-          <string>org.apache.jasper.servlet.TldScanner$TldScannerCallback</string>
-          <string>org.apache.jasper.security.SecurityClassLoad</string>
-          <string>org.apache.jasper.runtime.InstanceManagerFactory</string>
+          <string>org.apache.tomcat.util.compat.JreCompat</string>
+          <string>java.lang.reflect.InvocationTargetException</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -3642,6 +3511,57 @@
           <string>org.apache.catalina.ha.session.SessionMessageImpl</string>
           <string>org.apache.catalina.ha.ClusterMessage</string>
           <string>org.apache.catalina.ha.tcp.SimpleTcpCluster</string>
+        </entities>
+      </edu.usc.softarch.arcade.facts.ConcernCluster>
+      <edu.usc.softarch.arcade.facts.ConcernCluster>
+        <name>org.apache.jasper.servlet.ss</name>
+        <entities>
+          <string>org.apache.catalina.storeconfig.JarScannerSF</string>
+          <string>org.apache.jasper.servlet.TldScanner</string>
+          <string>org.apache.tomcat.PeriodicEventListener</string>
+          <string>org.apache.jasper.compiler.JspConfig$JspProperty</string>
+          <string>org.apache.tomcat.JarScanner</string>
+          <string>org.apache.jasper.servlet.JasperInitializer</string>
+          <string>org.apache.jasper.compiler.JspConfig$JspPropertyGroup</string>
+          <string>org.apache.jasper.EmbeddedServletOptions</string>
+          <string>org.apache.jasper.util.FastRemovalDequeue$1</string>
+          <string>org.apache.jasper.compiler.JspConfig</string>
+          <string>org.apache.jasper.util.FastRemovalDequeue$Entry</string>
+          <string>org.apache.jasper.runtime.ExceptionUtils</string>
+          <string>org.apache.tomcat.util.scan.StandardJarScanner$ClassPathEntry</string>
+          <string>org.apache.tomcat.SimpleInstanceManager</string>
+          <string>java.nio.file.SimpleFileVisitor</string>
+          <string>org.apache.jasper.servlet.JspServlet</string>
+          <string>javax.servlet.ServletConfig</string>
+          <string>java.nio.file.FileVisitor</string>
+          <string>org.apache.jasper.util.FastRemovalDequeue</string>
+          <string>org.apache.jasper.runtime.TagHandlerPool</string>
+          <string>org.apache.jasper.compiler.JarScannerFactory</string>
+          <string>org.apache.tomcat.InstanceManager</string>
+          <string>org.apache.tomcat.JarScannerCallback</string>
+          <string>org.apache.tomcat.util.scan.Constants</string>
+          <string>org.apache.tomcat.JarScanType</string>
+          <string>org.apache.jasper.compiler.Localizer</string>
+          <string>org.apache.tomcat.util.descriptor.tld.TldParser</string>
+          <string>java.nio.file.attribute.BasicFileAttributes</string>
+          <string>java.util.jar.Attributes</string>
+          <string>java.lang.SecurityManager</string>
+          <string>org.apache.jasper.compiler.TldCache</string>
+          <string>org.apache.jasper.Options</string>
+          <string>java.nio.file.FileVisitResult</string>
+          <string>org.apache.jasper.servlet.TldScanner$TldScannerCallback$1</string>
+          <string>org.apache.jasper.Constants</string>
+          <string>org.apache.jasper.servlet.JspServletWrapper</string>
+          <string>org.apache.tomcat.JarScanFilter</string>
+          <string>org.apache.jasper.servlet.JspServlet$1</string>
+          <string>org.apache.jasper.compiler.TldCache$TaglibXmlCacheEntry</string>
+          <string>java.lang.ClassNotFoundException</string>
+          <string>javax.servlet.ServletContext</string>
+          <string>org.apache.jasper.runtime.JspSourceDependent</string>
+          <string>org.apache.jasper.servlet.TldScanner$TldScannerCallback</string>
+          <string>org.apache.tomcat.util.scan.StandardJarScanner</string>
+          <string>org.apache.jasper.security.SecurityClassLoad</string>
+          <string>org.apache.jasper.runtime.InstanceManagerFactory</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -3683,7 +3603,6 @@
           <string>javax.websocket.Decoder$Text</string>
           <string>java.nio.channels.AsynchronousChannelGroup</string>
           <string>javax.websocket.ClientEndpoint</string>
-          <string>java.security.AccessController</string>
           <string>org.apache.tomcat.websocket.WsPongMessage</string>
           <string>org.apache.tomcat.websocket.WsFrameClient</string>
           <string>javax.websocket.Encoder</string>
@@ -3698,7 +3617,6 @@
           <string>org.apache.tomcat.InstanceManagerBindings</string>
           <string>javax.websocket.Decoder$BinaryStream</string>
           <string>org.apache.tomcat.websocket.MessagePart</string>
-          <string>org.apache.tomcat.websocket.BackgroundProcessManager$WsBackgroundThread</string>
           <string>org.apache.tomcat.util.security.MD5Encoder</string>
           <string>org.apache.tomcat.websocket.Transformation</string>
           <string>java.lang.reflect.TypeVariable</string>
@@ -3714,7 +3632,6 @@
           <string>org.apache.tomcat.websocket.WsRemoteEndpointImplBase$EndMessageHandler</string>
           <string>org.apache.tomcat.websocket.AsyncChannelWrapperNonSecure$NoOpFuture</string>
           <string>java.util.ArrayDeque</string>
-          <string>org.apache.tomcat.websocket.BackgroundProcessManager</string>
           <string>java.lang.IllegalStateException</string>
           <string>javax.websocket.Encoder$Text</string>
           <string>org.apache.tomcat.util.security.KeyStoreUtil</string>
@@ -3727,6 +3644,7 @@
           <string>java.lang.Runnable</string>
           <string>javax.websocket.WebSocketContainer</string>
           <string>org.apache.tomcat.websocket.AsyncChannelWrapperSecure$ReadTask</string>
+          <string>java.lang.NoSuchFieldError</string>
           <string>java.net.ProxySelector</string>
           <string>javax.websocket.Decoder$Binary</string>
           <string>org.apache.tomcat.websocket.Constants</string>
@@ -3768,6 +3686,7 @@
           <string>org.apache.tomcat.websocket.WsRemoteEndpointImplBase$State</string>
           <string>org.apache.tomcat.websocket.WsHandshakeResponse</string>
           <string>org.apache.tomcat.websocket.WsExtension</string>
+          <string>org.apache.tomcat.websocket.WsIOException</string>
           <string>org.apache.tomcat.websocket.FutureToSendHandler</string>
           <string>javax.websocket.SessionException</string>
           <string>org.apache.tomcat.websocket.WsRemoteEndpointImplBase$IntermediateMessageHandler</string>
@@ -3777,6 +3696,8 @@
           <string>java.net.Proxy$Type</string>
           <string>java.nio.charset.CoderResult</string>
           <string>org.apache.tomcat.websocket.pojo.PojoEndpointClient</string>
+          <string>org.apache.jasper.tagplugins.jstl.Util$ImportResponseWrapper</string>
+          <string>java.nio.charset.CodingErrorAction</string>
           <string>java.util.zip.DataFormatException</string>
           <string>org.apache.tomcat.websocket.AsyncChannelGroupUtil$AsyncIOThreadFactory</string>
           <string>org.apache.tomcat.websocket.WsFrameBase$TerminalTransformation</string>
@@ -3798,67 +3719,57 @@
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
-        <name>websocket.snake.ss</name>
-        <entities>
-          <string>websocket.snake.Location</string>
-          <string>websocket.snake.Location$1</string>
-          <string>java.lang.NoSuchFieldError</string>
-          <string>websocket.snake.Direction</string>
-          <string>websocket.snake.SnakeTimer</string>
-          <string>websocket.snake.SnakeTimer$1</string>
-          <string>websocket.snake.Snake</string>
-          <string>websocket.snake.SnakeAnnotation</string>
-        </entities>
-      </edu.usc.softarch.arcade.facts.ConcernCluster>
-      <edu.usc.softarch.arcade.facts.ConcernCluster>
         <name>org.apache.catalina.tribes.group.interceptors.ss</name>
         <entities>
           <string>java.util.zip.GZIPInputStream</string>
           <string>org.apache.catalina.tribes.ChannelInterceptor$InterceptorEvent</string>
-          <string>org.apache.catalina.tribes.group.interceptors.DomainFilterInterceptor</string>
           <string>org.apache.catalina.tribes.group.interceptors.TcpPingInterceptor$PingThread</string>
           <string>org.apache.catalina.tribes.group.interceptors.FragmentationInterceptor</string>
           <string>javax.crypto.spec.SecretKeySpec</string>
           <string>org.apache.catalina.tribes.group.interceptors.DomainFilterInterceptorMBean</string>
-          <string>org.apache.catalina.tribes.group.interceptors.TcpPingInterceptorMBean</string>
-          <string>org.apache.catalina.tribes.group.interceptors.EncryptInterceptor$BaseEncryptionManager</string>
-          <string>javax.crypto.spec.IvParameterSpec</string>
           <string>org.apache.catalina.tribes.group.interceptors.FragmentationInterceptor$FragCollection</string>
-          <string>javax.crypto.NoSuchPaddingException</string>
-          <string>org.apache.catalina.tribes.group.interceptors.MessageDispatchInterceptor$1</string>
-          <string>org.apache.catalina.tribes.group.interceptors.FragmentationInterceptorMBean</string>
-          <string>org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationEvent</string>
           <string>org.apache.catalina.tribes.group.interceptors.TwoPhaseCommitInterceptor$MapEntry</string>
           <string>org.apache.catalina.tribes.group.interceptors.ThroughputInterceptorMBean</string>
-          <string>java.net.ConnectException</string>
           <string>java.security.spec.AlgorithmParameterSpec</string>
-          <string>org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage</string>
           <string>org.apache.catalina.tribes.group.interceptors.EncryptInterceptor$ECBEncryptionManager</string>
-          <string>org.apache.catalina.tribes.group.interceptors.TwoPhaseCommitInterceptor</string>
-          <string>org.apache.catalina.tribes.group.interceptors.OrderInterceptor$Counter</string>
-          <string>org.apache.catalina.tribes.group.interceptors.FragmentationInterceptor$FragKey</string>
           <string>org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator</string>
-          <string>org.apache.catalina.tribes.group.interceptors.OrderInterceptor$MessageOrder</string>
-          <string>org.apache.catalina.tribes.group.interceptors.TcpFailureDetectorMBean</string>
-          <string>java.text.DecimalFormat</string>
-          <string>org.apache.catalina.tribes.group.interceptors.EncryptInterceptor</string>
           <string>org.apache.catalina.tribes.group.interceptors.EncryptInterceptor$ChannelConfigException</string>
           <string>org.apache.catalina.tribes.group.interceptors.ThroughputInterceptor</string>
-          <string>org.apache.catalina.tribes.group.interceptors.StaticMembershipInterceptorMBean</string>
           <string>org.apache.catalina.tribes.ChannelInterceptor</string>
-          <string>org.apache.catalina.tribes.group.interceptors.MessageDispatchInterceptorMBean</string>
           <string>org.apache.catalina.tribes.group.interceptors.GzipInterceptor</string>
           <string>org.apache.catalina.tribes.group.interceptors.StaticMembershipInterceptor</string>
           <string>org.apache.catalina.tribes.group.interceptors.OrderInterceptor</string>
           <string>org.apache.catalina.tribes.group.interceptors.MessageDispatchInterceptor</string>
-          <string>org.apache.catalina.tribes.group.interceptors.EncryptInterceptor$GCMEncryptionManager</string>
+          <string>java.util.zip.GZIPOutputStream</string>
           <string>org.apache.catalina.tribes.group.interceptors.TcpPingInterceptor</string>
-          <string>java.security.NoSuchProviderException</string>
-          <string>org.apache.catalina.tribes.group.interceptors.StaticMembershipInterceptor$1</string>
           <string>java.net.NoRouteToHostException</string>
-          <string>org.apache.catalina.tribes.group.interceptors.TcpFailureDetector</string>
           <string>org.apache.catalina.tribes.group.interceptors.EncryptInterceptorMBean</string>
           <string>javax.crypto.spec.GCMParameterSpec</string>
+          <string>org.apache.catalina.tribes.group.interceptors.DomainFilterInterceptor</string>
+          <string>org.apache.catalina.tribes.group.interceptors.TcpPingInterceptorMBean</string>
+          <string>org.apache.catalina.tribes.group.interceptors.EncryptInterceptor$BaseEncryptionManager</string>
+          <string>javax.crypto.spec.IvParameterSpec</string>
+          <string>javax.crypto.NoSuchPaddingException</string>
+          <string>org.apache.catalina.tribes.group.interceptors.MessageDispatchInterceptor$1</string>
+          <string>org.apache.catalina.tribes.group.interceptors.FragmentationInterceptorMBean</string>
+          <string>org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationEvent</string>
+          <string>org.apache.catalina.tribes.util.TcclThreadFactory$1</string>
+          <string>java.net.ConnectException</string>
+          <string>org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator$CoordinationMessage</string>
+          <string>org.apache.catalina.tribes.group.interceptors.TwoPhaseCommitInterceptor</string>
+          <string>org.apache.catalina.tribes.group.interceptors.OrderInterceptor$Counter</string>
+          <string>org.apache.catalina.tribes.group.interceptors.FragmentationInterceptor$FragKey</string>
+          <string>org.apache.catalina.tribes.group.interceptors.OrderInterceptor$MessageOrder</string>
+          <string>org.apache.catalina.tribes.group.interceptors.TcpFailureDetectorMBean</string>
+          <string>java.text.DecimalFormat</string>
+          <string>org.apache.catalina.tribes.group.interceptors.EncryptInterceptor</string>
+          <string>org.apache.catalina.tribes.util.TcclThreadFactory</string>
+          <string>org.apache.catalina.tribes.group.interceptors.StaticMembershipInterceptorMBean</string>
+          <string>org.apache.catalina.tribes.group.interceptors.MessageDispatchInterceptorMBean</string>
+          <string>org.apache.catalina.tribes.group.interceptors.EncryptInterceptor$GCMEncryptionManager</string>
+          <string>java.security.NoSuchProviderException</string>
+          <string>org.apache.catalina.tribes.group.interceptors.StaticMembershipInterceptor$1</string>
+          <string>org.apache.catalina.tribes.group.interceptors.TcpFailureDetector</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -3899,7 +3810,6 @@
           <string>java.util.concurrent.RejectedExecutionHandler</string>
           <string>org.apache.tomcat.util.threads.ThreadPoolExecutor$RejectHandler</string>
           <string>org.apache.tomcat.util.threads.LimitLatch$Sync</string>
-          <string>java.lang.ThreadGroup</string>
           <string>org.apache.tomcat.util.threads.LimitLatch</string>
           <string>org.apache.tomcat.util.threads.TaskThread</string>
           <string>org.apache.tomcat.util.threads.Constants</string>
@@ -3916,7 +3826,6 @@
           <string>org.apache.tomcat.dbcp.pool2.impl.PooledSoftReference</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.EvictionTimer$EvictorThreadFactory$1</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.DefaultPooledObject</string>
-          <string>javax.management.InstanceAlreadyExistsException</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.NoOpCallStack</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.LinkedBlockingDeque$Node</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.GenericKeyedObjectPool$ObjectDeque</string>
@@ -3929,7 +3838,6 @@
           <string>org.apache.tomcat.dbcp.pool2.impl.EvictionConfig</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.EvictionTimer</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.LinkedBlockingDeque$DescendingItr</string>
-          <string>javax.management.NotCompliantMBeanException</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.GenericObjectPoolMXBean</string>
           <string>org.apache.tomcat.dbcp.dbcp2.AbandonedTrace</string>
           <string>java.util.concurrent.ConcurrentHashMap</string>
@@ -3937,20 +3845,17 @@
           <string>org.apache.tomcat.dbcp.pool2.impl.LinkedBlockingDeque$1</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.BaseGenericObjectPool$StatsStore</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.BaseGenericObjectPool$IdentityWrapper</string>
-          <string>javax.management.JMException</string>
           <string>java.security.AccessControlException</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.BaseGenericObjectPool$EvictionIterator</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.LinkedBlockingDeque</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.BaseGenericObjectPool$Evictor</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.GenericKeyedObjectPool</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.GenericObjectPoolConfig</string>
-          <string>org.apache.tomcat.dbcp.pool2.impl.GenericKeyedObjectPoolConfig</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.AbandonedConfig</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.DefaultPooledObjectInfoMBean</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.BaseGenericObjectPool</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.SecurityManagerCallStack$Snapshot</string>
           <string>org.apache.tomcat.dbcp.pool2.UsageTracking</string>
-          <string>javax.management.MBeanRegistrationException</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.CallStack</string>
           <string>java.lang.ref.SoftReference</string>
           <string>java.lang.ref.WeakReference</string>
@@ -3959,9 +3864,7 @@
           <string>org.apache.tomcat.dbcp.pool2.impl.BaseObjectPoolConfig</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.ThrowableCallStack$1</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.InterruptibleReentrantLock</string>
-          <string>org.apache.tomcat.dbcp.pool2.PooledObjectFactory</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.SoftReferenceObjectPool</string>
-          <string>org.apache.tomcat.dbcp.pool2.BasePooledObjectFactory</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.PoolImplUtils</string>
           <string>org.apache.tomcat.dbcp.pool2.PooledObject</string>
           <string>org.apache.tomcat.dbcp.pool2.impl.ThrowableCallStack$Snapshot</string>
@@ -3982,7 +3885,6 @@
       <edu.usc.softarch.arcade.facts.ConcernCluster>
         <name>org.apache.tomcat.util.net.openssl.ss</name>
         <entities>
-          <string>javax.net.ssl.X509KeyManager</string>
           <string>org.apache.tomcat.util.net.openssl.ciphers.KeyExchange</string>
           <string>java.security.cert.CertificateFactory</string>
           <string>org.apache.tomcat.util.net.openssl.ciphers.OpenSSLCipherConfigurationParser</string>
@@ -3994,7 +3896,6 @@
           <string>java.security.SecureRandom</string>
           <string>org.apache.tomcat.util.net.openssl.OpenSSLSessionContext$EmptyEnumeration</string>
           <string>org.apache.tomcat.util.net.openssl.ciphers.Encryption</string>
-          <string>org.apache.tomcat.util.net.SSLHostConfigCertificate$Type</string>
           <string>java.io.ByteArrayInputStream</string>
           <string>java.lang.Enum</string>
           <string>org.apache.tomcat.util.net.openssl.OpenSSLConfCmd</string>
@@ -4029,7 +3930,6 @@
           <string>java.security.PublicKey</string>
           <string>java.security.cert.CertificateException</string>
           <string>javax.security.cert.X509Certificate</string>
-          <string>org.apache.catalina.storeconfig.SSLHostConfigSF</string>
           <string>javax.net.ssl.SSLSessionBindingListener</string>
           <string>javax.security.cert.CertificateException</string>
           <string>javax.net.ssl.X509TrustManager</string>
@@ -4056,7 +3956,6 @@
         <entities>
           <string>org.apache.tomcat.util.http.fileupload.IOUtils</string>
           <string>java.io.BufferedInputStream</string>
-          <string>org.apache.tomcat.util.http.fileupload.FileItemHeaders</string>
           <string>java.util.UUID</string>
           <string>org.apache.tomcat.util.http.fileupload.disk.DiskFileItem</string>
           <string>java.io.BufferedOutputStream</string>
@@ -4081,8 +3980,8 @@
           <string>org.apache.catalina.util.ServerInfo</string>
           <string>org.apache.catalina.util.TomcatCSS</string>
           <string>org.apache.catalina.valves.Constants</string>
-          <string>org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement</string>
           <string>org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement</string>
+          <string>org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement</string>
           <string>org.apache.catalina.users.Constants</string>
           <string>org.apache.catalina.valves.AbstractAccessLogValve$RemoteAddrElement</string>
           <string>org.apache.catalina.valves.ExtendedAccessLogValve$DateElement</string>
@@ -4099,7 +3998,6 @@
           <string>jsp2.examples.FooBean</string>
           <string>org.apache.catalina.valves.AbstractAccessLogValve$SessionAttributeElement</string>
           <string>org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement$1</string>
-          <string>org.apache.catalina.startup.VersionLoggerListener</string>
           <string>java.lang.StackTraceElement</string>
           <string>org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement</string>
           <string>java.lang.String</string>
@@ -4108,17 +4006,17 @@
           <string>org.apache.catalina.valves.ExtendedAccessLogValve$3</string>
           <string>org.apache.catalina.valves.ExtendedAccessLogValve$4</string>
           <string>org.apache.catalina.valves.AbstractAccessLogValve$2</string>
-          <string>org.apache.catalina.valves.AbstractAccessLogValve$1</string>
           <string>org.apache.catalina.valves.ExtendedAccessLogValve$1</string>
           <string>java.io.BufferedWriter</string>
+          <string>org.apache.catalina.valves.AbstractAccessLogValve$1</string>
           <string>org.apache.catalina.valves.ExtendedAccessLogValve$2</string>
           <string>org.apache.catalina.valves.ExtendedAccessLogValve$7</string>
           <string>org.apache.catalina.valves.ExtendedAccessLogValve$8</string>
           <string>org.apache.catalina.valves.ExtendedAccessLogValve$5</string>
           <string>org.apache.catalina.valves.ExtendedAccessLogValve$6</string>
           <string>org.apache.catalina.valves.ExtendedAccessLogValve$9</string>
-          <string>org.apache.catalina.valves.AbstractAccessLogValve$DateFormatCache</string>
           <string>org.apache.catalina.ant.jmx.Arg</string>
+          <string>org.apache.catalina.valves.AbstractAccessLogValve$DateFormatCache</string>
           <string>RequestHeaderExample</string>
           <string>org.apache.catalina.valves.AbstractAccessLogValve$RequestURIElement</string>
           <string>org.apache.tomcat.util.net.IPv6Utils</string>
@@ -4128,6 +4026,7 @@
           <string>org.apache.catalina.valves.AbstractAccessLogValve$LocalServerNameElement</string>
           <string>org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement</string>
           <string>java.util.Date</string>
+          <string>org.apache.catalina.ssi.SSIFilter</string>
           <string>java.util.Scanner</string>
           <string>org.apache.tomcat.jni.Local</string>
           <string>org.apache.catalina.valves.AbstractAccessLogValve$PortType</string>
@@ -4142,6 +4041,7 @@
           <string>org.apache.catalina.valves.AbstractAccessLogValve$ResponseHeaderElement</string>
           <string>colors.ColorGameBean</string>
           <string>org.apache.catalina.valves.CrawlerSessionManagerValve$CrawlerHttpSessionBindingListener</string>
+          <string>org.apache.catalina.ssi.ResponseIncludeWrapper</string>
           <string>org.apache.catalina.valves.AbstractAccessLogValve$CookieElement</string>
           <string>java.io.CharArrayWriter</string>
           <string>org.apache.catalina.valves.AbstractAccessLogValve$ConnectionStatusElement</string>
@@ -4186,7 +4086,6 @@
           <string>org.apache.tomcat.jdbc.pool.interceptor.StatementDecoratorInterceptor$ResultSetProxy</string>
           <string>org.apache.tomcat.jdbc.pool.interceptor.StatementDecoratorInterceptor</string>
           <string>javax.management.NotificationEmitter</string>
-          <string>org.apache.tomcat.jdbc.pool.interceptor.AbstractCreateStatementInterceptor</string>
           <string>org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReportJmxMBean</string>
           <string>java.util.concurrent.atomic.AtomicInteger</string>
           <string>java.sql.ResultSet</string>
@@ -4196,10 +4095,10 @@
           <string>org.apache.tomcat.jdbc.pool.interceptor.AbstractQueryReport</string>
           <string>javax.management.openmbean.CompositeType</string>
           <string>org.apache.tomcat.jdbc.pool.interceptor.StatementCacheMBean</string>
-          <string>org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReport$QueryStatsComparator</string>
           <string>javax.management.openmbean.CompositeData</string>
-          <string>org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReport</string>
+          <string>org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReport$QueryStatsComparator</string>
           <string>org.apache.tomcat.jdbc.pool.interceptor.StatementDecoratorInterceptor$StatementProxy</string>
+          <string>org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReport</string>
           <string>org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer$StatementEntry</string>
           <string>javax.management.openmbean.OpenType</string>
           <string>org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer</string>
@@ -4232,9 +4131,6 @@
           <string>org.apache.el.lang.FunctionMapperImpl</string>
           <string>org.apache.el.lang.ELArithmetic$BigIntegerDelegate</string>
           <string>java.math.RoundingMode</string>
-          <string>org.apache.el.lang.ELSupport</string>
-          <string>java.beans.PropertyEditor</string>
-          <string>java.beans.PropertyEditorManager</string>
           <string>org.apache.el.lang.FunctionMapperFactory</string>
           <string>org.apache.el.lang.ExpressionBuilder$SynchronizedStack</string>
           <string>org.apache.el.lang.ELArithmetic$BigDecimalDelegate</string>
@@ -4242,8 +4138,8 @@
           <string>org.apache.el.lang.VariableMapperFactory</string>
           <string>org.apache.el.MethodExpressionImpl</string>
           <string>org.apache.el.MethodExpressionLiteral</string>
+          <string>java.io.ObjectInput</string>
           <string>org.apache.el.lang.FunctionMapperImpl$Function</string>
-          <string>org.apache.el.lang.ELSupport$1</string>
         </entities>
       </edu.usc.softarch.arcade.facts.ConcernCluster>
       <edu.usc.softarch.arcade.facts.ConcernCluster>
@@ -4275,6 +4171,7 @@
           <string>javax.websocket.PongMessage</string>
           <string>javax.websocket.server.PathParam</string>
           <string>java.lang.reflect.Method</string>
+          <string>websocket.snake.SnakeAnnotation</string>
           <string>websocket.chat.ChatAnnotation</string>
           <string>org.apache.tomcat.websocket.pojo.PojoMethodMapping</string>
           <string>org.apache.tomcat.websocket.DecoderEntry</string>
@@ -4309,7 +4206,7 @@
   </edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
   <edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
     <clusters>
-      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[9]"/>
+      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[10]"/>
     </clusters>
   </edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
   <edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
@@ -4319,47 +4216,47 @@
   </edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
   <edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
     <clusters>
-      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[22]"/>
+      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[21]"/>
     </clusters>
   </edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
   <edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
     <clusters>
-      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[35]"/>
+      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[34]"/>
     </clusters>
   </edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
   <edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
     <clusters>
-      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[42]"/>
+      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[40]"/>
     </clusters>
   </edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
   <edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
     <clusters>
-      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[45]"/>
+      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[43]"/>
     </clusters>
   </edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
   <edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
     <clusters>
-      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[46]"/>
+      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[44]"/>
     </clusters>
   </edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
   <edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
     <clusters>
-      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[50]"/>
+      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[48]"/>
     </clusters>
   </edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
   <edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
     <clusters>
-      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[62]"/>
+      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[59]"/>
     </clusters>
   </edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
   <edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
     <clusters>
-      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[67]"/>
+      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[64]"/>
     </clusters>
   </edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
   <edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
     <clusters>
-      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[69]"/>
+      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[80]"/>
     </clusters>
   </edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
   <edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
@@ -4374,22 +4271,17 @@
   </edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
   <edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
     <clusters>
-      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[89]"/>
+      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[87]"/>
     </clusters>
   </edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
   <edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
     <clusters>
-      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[90]"/>
+      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[96]"/>
     </clusters>
   </edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
   <edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
     <clusters>
-      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[100]"/>
-    </clusters>
-  </edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
-  <edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
-    <clusters>
-      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[110]"/>
+      <edu.usc.softarch.arcade.facts.ConcernCluster reference="../../../edu.usc.softarch.arcade.antipattern.detection.BdcSmell/clusters/edu.usc.softarch.arcade.facts.ConcernCluster[105]"/>
     </clusters>
   </edu.usc.softarch.arcade.antipattern.detection.BuoSmell>
 </linked-hash-set>

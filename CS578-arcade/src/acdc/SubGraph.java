@@ -110,6 +110,24 @@ public class SubGraph extends Pattern {
       IO.put("**************************", 2);
       IO.put("Dominator " + tentativeDominator, 2);
       HashSet cS = coveredSet(tentativeDominatorTreeNode, vRootChildren);
+
+
+      /** Our Solution */
+      DefaultMutableTreeNode aa;
+      Node cSNode;
+      Iterator al = cS.iterator();
+      while (al.hasNext()) {
+        aa = (DefaultMutableTreeNode) al.next();
+        cSNode = (Node) aa.getUserObject();
+        int index = cSNode.getName().lastIndexOf('$');
+        if(cSNode.getName().contains(tentativeDominator.getName()+'$')&&cS.size() == 2){
+          cS.remove(aa);
+          break;
+        }
+      }
+      /** Ends here */
+
+
       if (cS.size() == 1) {
         ht.remove(tentativeDominator);
       } else //coveredSet returned tentativeRoot and its set of dominated nodes

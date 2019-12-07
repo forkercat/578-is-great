@@ -37615,7 +37615,7 @@ DEBUG - org.apache.naming.factory.ResourceLinkFactory javax.naming.spi.ObjectFac
 DEBUG - org.apache.naming.factory.ResourceLinkFactory org.apache.naming.ResourceLinkRef
 DEBUG - org.apache.naming.factory.ResourceLinkFactory org.apache.naming.StringManager
 DEBUG - Running smell detecion for revision 8.5.47
-DEBUG - Elapsed time in milliseconds: 240
+DEBUG - Elapsed time in milliseconds: 146
 DEBUG - Found and built clusters:
 DEBUG - org.apache.catalina.ha.authenticator.ss
 DEBUG - org.apache.el.parser.ss
@@ -37632,7 +37632,6 @@ DEBUG - org.apache.catalina.startup.ss
 DEBUG - org.apache.catalina.ha.deploy.ss
 DEBUG - org.apache.catalina.authenticator.jaspic.ss
 DEBUG - javax.el.ss
-DEBUG - org.apache.catalina.tribes.tipis.ss
 DEBUG - org.apache.tomcat.util.http.fileupload.servlet.ss
 DEBUG - org.apache.tomcat.buildutil.translate.ss
 DEBUG - javax.websocket.server.ss
@@ -37656,7 +37655,6 @@ DEBUG - org.apache.naming.ss
 DEBUG - javax.servlet.jsp.el.ss
 DEBUG - javax.servlet.annotation.ss
 DEBUG - compressionFilters.ss
-DEBUG - org.apache.tomcat.util.res.ss
 DEBUG - org.apache.catalina.tribes.transport.ss
 DEBUG - org.apache.catalina.tribes.transport.nio.ss
 DEBUG - org.apache.coyote.ss
@@ -37671,7 +37669,6 @@ DEBUG - javax.websocket.ss
 DEBUG - org.apache.tomcat.websocket.server.ss
 DEBUG - org.apache.el.stream.ss
 DEBUG - org.apache.tomcat.jni.ss
-DEBUG - org.apache.jasper.tagplugins.jstl.ss
 DEBUG - org.apache.catalina.ha.backend.ss
 DEBUG - org.apache.catalina.tribes.io.ss
 DEBUG - org.apache.catalina.webresources.ss
@@ -37724,7 +37721,6 @@ DEBUG - org.apache.tomcat.util.compat.ss
 DEBUG - org.apache.jasper.servlet.ss
 DEBUG - org.apache.catalina.ha.tcp.ss
 DEBUG - org.apache.tomcat.websocket.ss
-DEBUG - websocket.snake.ss
 DEBUG - org.apache.catalina.tribes.group.interceptors.ss
 DEBUG - org.apache.jasper.ss
 DEBUG - org.apache.catalina.mapper.ss
@@ -37741,209 +37737,200 @@ DEBUG - cal.ss
 DEBUG - javax.persistence.ss
 DEBUG - org.apache.tomcat.websocket.pojo.ss
 DEBUG - org.apache.tomcat.util.codec.ss
-DEBUG - Elapsed time in milliseconds: 706
-DEBUG - No. of vertices: 124
-DEBUG - No. of edges: 3726
+DEBUG - Elapsed time in milliseconds: 517
+DEBUG - No. of vertices: 120
+DEBUG - No. of edges: 3409
 DEBUG - Counting this strongly connected component set as relevant
-DEBUG - [org.apache.catalina.ha.authenticator.ss, org.apache.el.parser.ss, org.apache.tomcat.util.buf.ss, javax.servlet.http.ss, org.apache.tomcat.util.ss, org.apache.tomcat.util.digester.ss, org.apache.jasper.xmlparser.ss, websocket.drawboard.ss, org.apache.tomcat.util.net.ss, javax.servlet.jsp.ss, examples.ss, org.apache.catalina.startup.ss, org.apache.catalina.ha.deploy.ss, org.apache.catalina.authenticator.jaspic.ss, javax.el.ss, org.apache.catalina.tribes.tipis.ss, org.apache.tomcat.util.http.fileupload.servlet.ss, javax.websocket.server.ss, org.apache.catalina.manager.host.ss, org.apache.tomcat.util.scan.ss, org.apache.jasper.el.ss, org.apache.catalina.ssi.ss, org.apache.catalina.tribes.util.ss, org.apache.juli.ss, org.apache.tomcat.util.http.fileupload.ss, org.apache.naming.factory.ss, org.apache.tomcat.dbcp.pool2.ss, org.apache.catalina.users.ss, org.apache.jasper.runtime.ss, org.apache.catalina.tribes.transport.bio.ss, org.apache.tomcat.util.modeler.ss, org.apache.tomcat.jdbc.pool.ss, org.apache.tomcat.dbcp.dbcp2.cpdsadapter.ss, org.apache.naming.ss, javax.servlet.jsp.el.ss, javax.servlet.annotation.ss, compressionFilters.ss, org.apache.tomcat.util.res.ss, org.apache.catalina.tribes.transport.ss, org.apache.catalina.tribes.transport.nio.ss, org.apache.coyote.ss, org.apache.catalina.core.ss, org.apache.tomcat.util.descriptor.tagplugin.ss, org.apache.catalina.util.ss, org.apache.catalina.storeconfig.ss, org.apache.tomcat.util.descriptor.web.ss, org.apache.tomcat.dbcp.dbcp2.datasources.ss, javax.websocket.ss, org.apache.tomcat.websocket.server.ss, org.apache.el.stream.ss, org.apache.tomcat.jni.ss, org.apache.jasper.tagplugins.jstl.ss, org.apache.catalina.ha.backend.ss, org.apache.catalina.tribes.io.ss, org.apache.catalina.tribes.membership.ss, org.apache.catalina.webresources.ss, org.apache.coyote.http11.filters.ss, javax.security.auth.message.ss, org.apache.tomcat.util.log.ss, org.apache.catalina.authenticator.ss, org.apache.tomcat.util.http.ss, org.apache.catalina.valves.rewrite.ss, org.apache.el.util.ss, org.apache.tomcat.util.bcel.classfile.ss, org.apache.catalina.ant.jmx.ss, org.apache.catalina.manager.ss, org.apache.catalina.connector.ss, org.apache.catalina.mbeans.ss, org.apache.catalina.ha.session.ss, org.apache.catalina.ha.context.ss, org.apache.tomcat.util.codec.binary.ss, org.apache.tomcat.dbcp.dbcp2.ss, org.apache.catalina.tribes.group.ss, org.apache.naming.java.ss, org.apache.coyote.http11.upgrade.ss, org.apache.tomcat.util.http.parser.ss, org.apache.catalina.loader.ss, org.apache.coyote.http2.ss, javax.servlet.jsp.tagext.ss, org.apache.tomcat.util.collections.ss, org.apache.tomcat.util.net.jsse.ss, javax.security.auth.message.config.ss, org.apache.catalina.session.ss, org.apache.catalina.ant.ss, org.apache.tomcat.buildutil.ss, org.apache.coyote.http11.ss, org.apache.coyote.ajp.ss, org.apache.catalina.security.ss, org.apache.jasper.compiler.ss, org.apache.catalina.realm.ss, websocket.echo.ss, org.apache.el.ss, org.apache.catalina.servlets.ss, org.apache.juli.logging.ss, org.apache.tomcat.util.descriptor.tld.ss, org.apache.catalina.filters.ss, org.apache.tomcat.util.compat.ss, org.apache.jasper.servlet.ss, org.apache.catalina.ha.tcp.ss, org.apache.tomcat.websocket.ss, websocket.snake.ss, org.apache.catalina.tribes.group.interceptors.ss, org.apache.jasper.ss, org.apache.catalina.mapper.ss, org.apache.tomcat.util.threads.ss, org.apache.tomcat.dbcp.pool2.impl.ss, org.apache.tomcat.util.net.openssl.ss, org.apache.tomcat.util.http.fileupload.util.ss, org.apache.tomcat.util.http.fileupload.disk.ss, org.apache.catalina.valves.ss, org.apache.catalina.webresources.war.ss, org.apache.tomcat.jdbc.pool.interceptor.ss, org.apache.el.lang.ss, javax.persistence.ss, org.apache.tomcat.websocket.pojo.ss, org.apache.tomcat.util.codec.ss]
-DEBUG - scc size: 116
+DEBUG - [org.apache.catalina.ha.authenticator.ss, org.apache.el.parser.ss, org.apache.tomcat.util.buf.ss, javax.servlet.http.ss, org.apache.tomcat.util.digester.ss, org.apache.tomcat.util.ss, org.apache.jasper.xmlparser.ss, websocket.drawboard.ss, javax.servlet.jsp.ss, org.apache.tomcat.util.net.ss, examples.ss, org.apache.catalina.startup.ss, org.apache.catalina.ha.deploy.ss, org.apache.catalina.authenticator.jaspic.ss, javax.el.ss, org.apache.tomcat.util.http.fileupload.servlet.ss, javax.websocket.server.ss, org.apache.catalina.manager.host.ss, org.apache.tomcat.util.scan.ss, org.apache.jasper.el.ss, org.apache.catalina.ssi.ss, org.apache.catalina.tribes.util.ss, org.apache.juli.ss, org.apache.tomcat.util.http.fileupload.ss, org.apache.naming.factory.ss, org.apache.catalina.users.ss, org.apache.tomcat.dbcp.pool2.ss, org.apache.jasper.runtime.ss, org.apache.catalina.tribes.transport.bio.ss, org.apache.tomcat.util.modeler.ss, org.apache.tomcat.jdbc.pool.ss, org.apache.tomcat.dbcp.dbcp2.cpdsadapter.ss, org.apache.naming.ss, javax.servlet.jsp.el.ss, javax.servlet.annotation.ss, compressionFilters.ss, org.apache.catalina.tribes.transport.ss, org.apache.catalina.tribes.transport.nio.ss, org.apache.coyote.ss, org.apache.catalina.core.ss, org.apache.tomcat.util.descriptor.tagplugin.ss, org.apache.catalina.util.ss, org.apache.catalina.storeconfig.ss, org.apache.tomcat.util.descriptor.web.ss, org.apache.tomcat.dbcp.dbcp2.datasources.ss, javax.websocket.ss, org.apache.tomcat.websocket.server.ss, org.apache.el.stream.ss, org.apache.tomcat.jni.ss, org.apache.catalina.ha.backend.ss, org.apache.catalina.tribes.io.ss, org.apache.catalina.webresources.ss, org.apache.catalina.tribes.membership.ss, org.apache.coyote.http11.filters.ss, javax.security.auth.message.ss, org.apache.tomcat.util.log.ss, org.apache.catalina.authenticator.ss, org.apache.tomcat.util.http.ss, org.apache.catalina.valves.rewrite.ss, org.apache.el.util.ss, org.apache.tomcat.util.bcel.classfile.ss, org.apache.catalina.ant.jmx.ss, org.apache.catalina.manager.ss, org.apache.catalina.connector.ss, org.apache.catalina.mbeans.ss, org.apache.catalina.ha.session.ss, org.apache.catalina.ha.context.ss, org.apache.tomcat.util.codec.binary.ss, org.apache.tomcat.dbcp.dbcp2.ss, org.apache.catalina.tribes.group.ss, org.apache.naming.java.ss, org.apache.coyote.http11.upgrade.ss, org.apache.tomcat.util.http.parser.ss, org.apache.catalina.loader.ss, org.apache.coyote.http2.ss, javax.servlet.jsp.tagext.ss, org.apache.tomcat.util.collections.ss, org.apache.tomcat.util.net.jsse.ss, javax.security.auth.message.config.ss, org.apache.catalina.session.ss, org.apache.catalina.ant.ss, org.apache.tomcat.buildutil.ss, org.apache.coyote.http11.ss, org.apache.coyote.ajp.ss, org.apache.catalina.security.ss, org.apache.jasper.compiler.ss, org.apache.catalina.realm.ss, websocket.echo.ss, org.apache.catalina.servlets.ss, org.apache.juli.logging.ss, org.apache.tomcat.util.descriptor.tld.ss, org.apache.catalina.filters.ss, org.apache.tomcat.util.compat.ss, org.apache.catalina.ha.tcp.ss, org.apache.jasper.servlet.ss, org.apache.tomcat.websocket.ss, org.apache.catalina.tribes.group.interceptors.ss, org.apache.jasper.ss, org.apache.catalina.mapper.ss, org.apache.tomcat.util.threads.ss, org.apache.tomcat.dbcp.pool2.impl.ss, org.apache.tomcat.util.net.openssl.ss, org.apache.tomcat.util.http.fileupload.util.ss, org.apache.tomcat.util.http.fileupload.disk.ss, org.apache.catalina.valves.ss, org.apache.catalina.webresources.war.ss, org.apache.tomcat.jdbc.pool.interceptor.ss, org.apache.el.lang.ss, javax.persistence.ss, org.apache.tomcat.websocket.pojo.ss, org.apache.tomcat.util.codec.ss]
+DEBUG - scc size: 111
 DEBUG - Number of strongly connected components: 1
 DEBUG - Computing the in and out degress of each vertex
 DEBUG - 	org.apache.catalina.ha.authenticator.ss
-DEBUG - 		 in degree: 44
-DEBUG - 		 out degree: 67
+DEBUG - 		 in degree: 41
+DEBUG - 		 out degree: 64
 DEBUG - 	org.apache.el.parser.ss
-DEBUG - 		 in degree: 120
-DEBUG - 		 out degree: 59
+DEBUG - 		 in degree: 116
+DEBUG - 		 out degree: 54
 DEBUG - 	org.apache.tomcat.util.buf.ss
-DEBUG - 		 in degree: 44
-DEBUG - 		 out degree: 27
+DEBUG - 		 in degree: 30
+DEBUG - 		 out degree: 16
 DEBUG - 	javax.servlet.http.ss
-DEBUG - 		 in degree: 32
+DEBUG - 		 in degree: 31
 DEBUG - 		 out degree: 22
 DEBUG - 	org.apache.jasper.xmlparser.ss
-DEBUG - 		 in degree: 59
-DEBUG - 		 out degree: 18
+DEBUG - 		 in degree: 57
+DEBUG - 		 out degree: 16
 DEBUG - 	org.apache.tomcat.util.digester.ss
-DEBUG - 		 in degree: 34
-DEBUG - 		 out degree: 53
+DEBUG - 		 in degree: 33
+DEBUG - 		 out degree: 49
 DEBUG - 	org.apache.tomcat.util.ss
 DEBUG - 		 in degree: 4
-DEBUG - 		 out degree: 18
+DEBUG - 		 out degree: 17
 DEBUG - 	websocket.drawboard.ss
-DEBUG - 		 in degree: 57
-DEBUG - 		 out degree: 18
+DEBUG - 		 in degree: 52
+DEBUG - 		 out degree: 16
 DEBUG - 	org.apache.tomcat.util.net.ss
-DEBUG - 		 in degree: 106
-DEBUG - 		 out degree: 56
+DEBUG - 		 in degree: 102
+DEBUG - 		 out degree: 52
 DEBUG - 	javax.servlet.jsp.ss
-DEBUG - 		 in degree: 8
+DEBUG - 		 in degree: 5
 DEBUG - 		 out degree: 13
 DEBUG - 	examples.ss
-DEBUG - 		 in degree: 5
-DEBUG - 		 out degree: 14
+DEBUG - 		 in degree: 10
+DEBUG - 		 out degree: 15
 DEBUG - 	org.apache.catalina.startup.ss
-DEBUG - 		 in degree: 68
-DEBUG - 		 out degree: 76
+DEBUG - 		 in degree: 66
+DEBUG - 		 out degree: 75
 DEBUG - 	org.apache.catalina.ha.deploy.ss
-DEBUG - 		 in degree: 25
-DEBUG - 		 out degree: 21
+DEBUG - 		 in degree: 26
+DEBUG - 		 out degree: 20
 DEBUG - 	org.apache.catalina.authenticator.jaspic.ss
 DEBUG - 		 in degree: 8
-DEBUG - 		 out degree: 37
+DEBUG - 		 out degree: 36
 DEBUG - 	javax.el.ss
-DEBUG - 		 in degree: 43
-DEBUG - 		 out degree: 49
-DEBUG - 	org.apache.catalina.tribes.tipis.ss
-DEBUG - 		 in degree: 14
-DEBUG - 		 out degree: 34
+DEBUG - 		 in degree: 41
+DEBUG - 		 out degree: 46
 DEBUG - 	org.apache.tomcat.util.http.fileupload.servlet.ss
 DEBUG - 		 in degree: 1
-DEBUG - 		 out degree: 6
+DEBUG - 		 out degree: 5
 DEBUG - 	org.apache.tomcat.buildutil.translate.ss
 DEBUG - 		 in degree: 0
 DEBUG - 		 out degree: 21
 DEBUG - 	javax.websocket.server.ss
 DEBUG - 		 in degree: 2
-DEBUG - 		 out degree: 18
+DEBUG - 		 out degree: 9
 DEBUG - 	Clock2.ss
 DEBUG - 		 in degree: 0
 DEBUG - 		 out degree: 8
 DEBUG - 	org.apache.catalina.manager.host.ss
 DEBUG - 		 in degree: 3
-DEBUG - 		 out degree: 28
+DEBUG - 		 out degree: 27
 DEBUG - 	org.apache.tomcat.util.scan.ss
-DEBUG - 		 in degree: 58
-DEBUG - 		 out degree: 40
+DEBUG - 		 in degree: 59
+DEBUG - 		 out degree: 28
 DEBUG - 	org.apache.jasper.el.ss
 DEBUG - 		 in degree: 8
 DEBUG - 		 out degree: 16
 DEBUG - 	org.apache.catalina.ssi.ss
-DEBUG - 		 in degree: 89
-DEBUG - 		 out degree: 34
+DEBUG - 		 in degree: 82
+DEBUG - 		 out degree: 28
 DEBUG - 	org.apache.catalina.tribes.util.ss
-DEBUG - 		 in degree: 24
-DEBUG - 		 out degree: 20
+DEBUG - 		 in degree: 15
+DEBUG - 		 out degree: 7
 DEBUG - 	org.apache.juli.ss
-DEBUG - 		 in degree: 39
+DEBUG - 		 in degree: 41
 DEBUG - 		 out degree: 43
 DEBUG - 	org.apache.tomcat.util.http.fileupload.ss
-DEBUG - 		 in degree: 55
-DEBUG - 		 out degree: 26
+DEBUG - 		 in degree: 59
+DEBUG - 		 out degree: 16
 DEBUG - 	org.apache.naming.factory.ss
 DEBUG - 		 in degree: 4
-DEBUG - 		 out degree: 27
+DEBUG - 		 out degree: 25
 DEBUG - 	org.apache.catalina.users.ss
-DEBUG - 		 in degree: 18
-DEBUG - 		 out degree: 27
+DEBUG - 		 in degree: 25
+DEBUG - 		 out degree: 26
 DEBUG - 	org.apache.tomcat.dbcp.pool2.ss
 DEBUG - 		 in degree: 40
-DEBUG - 		 out degree: 15
+DEBUG - 		 out degree: 16
 DEBUG - 	org.apache.jasper.runtime.ss
-DEBUG - 		 in degree: 50
-DEBUG - 		 out degree: 55
+DEBUG - 		 in degree: 48
+DEBUG - 		 out degree: 52
 DEBUG - 	org.apache.catalina.tribes.transport.bio.ss
 DEBUG - 		 in degree: 3
-DEBUG - 		 out degree: 26
+DEBUG - 		 out degree: 28
 DEBUG - 	org.apache.tomcat.util.modeler.ss
 DEBUG - 		 in degree: 31
-DEBUG - 		 out degree: 40
+DEBUG - 		 out degree: 33
 DEBUG - 	org.apache.tomcat.jdbc.pool.ss
-DEBUG - 		 in degree: 37
-DEBUG - 		 out degree: 49
+DEBUG - 		 in degree: 52
+DEBUG - 		 out degree: 47
 DEBUG - 	org.apache.tomcat.dbcp.dbcp2.cpdsadapter.ss
-DEBUG - 		 in degree: 6
+DEBUG - 		 in degree: 4
 DEBUG - 		 out degree: 14
 DEBUG - 	org.apache.naming.ss
 DEBUG - 		 in degree: 20
-DEBUG - 		 out degree: 41
+DEBUG - 		 out degree: 37
 DEBUG - 	javax.servlet.jsp.el.ss
-DEBUG - 		 in degree: 86
-DEBUG - 		 out degree: 25
+DEBUG - 		 in degree: 85
+DEBUG - 		 out degree: 23
 DEBUG - 	javax.servlet.annotation.ss
-DEBUG - 		 in degree: 6
+DEBUG - 		 in degree: 5
 DEBUG - 		 out degree: 4
 DEBUG - 	compressionFilters.ss
 DEBUG - 		 in degree: 1
 DEBUG - 		 out degree: 15
-DEBUG - 	org.apache.tomcat.util.res.ss
-DEBUG - 		 in degree: 60
-DEBUG - 		 out degree: 12
 DEBUG - 	org.apache.catalina.tribes.transport.ss
-DEBUG - 		 in degree: 4
-DEBUG - 		 out degree: 21
+DEBUG - 		 in degree: 2
+DEBUG - 		 out degree: 12
 DEBUG - 	org.apache.catalina.tribes.transport.nio.ss
-DEBUG - 		 in degree: 20
-DEBUG - 		 out degree: 25
+DEBUG - 		 in degree: 17
+DEBUG - 		 out degree: 23
 DEBUG - 	org.apache.coyote.ss
-DEBUG - 		 in degree: 12
-DEBUG - 		 out degree: 43
+DEBUG - 		 in degree: 4
+DEBUG - 		 out degree: 16
 DEBUG - 	org.apache.catalina.core.ss
-DEBUG - 		 in degree: 85
-DEBUG - 		 out degree: 84
+DEBUG - 		 in degree: 80
+DEBUG - 		 out degree: 80
 DEBUG - 	org.apache.tomcat.util.descriptor.tagplugin.ss
-DEBUG - 		 in degree: 6
-DEBUG - 		 out degree: 28
+DEBUG - 		 in degree: 7
+DEBUG - 		 out degree: 27
 DEBUG - 	org.apache.catalina.util.ss
-DEBUG - 		 in degree: 31
-DEBUG - 		 out degree: 34
+DEBUG - 		 in degree: 29
+DEBUG - 		 out degree: 33
 DEBUG - 	org.apache.catalina.storeconfig.ss
 DEBUG - 		 in degree: 36
-DEBUG - 		 out degree: 73
+DEBUG - 		 out degree: 68
 DEBUG - 	org.apache.tomcat.util.descriptor.web.ss
-DEBUG - 		 in degree: 110
-DEBUG - 		 out degree: 55
+DEBUG - 		 in degree: 105
+DEBUG - 		 out degree: 66
 DEBUG - 	org.apache.tomcat.dbcp.dbcp2.datasources.ss
 DEBUG - 		 in degree: 24
-DEBUG - 		 out degree: 41
+DEBUG - 		 out degree: 33
 DEBUG - 	async.ss
 DEBUG - 		 in degree: 0
 DEBUG - 		 out degree: 13
 DEBUG - 	javax.websocket.ss
-DEBUG - 		 in degree: 6
-DEBUG - 		 out degree: 10
+DEBUG - 		 in degree: 4
+DEBUG - 		 out degree: 7
 DEBUG - 	org.apache.tomcat.websocket.server.ss
-DEBUG - 		 in degree: 46
-DEBUG - 		 out degree: 58
+DEBUG - 		 in degree: 41
+DEBUG - 		 out degree: 55
 DEBUG - 	org.apache.el.stream.ss
-DEBUG - 		 in degree: 80
-DEBUG - 		 out degree: 19
+DEBUG - 		 in degree: 77
+DEBUG - 		 out degree: 25
 DEBUG - 	org.apache.tomcat.jni.ss
 DEBUG - 		 in degree: 3
 DEBUG - 		 out degree: 4
-DEBUG - 	org.apache.jasper.tagplugins.jstl.ss
-DEBUG - 		 in degree: 32
-DEBUG - 		 out degree: 23
 DEBUG - 	org.apache.catalina.ha.backend.ss
-DEBUG - 		 in degree: 19
+DEBUG - 		 in degree: 17
 DEBUG - 		 out degree: 20
 DEBUG - 	org.apache.catalina.tribes.io.ss
-DEBUG - 		 in degree: 9
-DEBUG - 		 out degree: 25
+DEBUG - 		 in degree: 8
+DEBUG - 		 out degree: 23
 DEBUG - 	org.apache.catalina.webresources.ss
-DEBUG - 		 in degree: 26
+DEBUG - 		 in degree: 27
 DEBUG - 		 out degree: 41
 DEBUG - 	org.apache.catalina.tribes.membership.ss
-DEBUG - 		 in degree: 55
-DEBUG - 		 out degree: 32
+DEBUG - 		 in degree: 51
+DEBUG - 		 out degree: 33
 DEBUG - 	javax.security.auth.message.ss
 DEBUG - 		 in degree: 1
 DEBUG - 		 out degree: 4
 DEBUG - 	org.apache.coyote.http11.filters.ss
-DEBUG - 		 in degree: 4
-DEBUG - 		 out degree: 10
+DEBUG - 		 in degree: 1
+DEBUG - 		 out degree: 7
 DEBUG - 	org.apache.tomcat.util.log.ss
-DEBUG - 		 in degree: 34
-DEBUG - 		 out degree: 12
+DEBUG - 		 in degree: 29
+DEBUG - 		 out degree: 7
 DEBUG - 	org.apache.catalina.authenticator.ss
-DEBUG - 		 in degree: 13
-DEBUG - 		 out degree: 50
+DEBUG - 		 in degree: 14
+DEBUG - 		 out degree: 49
 DEBUG - 	org.apache.tomcat.util.http.ss
-DEBUG - 		 in degree: 60
-DEBUG - 		 out degree: 31
+DEBUG - 		 in degree: 54
+DEBUG - 		 out degree: 21
 DEBUG - 	org.apache.catalina.valves.rewrite.ss
-DEBUG - 		 in degree: 30
-DEBUG - 		 out degree: 63
+DEBUG - 		 in degree: 32
+DEBUG - 		 out degree: 61
 DEBUG - 	org.apache.el.util.ss
 DEBUG - 		 in degree: 4
 DEBUG - 		 out degree: 27
@@ -37954,61 +37941,61 @@ DEBUG - 	org.apache.catalina.ant.jmx.ss
 DEBUG - 		 in degree: 2
 DEBUG - 		 out degree: 25
 DEBUG - 	org.apache.catalina.manager.ss
-DEBUG - 		 in degree: 34
-DEBUG - 		 out degree: 48
+DEBUG - 		 in degree: 33
+DEBUG - 		 out degree: 45
 DEBUG - 	org.apache.catalina.connector.ss
-DEBUG - 		 in degree: 91
-DEBUG - 		 out degree: 67
+DEBUG - 		 in degree: 83
+DEBUG - 		 out degree: 72
 DEBUG - 	javax.security.auth.message.callback.ss
 DEBUG - 		 in degree: 0
 DEBUG - 		 out degree: 6
 DEBUG - 	org.apache.catalina.mbeans.ss
-DEBUG - 		 in degree: 6
-DEBUG - 		 out degree: 49
+DEBUG - 		 in degree: 14
+DEBUG - 		 out degree: 54
 DEBUG - 	org.apache.catalina.ha.context.ss
-DEBUG - 		 in degree: 8
-DEBUG - 		 out degree: 36
+DEBUG - 		 in degree: 14
+DEBUG - 		 out degree: 35
 DEBUG - 	org.apache.catalina.ha.session.ss
-DEBUG - 		 in degree: 49
-DEBUG - 		 out degree: 69
+DEBUG - 		 in degree: 7
+DEBUG - 		 out degree: 47
 DEBUG - 	org.apache.tomcat.util.codec.binary.ss
 DEBUG - 		 in degree: 10
-DEBUG - 		 out degree: 12
+DEBUG - 		 out degree: 11
 DEBUG - 	org.apache.tomcat.dbcp.dbcp2.ss
-DEBUG - 		 in degree: 35
-DEBUG - 		 out degree: 38
+DEBUG - 		 in degree: 37
+DEBUG - 		 out degree: 39
 DEBUG - 	org.apache.catalina.tribes.group.ss
 DEBUG - 		 in degree: 60
-DEBUG - 		 out degree: 31
+DEBUG - 		 out degree: 39
 DEBUG - 	org.apache.naming.java.ss
-DEBUG - 		 in degree: 9
+DEBUG - 		 in degree: 8
 DEBUG - 		 out degree: 9
 DEBUG - 	nonblocking.ss
 DEBUG - 		 in degree: 0
-DEBUG - 		 out degree: 13
-DEBUG - 	org.apache.coyote.http11.upgrade.ss
-DEBUG - 		 in degree: 7
-DEBUG - 		 out degree: 16
-DEBUG - 	org.apache.tomcat.util.http.parser.ss
-DEBUG - 		 in degree: 43
-DEBUG - 		 out degree: 27
-DEBUG - 	org.apache.coyote.http2.ss
-DEBUG - 		 in degree: 14
-DEBUG - 		 out degree: 45
-DEBUG - 	org.apache.catalina.loader.ss
-DEBUG - 		 in degree: 47
-DEBUG - 		 out degree: 54
-DEBUG - 	javax.servlet.jsp.tagext.ss
-DEBUG - 		 in degree: 9
 DEBUG - 		 out degree: 12
+DEBUG - 	org.apache.coyote.http11.upgrade.ss
+DEBUG - 		 in degree: 15
+DEBUG - 		 out degree: 20
+DEBUG - 	org.apache.tomcat.util.http.parser.ss
+DEBUG - 		 in degree: 20
+DEBUG - 		 out degree: 20
+DEBUG - 	org.apache.coyote.http2.ss
+DEBUG - 		 in degree: 17
+DEBUG - 		 out degree: 41
+DEBUG - 	org.apache.catalina.loader.ss
+DEBUG - 		 in degree: 44
+DEBUG - 		 out degree: 49
+DEBUG - 	javax.servlet.jsp.tagext.ss
+DEBUG - 		 in degree: 8
+DEBUG - 		 out degree: 15
 DEBUG - 	org.apache.tomcat.util.collections.ss
-DEBUG - 		 in degree: 50
-DEBUG - 		 out degree: 13
+DEBUG - 		 in degree: 45
+DEBUG - 		 out degree: 10
 DEBUG - 	org.apache.tomcat.util.net.jsse.ss
-DEBUG - 		 in degree: 30
-DEBUG - 		 out degree: 30
+DEBUG - 		 in degree: 33
+DEBUG - 		 out degree: 28
 DEBUG - 	javax.security.auth.message.config.ss
-DEBUG - 		 in degree: 30
+DEBUG - 		 in degree: 28
 DEBUG - 		 out degree: 18
 DEBUG - 	jsp2.examples.simpletag.ss
 DEBUG - 		 in degree: 0
@@ -38017,98 +38004,95 @@ DEBUG - 	org.apache.catalina.ant.ss
 DEBUG - 		 in degree: 4
 DEBUG - 		 out degree: 13
 DEBUG - 	org.apache.catalina.session.ss
-DEBUG - 		 in degree: 59
-DEBUG - 		 out degree: 68
+DEBUG - 		 in degree: 51
+DEBUG - 		 out degree: 66
 DEBUG - 	org.apache.tomcat.buildutil.ss
 DEBUG - 		 in degree: 10
 DEBUG - 		 out degree: 28
 DEBUG - 	org.apache.coyote.http11.ss
-DEBUG - 		 in degree: 97
-DEBUG - 		 out degree: 44
+DEBUG - 		 in degree: 94
+DEBUG - 		 out degree: 52
 DEBUG - 	org.apache.coyote.ajp.ss
-DEBUG - 		 in degree: 4
-DEBUG - 		 out degree: 29
-DEBUG - 	org.apache.catalina.security.ss
 DEBUG - 		 in degree: 11
-DEBUG - 		 out degree: 21
+DEBUG - 		 out degree: 28
+DEBUG - 	org.apache.catalina.security.ss
+DEBUG - 		 in degree: 9
+DEBUG - 		 out degree: 20
 DEBUG - 	javax.annotation.sql.ss
 DEBUG - 		 in degree: 0
 DEBUG - 		 out degree: 3
 DEBUG - 	org.apache.jasper.compiler.ss
-DEBUG - 		 in degree: 74
+DEBUG - 		 in degree: 70
 DEBUG - 		 out degree: 59
 DEBUG - 	org.apache.catalina.realm.ss
-DEBUG - 		 in degree: 47
-DEBUG - 		 out degree: 77
+DEBUG - 		 in degree: 25
+DEBUG - 		 out degree: 66
 DEBUG - 	websocket.echo.ss
-DEBUG - 		 in degree: 5
-DEBUG - 		 out degree: 11
+DEBUG - 		 in degree: 21
+DEBUG - 		 out degree: 10
 DEBUG - 	org.apache.el.ss
-DEBUG - 		 in degree: 4
-DEBUG - 		 out degree: 14
+DEBUG - 		 in degree: 0
+DEBUG - 		 out degree: 15
 DEBUG - 	org.apache.juli.logging.ss
-DEBUG - 		 in degree: 71
+DEBUG - 		 in degree: 66
 DEBUG - 		 out degree: 20
 DEBUG - 	org.apache.catalina.servlets.ss
 DEBUG - 		 in degree: 38
-DEBUG - 		 out degree: 56
+DEBUG - 		 out degree: 51
 DEBUG - 	org.apache.catalina.filters.ss
 DEBUG - 		 in degree: 48
-DEBUG - 		 out degree: 48
+DEBUG - 		 out degree: 47
 DEBUG - 	org.apache.tomcat.util.descriptor.tld.ss
 DEBUG - 		 in degree: 5
-DEBUG - 		 out degree: 17
+DEBUG - 		 out degree: 16
 DEBUG - 	org.apache.tomcat.util.compat.ss
-DEBUG - 		 in degree: 48
-DEBUG - 		 out degree: 24
+DEBUG - 		 in degree: 42
+DEBUG - 		 out degree: 21
 DEBUG - 	org.apache.jasper.servlet.ss
-DEBUG - 		 in degree: 67
-DEBUG - 		 out degree: 40
+DEBUG - 		 in degree: 64
+DEBUG - 		 out degree: 44
 DEBUG - 	org.apache.catalina.ha.tcp.ss
 DEBUG - 		 in degree: 17
-DEBUG - 		 out degree: 41
+DEBUG - 		 out degree: 40
 DEBUG - 	org.apache.tomcat.websocket.ss
-DEBUG - 		 in degree: 92
-DEBUG - 		 out degree: 50
-DEBUG - 	websocket.snake.ss
-DEBUG - 		 in degree: 14
-DEBUG - 		 out degree: 20
+DEBUG - 		 in degree: 86
+DEBUG - 		 out degree: 49
 DEBUG - 	org.apache.catalina.tribes.group.interceptors.ss
-DEBUG - 		 in degree: 10
-DEBUG - 		 out degree: 33
+DEBUG - 		 in degree: 12
+DEBUG - 		 out degree: 37
 DEBUG - 	org.apache.jasper.ss
-DEBUG - 		 in degree: 13
+DEBUG - 		 in degree: 12
 DEBUG - 		 out degree: 35
 DEBUG - 	org.apache.catalina.mapper.ss
 DEBUG - 		 in degree: 3
-DEBUG - 		 out degree: 25
+DEBUG - 		 out degree: 22
 DEBUG - 	org.apache.tomcat.util.threads.ss
-DEBUG - 		 in degree: 13
+DEBUG - 		 in degree: 4
 DEBUG - 		 out degree: 16
 DEBUG - 	org.apache.tomcat.dbcp.pool2.impl.ss
-DEBUG - 		 in degree: 59
+DEBUG - 		 in degree: 56
 DEBUG - 		 out degree: 40
 DEBUG - 	org.apache.tomcat.util.net.openssl.ss
-DEBUG - 		 in degree: 51
-DEBUG - 		 out degree: 37
+DEBUG - 		 in degree: 47
+DEBUG - 		 out degree: 34
 DEBUG - 	org.apache.tomcat.util.http.fileupload.util.ss
 DEBUG - 		 in degree: 5
 DEBUG - 		 out degree: 10
 DEBUG - 	org.apache.tomcat.util.http.fileupload.disk.ss
-DEBUG - 		 in degree: 19
-DEBUG - 		 out degree: 17
+DEBUG - 		 in degree: 16
+DEBUG - 		 out degree: 16
 DEBUG - 	org.apache.catalina.valves.ss
-DEBUG - 		 in degree: 122
-DEBUG - 		 out degree: 47
+DEBUG - 		 in degree: 118
+DEBUG - 		 out degree: 42
 DEBUG - 	org.apache.catalina.webresources.war.ss
 DEBUG - 		 in degree: 1
 DEBUG - 		 out degree: 6
 DEBUG - 	org.apache.tomcat.jdbc.pool.interceptor.ss
-DEBUG - 		 in degree: 37
-DEBUG - 		 out degree: 37
+DEBUG - 		 in degree: 34
+DEBUG - 		 out degree: 35
 DEBUG - 	org.apache.el.lang.ss
-DEBUG - 		 in degree: 27
-DEBUG - 		 out degree: 29
+DEBUG - 		 in degree: 31
+DEBUG - 		 out degree: 26
 DEBUG - 	cal.ss
 DEBUG - 		 in degree: 0
 DEBUG - 		 out degree: 5
@@ -38116,129 +38100,124 @@ DEBUG - 	javax.persistence.ss
 DEBUG - 		 in degree: 2
 DEBUG - 		 out degree: 4
 DEBUG - 	org.apache.tomcat.websocket.pojo.ss
-DEBUG - 		 in degree: 51
-DEBUG - 		 out degree: 29
+DEBUG - 		 in degree: 50
+DEBUG - 		 out degree: 27
 DEBUG - 	org.apache.tomcat.util.codec.ss
 DEBUG - 		 in degree: 1
 DEBUG - 		 out degree: 3
-DEBUG - mean of in degrees: 30.048387096774192
-DEBUG - mean of out degrees: 30.048387096774192
-DEBUG - mean of in plus out degrees: 60.096774193548384
-DEBUG - std dev of in degrees: 29.708024931739786
-DEBUG - std dev of out degrees: 18.858848751691642
-DEBUG - std dev of in plus out degrees: 43.541106520037424
+DEBUG - mean of in degrees: 28.408333333333335
+DEBUG - mean of out degrees: 28.408333333333335
+DEBUG - mean of in plus out degrees: 56.81666666666667
+DEBUG - std dev of in degrees: 28.569977729269944
+DEBUG - std dev of out degrees: 18.566933575821384
+DEBUG - std dev of in plus out degrees: 42.452738592529016
 DEBUG - 		org.apache.catalina.ha.authenticator.ss has brick use overload for out degrees
-DEBUG - 		 out degree: 67
+DEBUG - 		 out degree: 64
 DEBUG - 		org.apache.el.parser.ss has brick use overload for in degrees
-DEBUG - 		 in degree: 120
-DEBUG - 		org.apache.el.parser.ss has brick use overload for out degrees
-DEBUG - 		 out degree: 59
+DEBUG - 		 in degree: 116
 DEBUG - 		org.apache.el.parser.ss has brick use overload for both in and out degrees
-DEBUG - 		 in degree: 120
-DEBUG - 		 out degree: 59
+DEBUG - 		 in degree: 116
+DEBUG - 		 out degree: 54
 DEBUG - 		org.apache.el.parser.ss has brick use overload for in plus out degrees
-DEBUG - 		 in plus out degrees: 179
+DEBUG - 		 in plus out degrees: 170
 DEBUG - 		org.apache.tomcat.util.net.ss has brick use overload for in degrees
-DEBUG - 		 in degree: 106
+DEBUG - 		 in degree: 102
 DEBUG - 		org.apache.tomcat.util.net.ss has brick use overload for both in and out degrees
-DEBUG - 		 in degree: 106
-DEBUG - 		 out degree: 56
+DEBUG - 		 in degree: 102
+DEBUG - 		 out degree: 52
 DEBUG - 		org.apache.tomcat.util.net.ss has brick use overload for in plus out degrees
-DEBUG - 		 in plus out degrees: 162
+DEBUG - 		 in plus out degrees: 154
 DEBUG - 		org.apache.catalina.startup.ss has brick use overload for out degrees
-DEBUG - 		 out degree: 76
+DEBUG - 		 out degree: 75
 DEBUG - 		org.apache.catalina.startup.ss has brick use overload for both in and out degrees
-DEBUG - 		 in degree: 68
-DEBUG - 		 out degree: 76
+DEBUG - 		 in degree: 66
+DEBUG - 		 out degree: 75
 DEBUG - 		org.apache.catalina.startup.ss has brick use overload for in plus out degrees
-DEBUG - 		 in plus out degrees: 144
-DEBUG - 		org.apache.catalina.ssi.ss has brick use overload for in degrees
-DEBUG - 		 in degree: 89
-DEBUG - 		javax.servlet.jsp.el.ss has brick use overload for in degrees
-DEBUG - 		 in degree: 86
-DEBUG - 		org.apache.catalina.core.ss has brick use overload for in degrees
-DEBUG - 		 in degree: 85
-DEBUG - 		org.apache.catalina.core.ss has brick use overload for out degrees
-DEBUG - 		 out degree: 84
-DEBUG - 		org.apache.catalina.core.ss has brick use overload for both in and out degrees
-DEBUG - 		 in degree: 85
-DEBUG - 		 out degree: 84
-DEBUG - 		org.apache.catalina.core.ss has brick use overload for in plus out degrees
-DEBUG - 		 in plus out degrees: 169
-DEBUG - 		org.apache.catalina.storeconfig.ss has brick use overload for out degrees
-DEBUG - 		 out degree: 73
-DEBUG - 		org.apache.tomcat.util.descriptor.web.ss has brick use overload for in degrees
-DEBUG - 		 in degree: 110
-DEBUG - 		org.apache.tomcat.util.descriptor.web.ss has brick use overload for both in and out degrees
-DEBUG - 		 in degree: 110
-DEBUG - 		 out degree: 55
-DEBUG - 		org.apache.tomcat.util.descriptor.web.ss has brick use overload for in plus out degrees
-DEBUG - 		 in plus out degrees: 165
-DEBUG - 		org.apache.el.stream.ss has brick use overload for in degrees
-DEBUG - 		 in degree: 80
-DEBUG - 		org.apache.catalina.valves.rewrite.ss has brick use overload for out degrees
-DEBUG - 		 out degree: 63
-DEBUG - 		org.apache.catalina.connector.ss has brick use overload for in degrees
-DEBUG - 		 in degree: 91
-DEBUG - 		org.apache.catalina.connector.ss has brick use overload for out degrees
-DEBUG - 		 out degree: 67
-DEBUG - 		org.apache.catalina.connector.ss has brick use overload for both in and out degrees
-DEBUG - 		 in degree: 91
-DEBUG - 		 out degree: 67
-DEBUG - 		org.apache.catalina.connector.ss has brick use overload for in plus out degrees
-DEBUG - 		 in plus out degrees: 158
-DEBUG - 		org.apache.catalina.ha.session.ss has brick use overload for out degrees
-DEBUG - 		 out degree: 69
-DEBUG - 		org.apache.catalina.session.ss has brick use overload for out degrees
-DEBUG - 		 out degree: 68
-DEBUG - 		org.apache.catalina.session.ss has brick use overload for in plus out degrees
-DEBUG - 		 in plus out degrees: 127
-DEBUG - 		org.apache.coyote.http11.ss has brick use overload for in degrees
-DEBUG - 		 in degree: 97
-DEBUG - 		org.apache.coyote.http11.ss has brick use overload for both in and out degrees
-DEBUG - 		 in degree: 97
-DEBUG - 		 out degree: 44
-DEBUG - 		org.apache.coyote.http11.ss has brick use overload for in plus out degrees
 DEBUG - 		 in plus out degrees: 141
+DEBUG - 		org.apache.catalina.ssi.ss has brick use overload for in degrees
+DEBUG - 		 in degree: 82
+DEBUG - 		javax.servlet.jsp.el.ss has brick use overload for in degrees
+DEBUG - 		 in degree: 85
+DEBUG - 		org.apache.catalina.core.ss has brick use overload for in degrees
+DEBUG - 		 in degree: 80
+DEBUG - 		org.apache.catalina.core.ss has brick use overload for out degrees
+DEBUG - 		 out degree: 80
+DEBUG - 		org.apache.catalina.core.ss has brick use overload for both in and out degrees
+DEBUG - 		 in degree: 80
+DEBUG - 		 out degree: 80
+DEBUG - 		org.apache.catalina.core.ss has brick use overload for in plus out degrees
+DEBUG - 		 in plus out degrees: 160
+DEBUG - 		org.apache.catalina.storeconfig.ss has brick use overload for out degrees
+DEBUG - 		 out degree: 68
+DEBUG - 		org.apache.tomcat.util.descriptor.web.ss has brick use overload for in degrees
+DEBUG - 		 in degree: 105
+DEBUG - 		org.apache.tomcat.util.descriptor.web.ss has brick use overload for out degrees
+DEBUG - 		 out degree: 66
+DEBUG - 		org.apache.tomcat.util.descriptor.web.ss has brick use overload for both in and out degrees
+DEBUG - 		 in degree: 105
+DEBUG - 		 out degree: 66
+DEBUG - 		org.apache.tomcat.util.descriptor.web.ss has brick use overload for in plus out degrees
+DEBUG - 		 in plus out degrees: 171
+DEBUG - 		org.apache.el.stream.ss has brick use overload for in degrees
+DEBUG - 		 in degree: 77
+DEBUG - 		org.apache.catalina.valves.rewrite.ss has brick use overload for out degrees
+DEBUG - 		 out degree: 61
+DEBUG - 		org.apache.catalina.connector.ss has brick use overload for in degrees
+DEBUG - 		 in degree: 83
+DEBUG - 		org.apache.catalina.connector.ss has brick use overload for out degrees
+DEBUG - 		 out degree: 72
+DEBUG - 		org.apache.catalina.connector.ss has brick use overload for both in and out degrees
+DEBUG - 		 in degree: 83
+DEBUG - 		 out degree: 72
+DEBUG - 		org.apache.catalina.connector.ss has brick use overload for in plus out degrees
+DEBUG - 		 in plus out degrees: 155
+DEBUG - 		org.apache.catalina.session.ss has brick use overload for out degrees
+DEBUG - 		 out degree: 66
+DEBUG - 		org.apache.coyote.http11.ss has brick use overload for in degrees
+DEBUG - 		 in degree: 94
+DEBUG - 		org.apache.coyote.http11.ss has brick use overload for both in and out degrees
+DEBUG - 		 in degree: 94
+DEBUG - 		 out degree: 52
+DEBUG - 		org.apache.coyote.http11.ss has brick use overload for in plus out degrees
+DEBUG - 		 in plus out degrees: 146
 DEBUG - 		org.apache.jasper.compiler.ss has brick use overload for out degrees
 DEBUG - 		 out degree: 59
 DEBUG - 		org.apache.jasper.compiler.ss has brick use overload for both in and out degrees
-DEBUG - 		 in degree: 74
+DEBUG - 		 in degree: 70
 DEBUG - 		 out degree: 59
 DEBUG - 		org.apache.jasper.compiler.ss has brick use overload for in plus out degrees
-DEBUG - 		 in plus out degrees: 133
+DEBUG - 		 in plus out degrees: 129
 DEBUG - 		org.apache.catalina.realm.ss has brick use overload for out degrees
-DEBUG - 		 out degree: 77
+DEBUG - 		 out degree: 66
 DEBUG - 		org.apache.tomcat.websocket.ss has brick use overload for in degrees
-DEBUG - 		 in degree: 92
+DEBUG - 		 in degree: 86
 DEBUG - 		org.apache.tomcat.websocket.ss has brick use overload for both in and out degrees
-DEBUG - 		 in degree: 92
-DEBUG - 		 out degree: 50
+DEBUG - 		 in degree: 86
+DEBUG - 		 out degree: 49
 DEBUG - 		org.apache.tomcat.websocket.ss has brick use overload for in plus out degrees
-DEBUG - 		 in plus out degrees: 142
+DEBUG - 		 in plus out degrees: 135
 DEBUG - 		org.apache.catalina.valves.ss has brick use overload for in degrees
-DEBUG - 		 in degree: 122
+DEBUG - 		 in degree: 118
 DEBUG - 		org.apache.catalina.valves.ss has brick use overload for both in and out degrees
-DEBUG - 		 in degree: 122
-DEBUG - 		 out degree: 47
+DEBUG - 		 in degree: 118
+DEBUG - 		 out degree: 42
 DEBUG - 		org.apache.catalina.valves.ss has brick use overload for in plus out degrees
-DEBUG - 		 in plus out degrees: 169
+DEBUG - 		 in plus out degrees: 160
 DEBUG - org.apache.catalina.ha.authenticator.ss has smells bdc,buo
 DEBUG - org.apache.el.parser.ss has smells bdc,buo
 DEBUG - org.apache.tomcat.util.buf.ss has smells bdc
 DEBUG - javax.servlet.http.ss has smells bdc
-DEBUG - org.apache.tomcat.util.ss has smells bdc
 DEBUG - org.apache.tomcat.util.digester.ss has smells bdc
+DEBUG - org.apache.tomcat.util.ss has smells bdc
 DEBUG - org.apache.jasper.xmlparser.ss has smells bdc
 DEBUG - websocket.drawboard.ss has smells bdc
-DEBUG - org.apache.tomcat.util.net.ss has smells bdc,buo
 DEBUG - javax.servlet.jsp.ss has smells bdc
+DEBUG - org.apache.tomcat.util.net.ss has smells bdc,buo
 DEBUG - examples.ss has smells bdc
 DEBUG - org.apache.catalina.startup.ss has smells bdc,buo
 DEBUG - org.apache.catalina.ha.deploy.ss has smells bdc
 DEBUG - org.apache.catalina.authenticator.jaspic.ss has smells bdc
 DEBUG - javax.el.ss has smells bdc
-DEBUG - org.apache.catalina.tribes.tipis.ss has smells bdc
 DEBUG - org.apache.tomcat.util.http.fileupload.servlet.ss has smells bdc
 DEBUG - javax.websocket.server.ss has smells bdc
 DEBUG - org.apache.catalina.manager.host.ss has smells bdc
@@ -38249,8 +38228,8 @@ DEBUG - org.apache.catalina.tribes.util.ss has smells bdc
 DEBUG - org.apache.juli.ss has smells bdc
 DEBUG - org.apache.tomcat.util.http.fileupload.ss has smells bdc
 DEBUG - org.apache.naming.factory.ss has smells bdc
-DEBUG - org.apache.tomcat.dbcp.pool2.ss has smells bdc
 DEBUG - org.apache.catalina.users.ss has smells bdc
+DEBUG - org.apache.tomcat.dbcp.pool2.ss has smells bdc
 DEBUG - org.apache.jasper.runtime.ss has smells bdc
 DEBUG - org.apache.catalina.tribes.transport.bio.ss has smells bdc
 DEBUG - org.apache.tomcat.util.modeler.ss has smells bdc
@@ -38260,7 +38239,6 @@ DEBUG - org.apache.naming.ss has smells bdc
 DEBUG - javax.servlet.jsp.el.ss has smells bdc,buo
 DEBUG - javax.servlet.annotation.ss has smells bdc
 DEBUG - compressionFilters.ss has smells bdc
-DEBUG - org.apache.tomcat.util.res.ss has smells bdc
 DEBUG - org.apache.catalina.tribes.transport.ss has smells bdc
 DEBUG - org.apache.catalina.tribes.transport.nio.ss has smells bdc
 DEBUG - org.apache.coyote.ss has smells bdc
@@ -38274,11 +38252,10 @@ DEBUG - javax.websocket.ss has smells bdc
 DEBUG - org.apache.tomcat.websocket.server.ss has smells bdc
 DEBUG - org.apache.el.stream.ss has smells bdc,buo
 DEBUG - org.apache.tomcat.jni.ss has smells bdc
-DEBUG - org.apache.jasper.tagplugins.jstl.ss has smells bdc
 DEBUG - org.apache.catalina.ha.backend.ss has smells bdc
 DEBUG - org.apache.catalina.tribes.io.ss has smells bdc
-DEBUG - org.apache.catalina.tribes.membership.ss has smells bdc
 DEBUG - org.apache.catalina.webresources.ss has smells bdc
+DEBUG - org.apache.catalina.tribes.membership.ss has smells bdc
 DEBUG - org.apache.coyote.http11.filters.ss has smells bdc
 DEBUG - javax.security.auth.message.ss has smells bdc
 DEBUG - org.apache.tomcat.util.log.ss has smells bdc
@@ -38291,7 +38268,7 @@ DEBUG - org.apache.catalina.ant.jmx.ss has smells bdc
 DEBUG - org.apache.catalina.manager.ss has smells bdc
 DEBUG - org.apache.catalina.connector.ss has smells bdc,buo
 DEBUG - org.apache.catalina.mbeans.ss has smells bdc
-DEBUG - org.apache.catalina.ha.session.ss has smells bdc,buo
+DEBUG - org.apache.catalina.ha.session.ss has smells bdc
 DEBUG - org.apache.catalina.ha.context.ss has smells bdc
 DEBUG - org.apache.tomcat.util.codec.binary.ss has smells bdc
 DEBUG - org.apache.tomcat.dbcp.dbcp2.ss has smells bdc
@@ -38314,16 +38291,14 @@ DEBUG - org.apache.catalina.security.ss has smells bdc
 DEBUG - org.apache.jasper.compiler.ss has smells bdc,buo
 DEBUG - org.apache.catalina.realm.ss has smells bdc,buo
 DEBUG - websocket.echo.ss has smells bdc
-DEBUG - org.apache.el.ss has smells bdc
 DEBUG - org.apache.catalina.servlets.ss has smells bdc
 DEBUG - org.apache.juli.logging.ss has smells bdc
 DEBUG - org.apache.tomcat.util.descriptor.tld.ss has smells bdc
 DEBUG - org.apache.catalina.filters.ss has smells bdc
 DEBUG - org.apache.tomcat.util.compat.ss has smells bdc
-DEBUG - org.apache.jasper.servlet.ss has smells bdc
 DEBUG - org.apache.catalina.ha.tcp.ss has smells bdc
+DEBUG - org.apache.jasper.servlet.ss has smells bdc
 DEBUG - org.apache.tomcat.websocket.ss has smells bdc,buo
-DEBUG - websocket.snake.ss has smells bdc
 DEBUG - org.apache.catalina.tribes.group.interceptors.ss has smells bdc
 DEBUG - org.apache.jasper.ss has smells bdc
 DEBUG - org.apache.catalina.mapper.ss has smells bdc
@@ -38339,9 +38314,9 @@ DEBUG - org.apache.el.lang.ss has smells bdc
 DEBUG - javax.persistence.ss has smells bdc
 DEBUG - org.apache.tomcat.websocket.pojo.ss has smells bdc
 DEBUG - org.apache.tomcat.util.codec.ss has smells bdc
-DEBUG - bdc : [org.apache.catalina.ha.authenticator.ss, org.apache.el.parser.ss, org.apache.tomcat.util.buf.ss, javax.servlet.http.ss, org.apache.tomcat.util.ss, org.apache.tomcat.util.digester.ss, org.apache.jasper.xmlparser.ss, websocket.drawboard.ss, org.apache.tomcat.util.net.ss, javax.servlet.jsp.ss, examples.ss, org.apache.catalina.startup.ss, org.apache.catalina.ha.deploy.ss, org.apache.catalina.authenticator.jaspic.ss, javax.el.ss, org.apache.catalina.tribes.tipis.ss, org.apache.tomcat.util.http.fileupload.servlet.ss, javax.websocket.server.ss, org.apache.catalina.manager.host.ss, org.apache.tomcat.util.scan.ss, org.apache.jasper.el.ss, org.apache.catalina.ssi.ss, org.apache.catalina.tribes.util.ss, org.apache.juli.ss, org.apache.tomcat.util.http.fileupload.ss, org.apache.naming.factory.ss, org.apache.tomcat.dbcp.pool2.ss, org.apache.catalina.users.ss, org.apache.jasper.runtime.ss, org.apache.catalina.tribes.transport.bio.ss, org.apache.tomcat.util.modeler.ss, org.apache.tomcat.jdbc.pool.ss, org.apache.tomcat.dbcp.dbcp2.cpdsadapter.ss, org.apache.naming.ss, javax.servlet.jsp.el.ss, javax.servlet.annotation.ss, compressionFilters.ss, org.apache.tomcat.util.res.ss, org.apache.catalina.tribes.transport.ss, org.apache.catalina.tribes.transport.nio.ss, org.apache.coyote.ss, org.apache.catalina.core.ss, org.apache.tomcat.util.descriptor.tagplugin.ss, org.apache.catalina.util.ss, org.apache.catalina.storeconfig.ss, org.apache.tomcat.util.descriptor.web.ss, org.apache.tomcat.dbcp.dbcp2.datasources.ss, javax.websocket.ss, org.apache.tomcat.websocket.server.ss, org.apache.el.stream.ss, org.apache.tomcat.jni.ss, org.apache.jasper.tagplugins.jstl.ss, org.apache.catalina.ha.backend.ss, org.apache.catalina.tribes.io.ss, org.apache.catalina.tribes.membership.ss, org.apache.catalina.webresources.ss, org.apache.coyote.http11.filters.ss, javax.security.auth.message.ss, org.apache.tomcat.util.log.ss, org.apache.catalina.authenticator.ss, org.apache.tomcat.util.http.ss, org.apache.catalina.valves.rewrite.ss, org.apache.el.util.ss, org.apache.tomcat.util.bcel.classfile.ss, org.apache.catalina.ant.jmx.ss, org.apache.catalina.manager.ss, org.apache.catalina.connector.ss, org.apache.catalina.mbeans.ss, org.apache.catalina.ha.session.ss, org.apache.catalina.ha.context.ss, org.apache.tomcat.util.codec.binary.ss, org.apache.tomcat.dbcp.dbcp2.ss, org.apache.catalina.tribes.group.ss, org.apache.naming.java.ss, org.apache.coyote.http11.upgrade.ss, org.apache.tomcat.util.http.parser.ss, org.apache.catalina.loader.ss, org.apache.coyote.http2.ss, javax.servlet.jsp.tagext.ss, org.apache.tomcat.util.collections.ss, org.apache.tomcat.util.net.jsse.ss, javax.security.auth.message.config.ss, org.apache.catalina.session.ss, org.apache.catalina.ant.ss, org.apache.tomcat.buildutil.ss, org.apache.coyote.http11.ss, org.apache.coyote.ajp.ss, org.apache.catalina.security.ss, org.apache.jasper.compiler.ss, org.apache.catalina.realm.ss, websocket.echo.ss, org.apache.el.ss, org.apache.catalina.servlets.ss, org.apache.juli.logging.ss, org.apache.tomcat.util.descriptor.tld.ss, org.apache.catalina.filters.ss, org.apache.tomcat.util.compat.ss, org.apache.jasper.servlet.ss, org.apache.catalina.ha.tcp.ss, org.apache.tomcat.websocket.ss, websocket.snake.ss, org.apache.catalina.tribes.group.interceptors.ss, org.apache.jasper.ss, org.apache.catalina.mapper.ss, org.apache.tomcat.util.threads.ss, org.apache.tomcat.dbcp.pool2.impl.ss, org.apache.tomcat.util.net.openssl.ss, org.apache.tomcat.util.http.fileupload.util.ss, org.apache.tomcat.util.http.fileupload.disk.ss, org.apache.catalina.valves.ss, org.apache.catalina.webresources.war.ss, org.apache.tomcat.jdbc.pool.interceptor.ss, org.apache.el.lang.ss, javax.persistence.ss, org.apache.tomcat.websocket.pojo.ss, org.apache.tomcat.util.codec.ss]
-DEBUG - buo : [org.apache.catalina.core.ss, org.apache.catalina.valves.rewrite.ss, org.apache.jasper.compiler.ss, org.apache.catalina.storeconfig.ss, org.apache.catalina.realm.ss, org.apache.tomcat.util.descriptor.web.ss, org.apache.catalina.ha.authenticator.ss, org.apache.catalina.session.ss, org.apache.catalina.connector.ss, org.apache.el.stream.ss, org.apache.catalina.ha.session.ss, org.apache.el.parser.ss, javax.servlet.jsp.el.ss, org.apache.coyote.http11.ss, org.apache.catalina.valves.ss, org.apache.tomcat.websocket.ss, org.apache.tomcat.util.net.ss, org.apache.catalina.ssi.ss, org.apache.catalina.startup.ss]
-DEBUG - bdc org.apache.catalina.ha.authenticator.ss,org.apache.el.parser.ss,org.apache.tomcat.util.buf.ss,javax.servlet.http.ss,org.apache.tomcat.util.ss,org.apache.tomcat.util.digester.ss,org.apache.jasper.xmlparser.ss,websocket.drawboard.ss,org.apache.tomcat.util.net.ss,javax.servlet.jsp.ss,examples.ss,org.apache.catalina.startup.ss,org.apache.catalina.ha.deploy.ss,org.apache.catalina.authenticator.jaspic.ss,javax.el.ss,org.apache.catalina.tribes.tipis.ss,org.apache.tomcat.util.http.fileupload.servlet.ss,javax.websocket.server.ss,org.apache.catalina.manager.host.ss,org.apache.tomcat.util.scan.ss,org.apache.jasper.el.ss,org.apache.catalina.ssi.ss,org.apache.catalina.tribes.util.ss,org.apache.juli.ss,org.apache.tomcat.util.http.fileupload.ss,org.apache.naming.factory.ss,org.apache.tomcat.dbcp.pool2.ss,org.apache.catalina.users.ss,org.apache.jasper.runtime.ss,org.apache.catalina.tribes.transport.bio.ss,org.apache.tomcat.util.modeler.ss,org.apache.tomcat.jdbc.pool.ss,org.apache.tomcat.dbcp.dbcp2.cpdsadapter.ss,org.apache.naming.ss,javax.servlet.jsp.el.ss,javax.servlet.annotation.ss,compressionFilters.ss,org.apache.tomcat.util.res.ss,org.apache.catalina.tribes.transport.ss,org.apache.catalina.tribes.transport.nio.ss,org.apache.coyote.ss,org.apache.catalina.core.ss,org.apache.tomcat.util.descriptor.tagplugin.ss,org.apache.catalina.util.ss,org.apache.catalina.storeconfig.ss,org.apache.tomcat.util.descriptor.web.ss,org.apache.tomcat.dbcp.dbcp2.datasources.ss,javax.websocket.ss,org.apache.tomcat.websocket.server.ss,org.apache.el.stream.ss,org.apache.tomcat.jni.ss,org.apache.jasper.tagplugins.jstl.ss,org.apache.catalina.ha.backend.ss,org.apache.catalina.tribes.io.ss,org.apache.catalina.tribes.membership.ss,org.apache.catalina.webresources.ss,org.apache.coyote.http11.filters.ss,javax.security.auth.message.ss,org.apache.tomcat.util.log.ss,org.apache.catalina.authenticator.ss,org.apache.tomcat.util.http.ss,org.apache.catalina.valves.rewrite.ss,org.apache.el.util.ss,org.apache.tomcat.util.bcel.classfile.ss,org.apache.catalina.ant.jmx.ss,org.apache.catalina.manager.ss,org.apache.catalina.connector.ss,org.apache.catalina.mbeans.ss,org.apache.catalina.ha.session.ss,org.apache.catalina.ha.context.ss,org.apache.tomcat.util.codec.binary.ss,org.apache.tomcat.dbcp.dbcp2.ss,org.apache.catalina.tribes.group.ss,org.apache.naming.java.ss,org.apache.coyote.http11.upgrade.ss,org.apache.tomcat.util.http.parser.ss,org.apache.catalina.loader.ss,org.apache.coyote.http2.ss,javax.servlet.jsp.tagext.ss,org.apache.tomcat.util.collections.ss,org.apache.tomcat.util.net.jsse.ss,javax.security.auth.message.config.ss,org.apache.catalina.session.ss,org.apache.catalina.ant.ss,org.apache.tomcat.buildutil.ss,org.apache.coyote.http11.ss,org.apache.coyote.ajp.ss,org.apache.catalina.security.ss,org.apache.jasper.compiler.ss,org.apache.catalina.realm.ss,websocket.echo.ss,org.apache.el.ss,org.apache.catalina.servlets.ss,org.apache.juli.logging.ss,org.apache.tomcat.util.descriptor.tld.ss,org.apache.catalina.filters.ss,org.apache.tomcat.util.compat.ss,org.apache.jasper.servlet.ss,org.apache.catalina.ha.tcp.ss,org.apache.tomcat.websocket.ss,websocket.snake.ss,org.apache.catalina.tribes.group.interceptors.ss,org.apache.jasper.ss,org.apache.catalina.mapper.ss,org.apache.tomcat.util.threads.ss,org.apache.tomcat.dbcp.pool2.impl.ss,org.apache.tomcat.util.net.openssl.ss,org.apache.tomcat.util.http.fileupload.util.ss,org.apache.tomcat.util.http.fileupload.disk.ss,org.apache.catalina.valves.ss,org.apache.catalina.webresources.war.ss,org.apache.tomcat.jdbc.pool.interceptor.ss,org.apache.el.lang.ss,javax.persistence.ss,org.apache.tomcat.websocket.pojo.ss,org.apache.tomcat.util.codec.ss
+DEBUG - bdc : [org.apache.catalina.ha.authenticator.ss, org.apache.el.parser.ss, org.apache.tomcat.util.buf.ss, javax.servlet.http.ss, org.apache.tomcat.util.digester.ss, org.apache.tomcat.util.ss, org.apache.jasper.xmlparser.ss, websocket.drawboard.ss, javax.servlet.jsp.ss, org.apache.tomcat.util.net.ss, examples.ss, org.apache.catalina.startup.ss, org.apache.catalina.ha.deploy.ss, org.apache.catalina.authenticator.jaspic.ss, javax.el.ss, org.apache.tomcat.util.http.fileupload.servlet.ss, javax.websocket.server.ss, org.apache.catalina.manager.host.ss, org.apache.tomcat.util.scan.ss, org.apache.jasper.el.ss, org.apache.catalina.ssi.ss, org.apache.catalina.tribes.util.ss, org.apache.juli.ss, org.apache.tomcat.util.http.fileupload.ss, org.apache.naming.factory.ss, org.apache.catalina.users.ss, org.apache.tomcat.dbcp.pool2.ss, org.apache.jasper.runtime.ss, org.apache.catalina.tribes.transport.bio.ss, org.apache.tomcat.util.modeler.ss, org.apache.tomcat.jdbc.pool.ss, org.apache.tomcat.dbcp.dbcp2.cpdsadapter.ss, org.apache.naming.ss, javax.servlet.jsp.el.ss, javax.servlet.annotation.ss, compressionFilters.ss, org.apache.catalina.tribes.transport.ss, org.apache.catalina.tribes.transport.nio.ss, org.apache.coyote.ss, org.apache.catalina.core.ss, org.apache.tomcat.util.descriptor.tagplugin.ss, org.apache.catalina.util.ss, org.apache.catalina.storeconfig.ss, org.apache.tomcat.util.descriptor.web.ss, org.apache.tomcat.dbcp.dbcp2.datasources.ss, javax.websocket.ss, org.apache.tomcat.websocket.server.ss, org.apache.el.stream.ss, org.apache.tomcat.jni.ss, org.apache.catalina.ha.backend.ss, org.apache.catalina.tribes.io.ss, org.apache.catalina.webresources.ss, org.apache.catalina.tribes.membership.ss, org.apache.coyote.http11.filters.ss, javax.security.auth.message.ss, org.apache.tomcat.util.log.ss, org.apache.catalina.authenticator.ss, org.apache.tomcat.util.http.ss, org.apache.catalina.valves.rewrite.ss, org.apache.el.util.ss, org.apache.tomcat.util.bcel.classfile.ss, org.apache.catalina.ant.jmx.ss, org.apache.catalina.manager.ss, org.apache.catalina.connector.ss, org.apache.catalina.mbeans.ss, org.apache.catalina.ha.session.ss, org.apache.catalina.ha.context.ss, org.apache.tomcat.util.codec.binary.ss, org.apache.tomcat.dbcp.dbcp2.ss, org.apache.catalina.tribes.group.ss, org.apache.naming.java.ss, org.apache.coyote.http11.upgrade.ss, org.apache.tomcat.util.http.parser.ss, org.apache.catalina.loader.ss, org.apache.coyote.http2.ss, javax.servlet.jsp.tagext.ss, org.apache.tomcat.util.collections.ss, org.apache.tomcat.util.net.jsse.ss, javax.security.auth.message.config.ss, org.apache.catalina.session.ss, org.apache.catalina.ant.ss, org.apache.tomcat.buildutil.ss, org.apache.coyote.http11.ss, org.apache.coyote.ajp.ss, org.apache.catalina.security.ss, org.apache.jasper.compiler.ss, org.apache.catalina.realm.ss, websocket.echo.ss, org.apache.catalina.servlets.ss, org.apache.juli.logging.ss, org.apache.tomcat.util.descriptor.tld.ss, org.apache.catalina.filters.ss, org.apache.tomcat.util.compat.ss, org.apache.catalina.ha.tcp.ss, org.apache.jasper.servlet.ss, org.apache.tomcat.websocket.ss, org.apache.catalina.tribes.group.interceptors.ss, org.apache.jasper.ss, org.apache.catalina.mapper.ss, org.apache.tomcat.util.threads.ss, org.apache.tomcat.dbcp.pool2.impl.ss, org.apache.tomcat.util.net.openssl.ss, org.apache.tomcat.util.http.fileupload.util.ss, org.apache.tomcat.util.http.fileupload.disk.ss, org.apache.catalina.valves.ss, org.apache.catalina.webresources.war.ss, org.apache.tomcat.jdbc.pool.interceptor.ss, org.apache.el.lang.ss, javax.persistence.ss, org.apache.tomcat.websocket.pojo.ss, org.apache.tomcat.util.codec.ss]
+DEBUG - buo : [org.apache.catalina.core.ss, org.apache.catalina.valves.rewrite.ss, org.apache.jasper.compiler.ss, org.apache.catalina.storeconfig.ss, org.apache.catalina.realm.ss, org.apache.tomcat.util.descriptor.web.ss, org.apache.catalina.ha.authenticator.ss, org.apache.catalina.session.ss, org.apache.catalina.connector.ss, org.apache.el.stream.ss, org.apache.el.parser.ss, javax.servlet.jsp.el.ss, org.apache.coyote.http11.ss, org.apache.catalina.valves.ss, org.apache.tomcat.websocket.ss, org.apache.tomcat.util.net.ss, org.apache.catalina.ssi.ss, org.apache.catalina.startup.ss]
+DEBUG - bdc org.apache.catalina.ha.authenticator.ss,org.apache.el.parser.ss,org.apache.tomcat.util.buf.ss,javax.servlet.http.ss,org.apache.tomcat.util.digester.ss,org.apache.tomcat.util.ss,org.apache.jasper.xmlparser.ss,websocket.drawboard.ss,javax.servlet.jsp.ss,org.apache.tomcat.util.net.ss,examples.ss,org.apache.catalina.startup.ss,org.apache.catalina.ha.deploy.ss,org.apache.catalina.authenticator.jaspic.ss,javax.el.ss,org.apache.tomcat.util.http.fileupload.servlet.ss,javax.websocket.server.ss,org.apache.catalina.manager.host.ss,org.apache.tomcat.util.scan.ss,org.apache.jasper.el.ss,org.apache.catalina.ssi.ss,org.apache.catalina.tribes.util.ss,org.apache.juli.ss,org.apache.tomcat.util.http.fileupload.ss,org.apache.naming.factory.ss,org.apache.catalina.users.ss,org.apache.tomcat.dbcp.pool2.ss,org.apache.jasper.runtime.ss,org.apache.catalina.tribes.transport.bio.ss,org.apache.tomcat.util.modeler.ss,org.apache.tomcat.jdbc.pool.ss,org.apache.tomcat.dbcp.dbcp2.cpdsadapter.ss,org.apache.naming.ss,javax.servlet.jsp.el.ss,javax.servlet.annotation.ss,compressionFilters.ss,org.apache.catalina.tribes.transport.ss,org.apache.catalina.tribes.transport.nio.ss,org.apache.coyote.ss,org.apache.catalina.core.ss,org.apache.tomcat.util.descriptor.tagplugin.ss,org.apache.catalina.util.ss,org.apache.catalina.storeconfig.ss,org.apache.tomcat.util.descriptor.web.ss,org.apache.tomcat.dbcp.dbcp2.datasources.ss,javax.websocket.ss,org.apache.tomcat.websocket.server.ss,org.apache.el.stream.ss,org.apache.tomcat.jni.ss,org.apache.catalina.ha.backend.ss,org.apache.catalina.tribes.io.ss,org.apache.catalina.webresources.ss,org.apache.catalina.tribes.membership.ss,org.apache.coyote.http11.filters.ss,javax.security.auth.message.ss,org.apache.tomcat.util.log.ss,org.apache.catalina.authenticator.ss,org.apache.tomcat.util.http.ss,org.apache.catalina.valves.rewrite.ss,org.apache.el.util.ss,org.apache.tomcat.util.bcel.classfile.ss,org.apache.catalina.ant.jmx.ss,org.apache.catalina.manager.ss,org.apache.catalina.connector.ss,org.apache.catalina.mbeans.ss,org.apache.catalina.ha.session.ss,org.apache.catalina.ha.context.ss,org.apache.tomcat.util.codec.binary.ss,org.apache.tomcat.dbcp.dbcp2.ss,org.apache.catalina.tribes.group.ss,org.apache.naming.java.ss,org.apache.coyote.http11.upgrade.ss,org.apache.tomcat.util.http.parser.ss,org.apache.catalina.loader.ss,org.apache.coyote.http2.ss,javax.servlet.jsp.tagext.ss,org.apache.tomcat.util.collections.ss,org.apache.tomcat.util.net.jsse.ss,javax.security.auth.message.config.ss,org.apache.catalina.session.ss,org.apache.catalina.ant.ss,org.apache.tomcat.buildutil.ss,org.apache.coyote.http11.ss,org.apache.coyote.ajp.ss,org.apache.catalina.security.ss,org.apache.jasper.compiler.ss,org.apache.catalina.realm.ss,websocket.echo.ss,org.apache.catalina.servlets.ss,org.apache.juli.logging.ss,org.apache.tomcat.util.descriptor.tld.ss,org.apache.catalina.filters.ss,org.apache.tomcat.util.compat.ss,org.apache.catalina.ha.tcp.ss,org.apache.jasper.servlet.ss,org.apache.tomcat.websocket.ss,org.apache.catalina.tribes.group.interceptors.ss,org.apache.jasper.ss,org.apache.catalina.mapper.ss,org.apache.tomcat.util.threads.ss,org.apache.tomcat.dbcp.pool2.impl.ss,org.apache.tomcat.util.net.openssl.ss,org.apache.tomcat.util.http.fileupload.util.ss,org.apache.tomcat.util.http.fileupload.disk.ss,org.apache.catalina.valves.ss,org.apache.catalina.webresources.war.ss,org.apache.tomcat.jdbc.pool.interceptor.ss,org.apache.el.lang.ss,javax.persistence.ss,org.apache.tomcat.websocket.pojo.ss,org.apache.tomcat.util.codec.ss
 DEBUG - buo org.apache.catalina.ha.authenticator.ss
 DEBUG - buo org.apache.el.parser.ss
 DEBUG - buo org.apache.tomcat.util.net.ss
@@ -38354,7 +38329,6 @@ DEBUG - buo org.apache.tomcat.util.descriptor.web.ss
 DEBUG - buo org.apache.el.stream.ss
 DEBUG - buo org.apache.catalina.valves.rewrite.ss
 DEBUG - buo org.apache.catalina.connector.ss
-DEBUG - buo org.apache.catalina.ha.session.ss
 DEBUG - buo org.apache.catalina.session.ss
 DEBUG - buo org.apache.coyote.http11.ss
 DEBUG - buo org.apache.jasper.compiler.ss
