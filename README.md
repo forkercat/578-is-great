@@ -404,28 +404,30 @@ Last but not least, our way of adding the new dependencies to the tree should be
 
 ## Security Decision #2
 
-**Name:** XXX
+**Name:** Remote Code Execution
 
-**Vulnerability ID:** [???](???)
+**Vulnerability ID:** [CVE-2017-12617](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12617)
 
-This was fixed in revision [???](???) for 8.5.x. Open it to see which files are related.
+This was fixed in revision [1809921](https://svn.apache.org/viewvc?view=revision&revision=1809921) for 8.5.x. Open it to see which files are related.
 
 
 ### Function Description
 
-This security decision is related to classes including `AbstractFileResourceSet` and `JrePlatform`.
+This security decision is related to two classes `AbstractFileResourceSet` and `JrePlatform`.
 
-The `AbstractFileResourceSet` is used to get the file identified by a URL.
+- `AbstractFileResourceSet` is used to get the file identified by a URL.
 
-The `JrePlatform` is used to check whether the tomcat is running on windows.
+- `JrePlatform` is used to check whether the Tomcat system is running on Windows operating systems.
 
 ![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/xj9uh.png)
 
+
+
 ### Vulnerability Description
 
-It's possible that a user upload a JSP file through HTTP PUT and that JSP file could be executed later.
+It is possible that a user upload a JSP file through an HTTP PUT request and that the JSP file could be executed in the system later.
 
-In this case, if the URL of that JSP file does not meet the requirement of the server's platform environment, like windows, an error could rise and the tomcat might crash.
+In this case, if the URL of that JSP file does not meet the requirement of the server's platform environment (e.g. Windows), an error would arise and the Tomcat might crash.
 
 
 ### How It Was Fixed
@@ -438,12 +440,13 @@ Then the `AbstractFileResourceSet` will check if the current platform is windows
 
 ```java
 if (JrePlatform.IS_WINDOWS && isInvalidWindowsFilename(name)) {
-	return null;
+  return null;
 }
 ```
 
-![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/cgf50.png)
+Class Diagram:
 
+![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/cgf50.png)
 
 
 
