@@ -33,7 +33,6 @@ This is a course project based on `ARCADE` and `Tomcat` in CS 578 Software Archi
     - [How It Was Fixed](#how-it-was-fixed-1)
     - [Failure in Recovery Techniques](#failure-in-recovery-techniques-1)
     - [What We Did](#what-we-did-1)
-    - [Potential Improvement](#potential-improvement-1)
   - [Extra Work: Visualization](#extra-work-visualization)
     - [Cluster Bubbles](#cluster-bubbles)
     - [Dependencies on Class Packages](#dependencies-on-class-packages)
@@ -449,42 +448,12 @@ Class Diagram:
 ![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/cgf50.png)
 
 
-
 ### Failure in Recovery Techniques
 In the original ACDC technique, ACDC fails in clustering `AbstractFileResourceSet` and `JrePlatform`.
 
-
-### Problem Analysis
-The reason why `AbstractFileResourceSet` and `JrePlatform` are not clustered is that in SubGraph Pattern, every child of the root will find its coverSet. A coverSet is a HashSet containing a node called "dominator node" and the set of its dominated nodes, `N = n(i), i:1,2,...m`, which have the followling properties.
-1. There exists a path from the doninator to every n(i)
-2. For any node v such that there exists a path from v to any n(i), either dominator node is in that path or v is one of n(i).
-In our testcase, the coverSet `org.apache.tomcat.util.compat.JrePlatform` finds is 
-`(org.apache.tomcat.util.compat.JrePlatform, org.apache.tomcat.util.compat.JrePlatform$1)`. 
-After finding its coverSet, a cluster named `org.apache.tomcat.util.compat.ss` will be created which contains `org.apache.tomcat.util.compat.JrePlatform` and `org.apache.tomcat.util.compat.JrePlatform$1`.
-As a result, `org.apache.tomcat.util.compat.JrePlatform` will not appear in any other cluster. So `AbstractFileResourceSet` and `JrePlatform` are not in the same cluster in output.
+Originally, `org.apache.catalina.webresources.ss` only contains `AbstractFileResourceSet` but does not have `JrePlatform`.
 
 
-### What We Did
-We modify the `SubGraph Pattern` so that it will not create a cluster if the coverSet only contains twe elements, `A` and `A$1`. After our modification, the cluster named `org.apache.tomcat.util.compat.ss` will not be created in the `SubGraph Pattern`.
-Both `org.apache.tomcat.util.compat.JrePlatform` and `org.apache.tomcat.util.compat.JrePlatform$1)` will become `orphans` which will be clustered in the `OrphanAdoption Pattern` following the rule that an orphan would be placed under the cluster-node with the largest number of children which point to the orphan.
-Here is our modification in the `SubGraph Pattern`.
-```java
-HashSet cS = coveredSet(tentativeDominatorTreeNode, vRootChildren);
-
-DefaultMutableTreeNode aa;
-Node cSNode;
-Iterator al = cS.iterator();
-while (al.hasNext()) {
-	aa = (DefaultMutableTreeNode) al.next();
-   	cSNode = (Node) aa.getUserObject();
-    	int index = cSNode.getName().lastIndexOf('$');
-    	if(cSNode.getName().contains(tentativeDominator.getName()+'$')&&cS.size() == 2){
-     		cS.remove(aa);
-     		break;
-    	}
-}
-```
-Finally we re-run ARCADE and have the result we would expect as follows.
 
 
 ## Extra Work: Visualization
