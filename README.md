@@ -33,7 +33,6 @@ This is a course project based on `ARCADE` and `Tomcat` in CS 578 Software Archi
     - [How It Was Fixed](#how-it-was-fixed-1)
     - [Failure in Recovery Techniques](#failure-in-recovery-techniques-1)
     - [What We Did](#what-we-did-1)
-    - [Potential Improvement](#potential-improvement-1)
   - [Extra Work: Visualization](#extra-work-visualization)
     - [Cluster Bubbles](#cluster-bubbles)
     - [Dependencies on Class Packages](#dependencies-on-class-packages)
@@ -449,18 +448,21 @@ Class Diagram:
 ![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/cgf50.png)
 
 
-
 ### Failure in Recovery Techniques
 
+Originally, `org.apache.catalina.webresources.ss` only contains `AbstractFileResourceSet` but does not have `JrePlatform`.
 
+![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/4l34i.png)
 
 
 ### What We Did
 
 
+![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/gjr3n.png)
 
+As you can see, they are clustered together now.
 
-### Potential Improvement
+![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/f6wgw.png)
 
 
 
